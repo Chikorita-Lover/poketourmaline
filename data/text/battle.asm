@@ -624,6 +624,12 @@ NotVeryEffectiveText:
 	line "effective…"
 	prompt
 
+KebiaBerryText:
+	text "<TARGET> took"
+	line "less damage with"
+	cont "its KEBIA BERRY!"
+	prompt
+
 TookDownWithItText:
 	text "<TARGET>"
 	line "took down with it,"

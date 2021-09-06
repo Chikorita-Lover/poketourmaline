@@ -8,9 +8,13 @@
 
 ; Marts indexes (see data/items/marts.asm)
 	const_def
+	const MART_TOROMA
+	const MART_TOROMA_DEX
 	const MART_CHERRYGROVE
 	const MART_CHERRYGROVE_DEX
-	const MART_VIOLET
+	const MART_ORMALI
+	const MART_ORMALI_BALLS
+	const BERRY_MART_ORMALI
 	const MART_AZALEA
 	const MART_CIANWOOD
 	const MART_GOLDENROD_2F_1

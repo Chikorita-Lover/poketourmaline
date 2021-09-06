@@ -38,7 +38,7 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw NoEffect            ; ITEM_19
+	dw NoEffect            ; EVIOLITE
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -58,18 +58,18 @@ ItemEffects:
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw NoEffect            ; ITEM_2D
+	dw NoEffect            ; JABOCA_BERRY
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
 	dw XItemEffect         ; X_ATTACK
-	dw NoEffect            ; ITEM_32
+	dw NoEffect            ; APICOT_BERRY
 	dw XItemEffect         ; X_DEFEND
 	dw XItemEffect         ; X_SPEED
 	dw XItemEffect         ; X_SPECIAL
 	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
-	dw PokeFluteEffect     ; POKE_FLUTE
+	dw NoEffect            ; KEBIA_BERRY
 	dw NoEffect            ; EXP_SHARE
 	dw OldRodEffect        ; OLD_ROD
 	dw GoodRodEffect       ; GOOD_ROD
@@ -87,13 +87,13 @@ ItemEffects:
 	dw NoEffect            ; SILVER_WING
 	dw RestoreHPEffect     ; MOOMOO_MILK
 	dw NoEffect            ; QUICK_CLAW
-	dw StatusHealingEffect ; PSNCUREBERRY
+	dw StatusHealingEffect ; PECHA_BERRY
 	dw NoEffect            ; GOLD_LEAF
 	dw NoEffect            ; SOFT_SAND
 	dw NoEffect            ; SHARP_BEAK
-	dw StatusHealingEffect ; PRZCUREBERRY
-	dw StatusHealingEffect ; BURNT_BERRY
-	dw StatusHealingEffect ; ICE_BERRY
+	dw StatusHealingEffect ; CHERI_BERRY
+	dw StatusHealingEffect ; ASPEAR_BERRY
+	dw StatusHealingEffect ; RAWST_BERRY
 	dw NoEffect            ; POISON_BARB
 	dw NoEffect            ; KINGS_ROCK
 	dw BitterBerryEffect   ; BITTER_BERRY
@@ -118,11 +118,11 @@ ItemEffects:
 	dw NoEffect            ; BLACKGLASSES
 	dw NoEffect            ; SLOWPOKETAIL
 	dw NoEffect            ; PINK_BOW
-	dw NoEffect            ; STICK
+	dw NoEffect            ; LEEK
 	dw NoEffect            ; SMOKE_BALL
 	dw NoEffect            ; NEVERMELTICE
 	dw NoEffect            ; MAGNET
-	dw StatusHealingEffect ; MIRACLEBERRY
+	dw StatusHealingEffect ; LUM_BERRY
 	dw NoEffect            ; PEARL
 	dw NoEffect            ; BIG_PEARL
 	dw NoEffect            ; EVERSTONE
@@ -163,7 +163,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_93
 	dw NoEffect            ; ITEM_94
 	dw NoEffect            ; ITEM_95
-	dw RestorePPEffect     ; MYSTERYBERRY
+	dw RestorePPEffect     ; LEPPA_BERRY
 	dw NoEffect            ; DRAGON_SCALE
 	dw NoEffect            ; BERSERK_GENE
 	dw NoEffect            ; ITEM_99
@@ -178,7 +178,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_A2
 	dw NoEffect            ; LIGHT_BALL
 	dw PokeBallEffect      ; FRIEND_BALL
-	dw PokeBallEffect      ; MOON_BALL
+	dw PokeBallEffect      ; DUSK_BALL
 	dw PokeBallEffect      ; LOVE_BALL
 	dw NormalBoxEffect     ; NORMAL_BOX
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
@@ -736,7 +736,7 @@ BallMultiplierFunctionTable:
 	dbw LEVEL_BALL,  LevelBallMultiplier
 	dbw LURE_BALL,   LureBallMultiplier
 	dbw FAST_BALL,   FastBallMultiplier
-	dbw MOON_BALL,   MoonBallMultiplier
+	dbw DUSK_BALL,   DuskBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
 	db -1 ; end
@@ -761,13 +761,10 @@ ParkBallMultiplier:
 	ret
 
 GetPokedexEntryBank:
-; This function is buggy.
-; It gets the wrong bank for Kadabra (64), Tauros (128), and Sunflora (192).
-; Uncomment the line below to fix this.
 	push hl
 	push de
 	ld a, [wEnemyMonSpecies]
-	; dec a
+	dec a
 	rlca
 	rlca
 	maskbits NUM_DEX_ENTRY_BANKS
@@ -904,50 +901,30 @@ LureBallMultiplier:
 	ld b, a
 	ret
 
-MoonBallMultiplier:
-; This function is buggy.
-; Intent:  multiply catch rate by 4 if mon evolves with moon stone
-; Reality: no boost
-	push bc
-	ld a, [wTempEnemyMonSpecies]
-	dec a
-	ld c, a
-	ld b, 0
-	ld hl, EvosAttacksPointers
-	add hl, bc
-	add hl, bc
-	ld a, BANK(EvosAttacksPointers)
-	call GetFarWord
-	pop bc
+DuskBallMultiplier:
+; is it night?
+	ld a, [wTimeOfDay]
+	cp NITE
+	jr z, .night_or_cave
+; or are we in a cave?
+	ld a, [wEnvironment]
+	cp CAVE
+	jr z, .night_or_cave
+; neither night nor cave
+	ret
 
-	push bc
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	cp EVOLVE_ITEM
-	pop bc
-	ret nz
-
-	inc hl
-	inc hl
-	inc hl
-
-; Moon Stone's constant from Pokémon Red is used.
-; No Pokémon evolve with Burn Heal,
-; so Moon Balls always have a catch rate of 1×.
-	push bc
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	cp MOON_STONE_RED ; BURN_HEAL
-	pop bc
-	ret nz
-
-	sla b
+.night_or_cave
+; b is the catch rate
+; a := b + b + b == b × 3
+	ld a, b
+rept 3
+	add b
 	jr c, .max
-	sla b
-	jr nc, .done
+endr
+	ret
+
 .max
 	ld b, $ff
-.done
 	ret
 
 LoveBallMultiplier:
@@ -996,7 +973,7 @@ LoveBallMultiplier:
 	pop de
 	cp d
 	pop bc
-	ret nz ; for the intended effect, this should be "ret z"
+	ret z
 
 	sla b
 	jr c, .max
@@ -1016,11 +993,6 @@ LoveBallMultiplier:
 	ret
 
 FastBallMultiplier:
-; This function is buggy.
-; Intent:  multiply catch rate by 4 if enemy mon is in one of the three
-;          FleeMons tables.
-; Reality: multiply catch rate by 4 if enemy mon is one of the first three in
-;          the first FleeMons table.
 	ld a, [wTempEnemyMonSpecies]
 	ld c, a
 	ld hl, FleeMons
@@ -1034,7 +1006,7 @@ FastBallMultiplier:
 	cp -1
 	jr z, .next
 	cp c
-	jr nz, .next ; for the intended effect, this should be "jr nz, .loop"
+	jr nz, .loop
 	sla b
 	jr c, .max
 
@@ -2510,7 +2482,7 @@ RestorePP:
 	jr z, .restore_all
 
 	ld c, 5
-	cp MYSTERYBERRY
+	cp LEPPA_BERRY
 	jr z, .restore_some
 
 	ld c, 10

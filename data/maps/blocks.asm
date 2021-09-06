@@ -94,8 +94,8 @@ Route25_Blocks:
 Route24_Blocks:
 	INCBIN "maps/Route24.blk"
 
-BetaVioletCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaVioletCity.blk"
+BetaOrmaliCity_Blocks: ; unreferenced
+	INCBIN "maps/unused/BetaOrmaliCity.blk"
 
 Route3_Blocks:
 	INCBIN "maps/Route3.blk"
@@ -277,7 +277,7 @@ Route8SaffronGate_Blocks:
 Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
-Route31VioletGate_Blocks:
+Route31OrmaliGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 BetaAzaleaTown_Blocks: ; unreferenced
@@ -289,8 +289,8 @@ VermilionCity_Blocks:
 BetaOlivineCity_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaOlivineCity.blk"
 
-BetaNewBarkTown_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaNewBarkTown.blk"
+BetaToromaTown_Blocks: ; unreferenced
+	INCBIN "maps/unused/BetaToromaTown.blk"
 
 ElmsLab_Blocks:
 	INCBIN "maps/ElmsLab.blk"
@@ -324,7 +324,7 @@ EcruteakMart_Blocks:
 BlackthornMart_Blocks:
 CeruleanMart_Blocks:
 AzaleaMart_Blocks:
-VioletMart_Blocks:
+OrmaliMart_Blocks:
 VermilionMart_Blocks:
 PewterMart_Blocks:
 FuchsiaMart_Blocks:
@@ -332,6 +332,7 @@ LavenderMart_Blocks:
 ViridianMart_Blocks:
 SaffronMart_Blocks:
 CherrygroveMart_Blocks:
+ToromaMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
 Route10North_Blocks:
@@ -348,7 +349,7 @@ CinnabarPokecenter1F_Blocks:
 CeruleanPokecenter1F_Blocks:
 Route10Pokecenter1F_Blocks:
 AzaleaPokecenter1F_Blocks:
-VioletPokecenter1F_Blocks:
+OrmaliPokecenter1F_Blocks:
 Route32Pokecenter1F_Blocks:
 GoldenrodPokecenter1F_Blocks:
 VermilionPokecenter1F_Blocks:
@@ -361,6 +362,7 @@ CianwoodPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 SaffronPokecenter1F_Blocks:
 CherrygrovePokecenter1F_Blocks:
+ToromaPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 BetaPewterMuseumOfScience1F_Blocks: ; unreferenced
@@ -442,8 +444,8 @@ TimeCapsule_Blocks:
 
 EcruteakLugiaSpeechHouse_Blocks:
 EcruteakItemfinderHouse_Blocks:
-VioletNicknameSpeechHouse_Blocks:
-VioletKylesHouse_Blocks:
+OrmaliNicknameSpeechHouse_Blocks:
+OrmaliKylesHouse_Blocks:
 	INCBIN "maps/House2.blk"
 
 BetaUnionCave_Blocks: ; unreferenced
@@ -523,14 +525,11 @@ RadioTower4F_Blocks:
 RadioTower5F_Blocks:
 	INCBIN "maps/RadioTower5F.blk"
 
-NewBarkTown_Blocks:
-	INCBIN "maps/NewBarkTown.blk"
+ToromaTown_Blocks:
+	INCBIN "maps/ToromaTown.blk"
 
 CherrygroveCity_Blocks:
 	INCBIN "maps/CherrygroveCity.blk"
-
-VioletCity_Blocks:
-	INCBIN "maps/VioletCity.blk"
 
 AzaleaTown_Blocks:
 	INCBIN "maps/AzaleaTown.blk"
@@ -731,9 +730,6 @@ KarensRoom_Blocks:
 AzaleaGym_Blocks:
 	INCBIN "maps/AzaleaGym.blk"
 
-VioletGym_Blocks:
-	INCBIN "maps/VioletGym.blk"
-
 GoldenrodGym_Blocks:
 	INCBIN "maps/GoldenrodGym.blk"
 
@@ -791,8 +787,8 @@ SlowpokeWellB2F_Blocks:
 IlexForest_Blocks:
 	INCBIN "maps/IlexForest.blk"
 
-DarkCaveVioletEntrance_Blocks:
-	INCBIN "maps/DarkCaveVioletEntrance.blk"
+DarkCaveOrmaliEntrance_Blocks:
+	INCBIN "maps/DarkCaveOrmaliEntrance.blk"
 
 DarkCaveBlackthornEntrance_Blocks:
 	INCBIN "maps/DarkCaveBlackthornEntrance.blk"
@@ -1045,3 +1041,24 @@ BetaBlank_Blocks: ; unreferenced
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+DevilsShaft1F_Blocks:
+	INCBIN "maps/DevilsShaft1F.blk"
+
+OrmaliGym_Blocks:
+	INCBIN "maps/OrmaliGym.blk"
+
+DevilsShaftB1F_Blocks:
+	INCBIN "maps/DevilsShaftB1F.blk"
+
+OrmaliCity_Blocks:
+	INCBIN "maps/OrmaliCity.blk"
+
+OrmaliBallMart_Blocks:
+	INCBIN "maps/OrmaliBallMart.blk"
+
+OrmaliBerryMart_Blocks:
+	INCBIN "maps/BerryMart.blk"
+
+OrmaliOutskirts_Blocks:
+	INCBIN "maps/OrmaliOutskirts.blk"

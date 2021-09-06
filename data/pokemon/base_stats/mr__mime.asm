@@ -3,10 +3,10 @@
 	db  40,  45,  65,  90, 100, 120
 	;   hp  atk  def  spd  sat  sdf
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+	db PSYCHIC_TYPE, FAIRY ; type
 	db 45 ; catch rate
 	db 136 ; base exp
-	db NO_ITEM, MYSTERYBERRY ; items
+	db NO_ITEM, LEPPA_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 25 ; step cycles to hatch

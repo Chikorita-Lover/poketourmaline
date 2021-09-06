@@ -1,9 +1,13 @@
 Marts:
 ; entries correspond to MART_* constants (see constants/mart_constants.asm)
 	table_width 2, Marts
+	dw MartToroma
+	dw MartToromaDex
 	dw MartCherrygrove
 	dw MartCherrygroveDex
-	dw MartViolet
+	dw MartOrmali
+	dw MartOrmaliBalls
+	dw BerryMartOrmali
 	dw MartAzalea
 	dw MartCianwood
 	dw MartGoldenrod2F1
@@ -37,6 +41,23 @@ Marts:
 	dw MartUnderground
 	assert_table_length NUM_MARTS
 
+MartToroma:
+	db 4 ; # items
+	db POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db -1 ; end
+
+MartToromaDex:
+	db 5 ; # items
+	db POKE_BALL
+	db POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db -1 ; end
+
 MartCherrygrove:
 	db 4 ; # items
 	db POTION
@@ -54,8 +75,8 @@ MartCherrygroveDex:
 	db AWAKENING
 	db -1 ; end
 
-MartViolet:
-	db 10 ; # items
+MartOrmali:
+	db 11 ; # items
 	db POKE_BALL
 	db POTION
 	db ESCAPE_ROPE
@@ -66,7 +87,24 @@ MartViolet:
 	db X_ATTACK
 	db X_SPEED
 	db FLOWER_MAIL
+	db DUSK_BALL
 	db -1 ; end
+
+MartOrmaliBalls:
+	db 3 ; # items
+	db POKE_BALL
+	db GREAT_BALL
+	db DUSK_BALL
+	db -1 ; end
+
+BerryMartOrmali:
+	db 6 ; # items
+	db LEPPA_BERRY
+	db CHERI_BERRY
+	db PECHA_BERRY
+	db JABOCA_BERRY
+	db APICOT_BERRY
+	db KEBIA_BERRY
 
 MartAzalea:
 	db 9 ; # items

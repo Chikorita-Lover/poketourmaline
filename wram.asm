@@ -727,13 +727,12 @@ wDexListingCursorBackup:: db
 wBackupDexListingCursor:: db
 wBackupDexListingPage:: db
 wDexCurLocation:: db
-if DEF(_CRYSTAL11)
 wPokedexStatus:: db
+wPokedexShinyToggle::
+; bit 0: set if displaying shiny palettes
+	db
 wPokedexDataEnd::
-else
-wPokedexDataEnd:: ds 1
-endc
-	ds 2
+	ds 1
 
 NEXTU
 ; pokegear
@@ -1404,12 +1403,7 @@ wCreditsLYOverride:: db
 NEXTU
 ; pokedex
 wPrevDexEntryJumptableIndex:: db
-if DEF(_CRYSTAL11)
 wPrevDexEntryBackup:: db
-else
-wPrevDexEntryBackup::
-wPokedexStatus:: db
-endc
 wUnusedPokedexByte:: db
 
 NEXTU
@@ -2555,11 +2549,12 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw
 
-	ds 2
+	ds 1
 
 wMornEncounterRate::  db
 wDayEncounterRate::   db
 wNiteEncounterRate::  db
+wEveEncounterRate::   db
 wWaterEncounterRate:: db
 wListMoves_MoveIndicesBuffer:: ds NUM_MOVES
 wPutativeTMHMMove:: db
@@ -2649,7 +2644,9 @@ wDudeNumBalls:: db
 wDudeBalls:: ds 2 * 4 + 1
 ENDU
 
-	ds 4
+wOtherTrainerType:: db
+wTrainerGroupBank:: db
+	ds 2
 
 wd430:: ; mobile
 wBattleAction:: db
@@ -2916,7 +2913,7 @@ wKarensRoomSceneID::                              db
 wLancesRoomSceneID::                              db
 wHallOfFameSceneID::                              db
 wRoute27SceneID::                                 db
-wNewBarkTownSceneID::                             db
+wToromaTownSceneID::                              db
 wElmsLabSceneID::                                 db
 wPlayersHouse1FSceneID::                          db
 wRoute29SceneID::                                 db

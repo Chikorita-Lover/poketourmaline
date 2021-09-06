@@ -70,7 +70,7 @@ CherrygroveCityGuideGent:
 	getstring STRING_BUFFER_4, .mapcardname
 	scall .JumpstdReceiveItem
 	setflag ENGINE_MAP_CARD
-	writetext GotMapCardText
+	writetext GotMapCardText2
 	promptbutton
 	writetext GuideGentPokegearText
 	waitbutton
@@ -113,35 +113,9 @@ CherrygroveSilverSceneNorth:
 	writetext CherrygroveRivalText_Seen
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
 	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
 	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.Totodile:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.Chikorita:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
+	loadtrainer RIVAL1, STIKE_1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -408,7 +382,7 @@ GuideGentGiftText:
 	line "small gift."
 	done
 
-GotMapCardText:
+GotMapCardText2:
 	text "<PLAYER>'s #GEAR"
 	line "now has a MAP!"
 	done

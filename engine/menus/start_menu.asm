@@ -192,21 +192,21 @@ StartMenu::
 .StatusString:   db "<PLAYER>@"
 .SaveString:     db "SAVE@"
 .OptionString:   db "OPTION@"
-.ExitString:     db "EXIT@"
+.ExitString:     db "CANCEL@"
 .PokegearString: db "<POKE>GEAR@"
 .QuitString:     db "QUIT@"
 
 .PokedexDesc:
 	db   "#MON"
-	next "database@"
+	next "index@"
 
 .PartyDesc:
-	db   "Party <PKMN>"
-	next "status@"
+	db   "View party"
+	next "#MON@"
 
 .PackDesc:
-	db   "Contains"
-	next "items@"
+	db   "View and"
+	next "use items@"
 
 .PokegearDesc:
 	db   "Trainer's"
@@ -214,7 +214,7 @@ StartMenu::
 
 .StatusDesc:
 	db   "Your own"
-	next "status@"
+	next "stats@"
 
 .SaveDesc:
 	db   "Save your"

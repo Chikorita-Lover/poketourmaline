@@ -78,6 +78,9 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_HEAL_PARALYZE
 	const HELD_HEAL_STATUS
 	const HELD_HEAL_CONFUSION
+	const HELD_JABOCA_BERRY
+	const HELD_APICOT_BERRY
+	const HELD_KEBIA_BERRY
 
 	const_next 20
 	const HELD_PREVENT_POISON
@@ -100,7 +103,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 
 	const_next 40
 	const_skip
-	const_skip
+	const HELD_EVIOLITE
 	const HELD_METAL_POWDER
 
 	const_next 50
@@ -121,6 +124,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_DRAGON_BOOST
 	const HELD_DARK_BOOST
 	const HELD_STEEL_BOOST
+	const HELD_FAIRY_BOOST
 
 	const_next 70
 	const HELD_CATCH_CHANCE

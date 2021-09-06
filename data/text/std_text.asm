@@ -10,6 +10,12 @@ NurseDayText:
 	cont "#MON CENTER."
 	done
 
+NurseEveText:
+	text "Good evening!"
+	line "Welcome to our"
+	cont "#MON CENTER."
+	done
+
 NurseNiteText:
 	text "Good evening!"
 	line "You're out late."
@@ -38,9 +44,19 @@ PokeComNurseDayText:
 	line "#COM CENTER."
 	done
 
+PokeComNurseEveText:
+	text "Good evening!"
+
+	para "This is the #-"
+	line "MON COMMUNICATION"
+
+	para "CENTER--or the"
+	line "#COM CENTER."
+	done
+
 PokeComNurseNiteText:
 	text "Good to see you"
-	line "working so late."
+	line "working so late!"
 
 	para "This is the #-"
 	line "MON COMMUNICATION"
@@ -172,12 +188,13 @@ TVText:
 	text "It's a TV."
 	done
 
-HomepageText:
-	text "#MON JOURNAL"
-	line "HOME PAGE…"
+DresserText1:
+	text "Would you like to"
+	line "change your style?"
+	done
 
-	para "It hasn't been"
-	line "updated…"
+DresserText2:
+	text "Looking good!"
 	done
 
 ; not used

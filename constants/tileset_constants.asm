@@ -12,6 +12,8 @@
 	const TILESET_LAB                  ; 0a
 	const TILESET_FACILITY             ; 0b
 	const TILESET_MART                 ; 0c
+	const TILESET_BERRY_MART
+	const TILESET_ORMALI_STADIUM
 	const TILESET_MANSION              ; 0d
 	const TILESET_GAME_CORNER          ; 0e
 	const TILESET_ELITE_FOUR_ROOM      ; 0f

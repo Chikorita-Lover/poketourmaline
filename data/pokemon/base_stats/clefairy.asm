@@ -3,10 +3,10 @@
 	db  70,  45,  48,  35,  60,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FAIRY, FAIRY ; type
 	db 150 ; catch rate
 	db 68 ; base exp
-	db MYSTERYBERRY, MOON_STONE ; items
+	db LEPPA_BERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 100 ; unknown 1
 	db 10 ; step cycles to hatch

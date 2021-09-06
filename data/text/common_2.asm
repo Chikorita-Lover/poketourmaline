@@ -72,8 +72,19 @@ _NameRaterPerfectNameText::
 	done
 
 _NameRaterEggText::
-	text "Whoa… That's just"
-	line "an EGG."
+	text "Hm… EGG…"
+	line "That's a fairly"
+	cont "decent name."
+
+	para "But, how about a"
+	line "slightly better"
+	cont "nickname?"
+
+	para "Want me to give it"
+	line "a better name?"
+
+	para "Ahaha, I'm just"
+	line "messing with you."
 	done
 
 _NameRaterSameNameText::
@@ -238,7 +249,7 @@ _MysteryGiftFiveADayText::
 
 _MysteryGiftOneADayText::
 	text "Sorry. One GIFT"
-	line "a day per person."
+	line "a day per friend."
 	prompt
 
 _MysteryGiftSentText::
@@ -302,8 +313,8 @@ _CantUseItemText::
 
 _UseCutText::
 	text_ram wStringBuffer2
-	text " used"
-	line "CUT!"
+	text " hacked"
+	line "away with CUT!"
 	prompt
 
 _CutNothingText::
@@ -342,13 +353,14 @@ _AskSurfText::
 
 _UseWaterfallText::
 	text_ram wStringBuffer2
-	text " used"
-	line "WATERFALL!"
+	text " shot"
+	line "up with WATERFALL!"
 	done
 
 _HugeWaterfallText::
-	text "Wow, it's a huge"
-	line "waterfall."
+	text "Wow, it's a"
+	line "huge waterfall."
+	cont "How beautiful!"
 	done
 
 _AskWaterfallText::
@@ -443,8 +455,8 @@ _AskWhirlpoolText::
 
 _UseHeadbuttText::
 	text_ram wStringBuffer2
-	text " did a"
-	line "HEADBUTT!"
+	text " gave"
+	line "it a HEADBUTT!"
 	prompt
 
 _HeadbuttNothingText::
@@ -512,15 +524,15 @@ _GotOffBikeText::
 	done
 
 _AskCutText::
-	text "This tree can be"
-	line "CUT!"
+	text "This tree can"
+	line "be CUT!"
 
 	para "Want to use CUT?"
 	done
 
 _CanCutText::
-	text "This tree can be"
-	line "CUT!"
+	text "This tree can"
+	line "be CUT!"
 	done
 
 _FoundItemText::
@@ -660,9 +672,12 @@ _YouCantUseItInABattleText::
 	line "in a battle."
 	prompt
 
-_AreYouABoyOrAreYouAGirlText::
-	text "Are you a boy?"
-	line "Or are you a girl?"
+_WhichGenderDoYouPreferText::
+	text "Which style would"
+	line "you prefer?"
+
+	para "(This may be"
+	line "changed later.)"
 	done
 
 Text_BattleEffectActivate::
@@ -1410,9 +1425,8 @@ _ItemsTooImportantText::
 	prompt
 
 _ItemsOakWarningText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+	text "This isn't the"
+	line "place for that."
 	done
 
 _PokemonSwapItemText::

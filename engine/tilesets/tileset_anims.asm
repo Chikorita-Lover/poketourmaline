@@ -258,6 +258,8 @@ TilesetGateAnim:
 TilesetLabAnim:
 TilesetFacilityAnim:
 TilesetMartAnim:
+TilesetBerryMartAnim:
+TilesetOrmaliStadiumAnim:
 TilesetMansionAnim:
 TilesetGameCornerAnim:
 TilesetTraditionalHouseAnim:

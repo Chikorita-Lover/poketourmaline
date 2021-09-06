@@ -2,7 +2,7 @@ CELADONGAMECORNERPRIZEROOM_TM32_COINS EQU 1500
 CELADONGAMECORNERPRIZEROOM_TM29_COINS EQU 3500
 CELADONGAMECORNERPRIZEROOM_TM15_COINS EQU 7500
 CELADONGAMECORNERPRIZEROOM_PIKACHU_COINS  EQU 2222
-CELADONGAMECORNERPRIZEROOM_PORYGON_COINS  EQU 5555
+CELADONGAMECORNERPRIZEROOM_LEAFEON_COINS  EQU 5555
 CELADONGAMECORNERPRIZEROOM_LARVITAR_COINS EQU 8888
 
 	object_const_def
@@ -135,7 +135,7 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	verticalmenu
 	closewindow
 	ifequal 1, .Pikachu
-	ifequal 2, .Porygon
+	ifequal 2, .Leafeon
 	ifequal 3, .Larvitar
 	sjump CeladonPrizeRoom_CancelPurchaseScript
 
@@ -157,22 +157,22 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	takecoins CELADONGAMECORNERPRIZEROOM_PIKACHU_COINS
 	sjump .loop
 
-.Porygon:
-	checkcoins CELADONGAMECORNERPRIZEROOM_PORYGON_COINS
+.Leafeon:
+	checkcoins CELADONGAMECORNERPRIZEROOM_LEAFEON_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, CeladonPrizeRoom_notenoughroom
-	getmonname STRING_BUFFER_3, PORYGON
+	getmonname STRING_BUFFER_3, LEAFEON
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	setval PORYGON
+	setval LEAFEON
 	special GameCornerPrizeMonCheckDex
-	givepoke PORYGON, 15
-	takecoins CELADONGAMECORNERPRIZEROOM_PORYGON_COINS
+	givepoke LEAFEON, 15
+	takecoins CELADONGAMECORNERPRIZEROOM_LEAFEON_COINS
 	sjump .loop
 
 .Larvitar:
@@ -203,12 +203,12 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
 	db "PIKACHU    {d:CELADONGAMECORNERPRIZEROOM_PIKACHU_COINS}@"
-	db "PORYGON    {d:CELADONGAMECORNERPRIZEROOM_PORYGON_COINS}@"
+	db "LEAFEON    {d:CELADONGAMECORNERPRIZEROOM_LEAFEON_COINS}@"
 	db "LARVITAR   {d:CELADONGAMECORNERPRIZEROOM_LARVITAR_COINS}@"
 	db "CANCEL@"
 
 CeladonGameCornerPrizeRoomGentlemanText:
-	text "I wanted PORYGON,"
+	text "I wanted LEAFEON,"
 	line "but I was short by"
 	cont "100 coins…"
 	done

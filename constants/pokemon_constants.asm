@@ -129,7 +129,7 @@
 	const LICKITUNG  ; 6c
 	const KOFFING    ; 6d
 	const WEEZING    ; 6e
-	const RHYHORN    ; 6f
+	const BALTOY    ; 6f
 	const RHYDON     ; 70
 	const CHANSEY    ; 71
 	const TANGELA    ; 72
@@ -155,7 +155,7 @@
 	const VAPOREON   ; 86
 	const JOLTEON    ; 87
 	const FLAREON    ; 88
-	const PORYGON    ; 89
+	const LEAFEON    ; 89
 	const OMANYTE    ; 8a
 	const OMASTAR    ; 8b
 	const KABUTO     ; 8c
@@ -244,7 +244,7 @@ JOHTO_POKEMON EQU const_value
 	const CORSOLA    ; de
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
-	const DELIBIRD   ; e1
+	const MANTYKE    ; e1
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4

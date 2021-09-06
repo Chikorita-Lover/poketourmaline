@@ -226,7 +226,7 @@ TownMap_InitCursorAndPlayerIconPositions:
 
 .FastShip:
 	ld [wPokegearMapPlayerIconLandmark], a
-	ld a, LANDMARK_NEW_BARK_TOWN
+	ld a, LANDMARK_TOROMA_TOWN
 	ld [wPokegearMapCursorLandmark], a
 	ret
 
@@ -565,8 +565,8 @@ PokegearMap_KantoMap:
 	jr PokegearMap_ContinueMap
 
 PokegearMap_JohtoMap:
-	ld d, LANDMARK_SILVER_CAVE
-	ld e, LANDMARK_NEW_BARK_TOWN
+	ld d, LANDMARK_PEWTER_CITY
+	ld e, LANDMARK_TOROMA_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -1489,7 +1489,7 @@ RadioChannels:
 
 .RuinsOfAlphRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_RUINS_OF_ALPH
+	cp LANDMARK_PEWTER_CITY
 	jr nz, .NoSignal
 	jp LoadStation_UnownRadio
 
@@ -1523,11 +1523,11 @@ RadioChannels:
 	bit STATUSFLAGS_ROCKET_SIGNAL_F, a
 	jr z, .NoSignal
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_MAHOGANY_TOWN
+	cp LANDMARK_PEWTER_CITY
 	jr z, .ok
-	cp LANDMARK_ROUTE_43
+	cp LANDMARK_PEWTER_CITY
 	jr z, .ok
-	cp LANDMARK_LAKE_OF_RAGE
+	cp LANDMARK_PEWTER_CITY
 	jr nz, .NoSignal
 .ok
 	jp LoadStation_EvolutionRadio
@@ -2270,7 +2270,7 @@ FlyMap:
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
 	ld a, JOHTO_FLYPOINT ; first Johto flypoint
-	ld [wTownMapPlayerIconLandmark], a ; first one is default (New Bark Town)
+	ld [wTownMapPlayerIconLandmark], a ; first one is default (Toroma Town)
 	ld [wStartFlypoint], a
 	ld a, KANTO_FLYPOINT - 1 ; last Johto flypoint
 	ld [wEndFlypoint], a
@@ -2311,7 +2311,7 @@ FlyMap:
 .NoKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
 	ld a, JOHTO_FLYPOINT ; first Johto flypoint
-	ld [wTownMapPlayerIconLandmark], a ; first one is default (New Bark Town)
+	ld [wTownMapPlayerIconLandmark], a ; first one is default (Toroma Town)
 	ld [wStartFlypoint], a
 	ld a, KANTO_FLYPOINT - 1 ; last Johto flypoint
 	ld [wEndFlypoint], a

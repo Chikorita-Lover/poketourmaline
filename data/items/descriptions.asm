@@ -25,7 +25,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw EvioliteDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -45,18 +45,18 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw TeruSama3Desc
+	dw JabocaBerryDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw TeruSama4Desc
+	dw ApicotBerryDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw TeruSama5Desc
+	dw KebiaBerryDesc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
@@ -74,13 +74,13 @@ ItemDescriptions:
 	dw SilverWingDesc
 	dw MoomooMilkDesc
 	dw QuickClawDesc
-	dw PsnCureBerryDesc
+	dw PechaBerryDesc
 	dw GoldLeafDesc
 	dw SoftSandDesc
 	dw SharpBeakDesc
-	dw PrzCureBerryDesc
-	dw BurntBerryDesc
-	dw IceBerryDesc
+	dw CheriBerryDesc
+	dw AspearBerryDesc
+	dw RawstBerryDesc
 	dw PoisonBarbDesc
 	dw KingsRockDesc
 	dw BitterBerryDesc
@@ -105,11 +105,11 @@ ItemDescriptions:
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
 	dw PinkBowDesc
-	dw StickDesc
+	dw LeekDesc
 	dw SmokeBallDesc
 	dw NeverMeltIceDesc
 	dw MagnetDesc
-	dw MiracleBerryDesc
+	dw LumBerryDesc
 	dw PearlDesc
 	dw BigPearlDesc
 	dw EverStoneDesc
@@ -150,7 +150,7 @@ ItemDescriptions:
 	dw TeruSama15Desc
 	dw TeruSama16Desc
 	dw TeruSama17Desc
-	dw MysteryBerryDesc
+	dw LeppaBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
 	dw TeruSama18Desc
@@ -165,7 +165,7 @@ ItemDescriptions:
 	dw TeruSama21Desc
 	dw LightBallDesc
 	dw FriendBallDesc
-	dw MoonBallDesc
+	dw DuskBallDesc
 	dw LoveBallDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
@@ -354,8 +354,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+EvioliteDesc:
+	db   "Raises DEFENSE of"
+	next "evolvable #MON.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -433,8 +434,9 @@ DireHitDesc:
 	db   "Ups critical hit"
 	next "ratio. (1 BTL)@"
 
-TeruSama3Desc:
-	db   "?@"
+JabocaBerryDesc:
+	db   "Reflects a physi-"
+	next "cal attack. (HOLD)@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -452,8 +454,9 @@ XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
 
-TeruSama4Desc:
-	db   "?@"
+ApicotBerryDesc:
+	db   "Ups SPCL.DEF at"
+	next "low HP. (HOLD)@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -475,8 +478,9 @@ ItemfinderDesc:
 	db   "Checks for unseen"
 	next "items in the area.@"
 
-TeruSama5Desc:
-	db   "?@"
+KebiaBerryDesc:
+	db   "Weakens super-eff."
+	next "POISON ATK. (HOLD)@"
 
 ExpShareDesc:
 	db   "Shares battle EXP."
@@ -546,7 +550,7 @@ QuickClawDesc:
 	db   "Raises 1st strike"
 	next "ratio. (HOLD)@"
 
-PsnCureBerryDesc:
+PechaBerryDesc:
 	db   "A self-cure for"
 	next "poison. (HOLD)@"
 
@@ -562,15 +566,15 @@ SharpBeakDesc:
 	db   "Powers up flying-"
 	next "type moves. (HOLD)@"
 
-PrzCureBerryDesc:
+CheriBerryDesc:
 	db   "A self-cure for"
 	next "paralysis. (HOLD)@"
 
-BurntBerryDesc:
+AspearBerryDesc:
 	db   "A self-cure for"
 	next "freezing. (HOLD)@"
 
-IceBerryDesc:
+RawstBerryDesc:
 	db   "A self-heal for a"
 	next "burn. (HOLD)@"
 
@@ -591,7 +595,8 @@ MintBerryDesc:
 	next "for sleep. (HOLD)@"
 
 RedApricornDesc:
-	db   "A red APRICORN.@"
+	db   "A red APRICORN."
+	next "Smells spicy.@"
 
 TinyMushroomDesc:
 	db   "An ordinary mush-"
@@ -606,7 +611,8 @@ SilverPowderDesc:
 	next "moves. (HOLD)@"
 
 BluApricornDesc:
-	db   "A blue APRICORN.@"
+	db   "A blue APRICORN."
+	next "Smells like grass.@"
 
 TeruSama6Desc:
 	db   "?@"
@@ -616,10 +622,12 @@ AmuletCoinDesc:
 	next "earnings. (HOLD)@"
 
 YlwApricornDesc:
-	db   "A yellow APRICORN.@"
+	db   "A yellow APRICORN."
+	next "Has a brisk scent.@"
 
 GrnApricornDesc:
-	db   "A green APRICORN.@"
+	db   "A green APRICORN."
+	next "Smells mysterious.@"
 
 CleanseTagDesc:
 	db   "Helps repel wild"
@@ -634,7 +642,8 @@ TwistedSpoonDesc:
 	next "type moves. (HOLD)@"
 
 WhtApricornDesc:
-	db   "A white APRICORN.@"
+	db   "A white APRICORN."
+	next "Has no scent.@"
 
 BlackbeltDesc:
 	db   "Boosts fighting-"
@@ -642,14 +651,14 @@ BlackbeltDesc:
 
 BlkApricornDesc:
 	db   "A black APRICORN."
-	next "@"
+	next "Smells unique.@"
 
 TeruSama7Desc:
 	db   "?@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
-	next "@"
+	next "Has a sweet scent.@"
 
 BlackGlassesDesc:
 	db   "Powers up dark-"
@@ -663,9 +672,9 @@ PinkBowDesc:
 	db   "Powers up normal-"
 	next "type moves. (HOLD)@"
 
-StickDesc:
-	db   "An ordinary stick."
-	next "Sell low.@"
+LeekDesc:
+	db   "Raises crit. ratio"
+	next "of FARFETCH'D.@"
 
 SmokeBallDesc:
 	db   "Escape from wild"
@@ -679,7 +688,7 @@ MagnetDesc:
 	db   "Boosts electric-"
 	next "type moves. (HOLD)@"
 
-MiracleBerryDesc:
+LumBerryDesc:
 	db   "Cures all status"
 	next "problems. (HOLD)@"
 
@@ -716,8 +725,8 @@ MiracleSeedDesc:
 	next "type moves. (HOLD)@"
 
 ThickClubDesc:
-	db   "A bone of some"
-	next "sort. Sell low.@"
+	db   "Raises ATK of CU-"
+	next "BONE and MAROWAK.@"
 
 FocusBandDesc:
 	db   "May prevent faint-"
@@ -832,7 +841,7 @@ TeruSama16Desc:
 TeruSama17Desc:
 	db   "?@"
 
-MysteryBerryDesc:
+LeppaBerryDesc:
 	db   "A self-restore"
 	next "for PP. (HOLD)@"
 
@@ -881,16 +890,16 @@ TeruSama21Desc:
 	db   "?@"
 
 LightBallDesc:
-	db   "An odd, electrical"
-	next "orb. (HOLD)@"
+	db   "Raises SPCL.ATK"
+	next "of PIKACHU.@"
 
 FriendBallDesc:
 	db   "A BALL that makes"
 	next "#MON friendly.@"
 
-MoonBallDesc:
-	db   "A BALL for MOON"
-	next "STONE evolvers.@"
+DuskBallDesc:
+	db   "A BALL for use at"
+	next "night or in caves.@"
 
 LoveBallDesc:
 	db   "For catching the"
@@ -909,7 +918,7 @@ SunStoneDesc:
 	next "kinds of #MON.@"
 
 PolkadotBowDesc:
-	db   "Powers up normal-"
+	db   "Powers up fairy-"
 	next "type moves. (HOLD)@"
 
 TeruSama22Desc:

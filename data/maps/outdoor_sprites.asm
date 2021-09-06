@@ -13,7 +13,7 @@ OutdoorSprites:
 	dw CeruleanGroupSprites
 	dw AzaleaGroupSprites
 	dw LakeOfRageGroupSprites
-	dw VioletGroupSprites
+	dw OrmaliGroupSprites
 	dw GoldenrodGroupSprites
 	dw VermilionGroupSprites
 	dw PalletGroupSprites
@@ -27,7 +27,7 @@ OutdoorSprites:
 	dw CeladonGroupSprites
 	dw CianwoodGroupSprites
 	dw ViridianGroupSprites
-	dw NewBarkGroupSprites
+	dw ToromaGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
 	assert_table_length NUM_MAP_GROUPS
@@ -307,7 +307,7 @@ IndigoGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_BOULDER
 
-NewBarkGroupSprites:
+ToromaGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
 	db SPRITE_FAMICOM
@@ -320,7 +320,7 @@ NewBarkGroupSprites:
 	db SPRITE_BIG_ONIX
 	db SPRITE_SUDOWOODO
 	db SPRITE_BIG_SNORLAX
-	db SPRITE_SILVER
+	db SPRITE_LASS
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
 	db SPRITE_COOLTRAINER_M
@@ -382,7 +382,7 @@ SilverGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 
-VioletGroupSprites:
+OrmaliGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
 	db SPRITE_FAMICOM
@@ -403,7 +403,7 @@ VioletGroupSprites:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BUG_CATCHER
 	db SPRITE_SUPER_NERD
-	db SPRITE_WEIRD_TREE
+	db SPRITE_SCIENTIST
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 

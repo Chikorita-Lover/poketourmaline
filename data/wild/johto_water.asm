@@ -100,7 +100,7 @@ JohtoWaterWildMons:
 	db 35, GOLDEEN
 	end_water_wildmons
 
-	def_water_wildmons DARK_CAVE_VIOLET_ENTRANCE
+	def_water_wildmons DARK_CAVE_ORMALI_ENTRANCE
 	db 2 percent ; encounter rate
 	db 15, MAGIKARP
 	db 10, MAGIKARP
@@ -205,7 +205,7 @@ JohtoWaterWildMons:
 	db 5, MAGIKARP
 	end_water_wildmons
 
-	def_water_wildmons NEW_BARK_TOWN
+	def_water_wildmons TOROMA_TOWN
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 15, TENTACOOL
@@ -219,7 +219,7 @@ JohtoWaterWildMons:
 	db 20, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons VIOLET_CITY
+	def_water_wildmons ORMALI_CITY
 	db 2 percent ; encounter rate
 	db 20, POLIWAG
 	db 15, POLIWAG

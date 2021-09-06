@@ -268,6 +268,14 @@ _CGB_Pokedex:
 
 .is_pokemon
 	call GetMonPalettePointer
+	ld a, [wPokedexShinyToggle]
+	bit 0, a
+	jr z, .not_shiny
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+.not_shiny
 	call LoadPalette_White_Col1_Col2_Black ; mon palette
 .got_palette
 	call WipeAttrmap
@@ -619,7 +627,7 @@ _CGB_TrainerCard:
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, FALKNER ; KRIS
+	ld a, STIKULRA ; KRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, BUGSY
@@ -669,7 +677,7 @@ _CGB_TrainerCard:
 	ld [hl], $1
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
-	ld a, $1 ; falkner
+	ld a, $1 ; stikulra
 	call FillBoxCGB
 	hlcoord 6, 11, wAttrmap
 	lb bc, 2, 4

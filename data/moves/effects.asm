@@ -52,6 +52,7 @@ PoisonHit:
 	poisontarget
 	endmove
 
+DrainingKiss:
 LeechHit:
 	checkobedience
 	usedmovetext
@@ -1763,6 +1764,20 @@ RapidSpin:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+CosmicPower:
+	checkobedience
+	usedmovetext
+	doturn
+	defenseup
+	lowersub
+	statupanim
+	statupmessage
+	statupfailtext
+	specialdefenseup
+	raisesub
+	statupmessage
 	endmove
 
 MorningSun:

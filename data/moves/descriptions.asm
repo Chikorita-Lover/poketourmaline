@@ -96,7 +96,7 @@ MoveDescriptions::
 	dw ConfusionDescription
 	dw PsychicMDescription
 	dw HypnosisDescription
-	dw MeditateDescription
+	dw PoisonJabDescription
 	dw AgilityDescription
 	dw QuickAttackDescription
 	dw RageDescription
@@ -177,7 +177,7 @@ MoveDescriptions::
 	dw CurseDescription
 	dw FlailDescription
 	dw Conversion2Description
-	dw AeroblastDescription
+	dw CosmicPowerDescription
 	dw CottonSporeDescription
 	dw ReversalDescription
 	dw SpiteDescription
@@ -217,7 +217,7 @@ MoveDescriptions::
 	dw SleepTalkDescription
 	dw HealBellDescription
 	dw ReturnDescription
-	dw PresentDescription
+	dw DrainingKissDescription
 	dw FrustrationDescription
 	dw SafeguardDescription
 	dw PainSplitDescription
@@ -251,18 +251,15 @@ MoveDescriptions::
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw BeatUpDescription
+	dw LeafBladeDescription
+	dw MudBombDescription
+	dw MagicalLeafDescription
+	dw PowerGemDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
 MoveFFDescription:
 Move00Description:
 	db "?@"
@@ -428,8 +425,8 @@ PoisonStingDescription:
 	next "poison the target.@"
 
 TwineedleDescription:
-	db   "Jabs the foe twice"
-	next "using stingers.@"
+	db   "Jabs twice at the"
+	next "foe. May poison.@"
 
 PinMissileDescription:
 	db   "Fires pins that"
@@ -521,7 +518,7 @@ HyperBeamDescription:
 
 PeckDescription:
 	db   "Jabs the foe with"
-	next "a beak, etc.@"
+	next "a beak, horn, etc.@"
 
 DrillPeckDescription:
 	db   "A strong, spin-"
@@ -620,8 +617,8 @@ RockThrowDescription:
 	next "enemy.@"
 
 EarthquakeDescription:
-	db   "Tough but useless"
-	next "vs. flying foes.@"
+	db   "Summons earthquake"
+	next "to deal hi damage.@"
 
 FissureDescription:
 	db   "A ground-type,"
@@ -647,9 +644,9 @@ HypnosisDescription:
 	db   "May put the foe to"
 	next "sleep.@"
 
-MeditateDescription:
-	db   "Raises the user's"
-	next "ATTACK.@"
+PoisonJabDescription:
+	db   "An attack that may"
+	next "poison the target.@"
 
 AgilityDescription:
 	db   "Sharply increases"
@@ -971,9 +968,9 @@ Conversion2Description:
 	db   "The user's type is"
 	next "made resistant.@"
 
-AeroblastDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+CosmicPowerDescription:
+	db   "Raises DEFENSE"
+	next "and SPCL.DEF.@"
 
 CottonSporeDescription:
 	db   "Sharply reduces"
@@ -1131,9 +1128,9 @@ ReturnDescription:
 	db   "An attack that is"
 	next "based on loyalty.@"
 
-PresentDescription:
-	db   "A bomb that may"
-	next "restore HP.@"
+DrainingKissDescription:
+	db   "Steals 1/2 of the"
+	next "damage inflicted.@"
 
 FrustrationDescription:
 	db   "An attack based on"
@@ -1267,6 +1264,18 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
+LeafBladeDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+MudBombDescription:
+	db   "An attack that may"
+	next "reduce accuracy.@"
+
+MagicalLeafDescription:
+	db   "An attack that"
+	next "never misses.@"
+
+PowerGemDescription:
+	db   "Fires beams of"
+	next "light to attack.@"

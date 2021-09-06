@@ -117,9 +117,9 @@ TrainerBugCatcherWade1:
 	scall .ItemSTD
 	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_PSNCUREBERRY
+	checkevent EVENT_WADE_HAS_PECHA_BERRY
 	iftrue .Psncureberry
-	checkevent EVENT_WADE_HAS_PRZCUREBERRY
+	checkevent EVENT_WADE_HAS_CHERI_BERRY
 	iftrue .Przcureberry
 	checkevent EVENT_WADE_HAS_BITTER_BERRY
 	iftrue .BitterBerry
@@ -128,11 +128,11 @@ TrainerBugCatcherWade1:
 	iffalse .PackFull
 	sjump .Done
 .Psncureberry:
-	verbosegiveitem PSNCUREBERRY
+	verbosegiveitem PECHA_BERRY
 	iffalse .PackFull
 	sjump .Done
 .Przcureberry:
-	verbosegiveitem PRZCUREBERRY
+	verbosegiveitem CHERI_BERRY
 	iffalse .PackFull
 	sjump .Done
 .BitterBerry:
@@ -398,16 +398,16 @@ Route31YoungsterText:
 
 	para "I'm going to raise"
 	line "it to take on"
-	cont "FALKNER."
+	cont "STIKULRA."
 
 	para "He's the leader of"
-	line "VIOLET CITY's GYM."
+	line "ORMALI CITY's GYM."
 	done
 
 Route31SignText:
 	text "ROUTE 31"
 
-	para "VIOLET CITY -"
+	para "ORMALI CITY -"
 	line "CHERRYGROVE CITY"
 	done
 
@@ -419,9 +419,9 @@ Route31_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  6, ROUTE_31_VIOLET_GATE, 3
-	warp_event  4,  7, ROUTE_31_VIOLET_GATE, 4
-	warp_event 34,  5, DARK_CAVE_VIOLET_ENTRANCE, 1
+	warp_event  4,  6, ROUTE_31_ORMALI_GATE, 3
+	warp_event  4,  7, ROUTE_31_ORMALI_GATE, 4
+	warp_event 34,  5, DARK_CAVE_ORMALI_ENTRANCE, 1
 
 	def_coord_events
 

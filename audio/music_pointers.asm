@@ -48,7 +48,7 @@ Music:
 	dba Music_JohtoTrainerBattle
 	dba Music_Route30
 	dba Music_EcruteakCity
-	dba Music_VioletCity
+	dba Music_OrmaliCity
 	dba Music_JohtoGymBattle
 	dba Music_ChampionBattle
 	dba Music_RivalBattle
@@ -63,7 +63,7 @@ Music:
 	dba Music_LookRocket
 	dba Music_LookPokemaniac
 	dba Music_LookSage
-	dba Music_NewBarkTown
+	dba Music_ToromaTown
 	dba Music_GoldenrodCity
 	dba Music_VermilionCity
 	dba Music_PokemonChannel

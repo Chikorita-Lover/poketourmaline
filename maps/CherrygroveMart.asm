@@ -10,7 +10,7 @@ CherrygroveMart_MapScripts:
 
 CherrygroveMartClerkScript:
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .PokeBallsInStock
 	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE
 	closetext

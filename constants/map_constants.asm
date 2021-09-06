@@ -140,7 +140,7 @@ ENDM
 	map_const SILVER_CAVE_ROOM_2,                          15, 18 ; 75
 	map_const SILVER_CAVE_ROOM_3,                          10, 18 ; 76
 	map_const SILVER_CAVE_ITEM_ROOMS,                      10,  9 ; 77
-	map_const DARK_CAVE_VIOLET_ENTRANCE,                   20, 18 ; 78
+	map_const DARK_CAVE_ORMALI_ENTRANCE,                   20, 18 ; 78
 	map_const DARK_CAVE_BLACKTHORN_ENTRANCE,               15, 18 ; 79
 	map_const DRAGONS_DEN_1F,                               5,  9 ; 80
 	map_const DRAGONS_DEN_B1F,                             20, 18 ; 81
@@ -231,24 +231,27 @@ ENDM
 	map_const LAKE_OF_RAGE,                                20, 18 ;  6
 	endgroup
 
-	newgroup VIOLET                                               ; 10
+	newgroup ORMALI                                               ; 10
+	map_const ORMALI_OUTSKIRTS,                            40,  9
 	map_const ROUTE_32,                                    10, 45 ;  1
 	map_const ROUTE_35,                                    10, 18 ;  2
 	map_const ROUTE_36,                                    30,  9 ;  3
 	map_const ROUTE_37,                                    10,  9 ;  4
-	map_const VIOLET_CITY,                                 20, 18 ;  5
-	map_const VIOLET_MART,                                  6,  4 ;  6
-	map_const VIOLET_GYM,                                   5,  8 ;  7
+	map_const ORMALI_CITY,                                 30, 18 ;  5
+	map_const ORMALI_MART,                                  6,  4 ;  6
+	map_const ORMALI_GYM,                                  20, 18 ;  7
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
-	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
-	map_const VIOLET_POKECENTER_1F,                         5,  4 ; 10
-	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 11
+	map_const ORMALI_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
+	map_const ORMALI_POKECENTER_1F,                         5,  4 ; 10
+	map_const ORMALI_KYLES_HOUSE,                           4,  4 ; 11
 	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
 	map_const ROUTE_32_POKECENTER_1F,                       5,  4 ; 13
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 15
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 17
+	map_const ORMALI_BALL_MART,                             6,  6 ; 18
+	map_const ORMALI_BERRY_MART,                            6,  4 ; 19
 	endgroup
 
 	newgroup GOLDENROD                                            ; 11
@@ -453,20 +456,24 @@ ENDM
 	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
 	endgroup
 
-	newgroup NEW_BARK                                             ; 24
+	newgroup TOROMA                                               ; 24
 	map_const ROUTE_26,                                    10, 54 ;  1
 	map_const ROUTE_27,                                    40,  9 ;  2
 	map_const ROUTE_29,                                    30,  9 ;  3
-	map_const NEW_BARK_TOWN,                               10,  9 ;  4
+	map_const TOROMA_TOWN,                                 20,  9 ;  4
 	map_const ELMS_LAB,                                     5,  6 ;  5
 	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  6
 	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  7
 	map_const PLAYERS_NEIGHBORS_HOUSE,                      4,  4 ;  8
+	map_const TOROMA_MART,                                  6,  4
+	map_const TOROMA_POKECENTER_1F,                         5,  4
 	map_const ELMS_HOUSE,                                   4,  4 ;  9
 	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ; 10
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
+	map_const DEVILS_SHAFT_1F,                             10,  9
+	map_const DEVILS_SHAFT_B1F,                            10, 18
 	endgroup
 
 	newgroup SAFFRON                                              ; 25
@@ -498,7 +505,7 @@ ENDM
 	map_const CHERRYGROVE_EVOLUTION_SPEECH_HOUSE,           4,  4 ;  8
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
-	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
+	map_const ROUTE_31_ORMALI_GATE,                         5,  4 ; 11
 	endgroup
 
 NUM_MAP_GROUPS EQU const_value ; 26

@@ -110,7 +110,7 @@ FramesPointers:
 	dw LickitungFrames
 	dw KoffingFrames
 	dw WeezingFrames
-	dw RhyhornFrames
+	dw BaltoyFrames
 	dw RhydonFrames
 	dw ChanseyFrames
 	dw TangelaFrames
@@ -136,7 +136,7 @@ FramesPointers:
 	dw VaporeonFrames
 	dw JolteonFrames
 	dw FlareonFrames
-	dw PorygonFrames
+	dw LeafeonFrames
 	dw OmanyteFrames
 	dw OmastarFrames
 	dw KabutoFrames
@@ -224,7 +224,7 @@ FramesPointers:
 	dw CorsolaFrames
 	dw RemoraidFrames
 	dw OctilleryFrames
-	dw DelibirdFrames
+	dw MantykeFrames
 	dw MantineFrames
 	dw SkarmoryFrames
 	dw HoundourFrames

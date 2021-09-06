@@ -7,7 +7,7 @@ SometimesFleeMons:
 	db TANGELA
 	db MR__MIME
 	db EEVEE
-	db PORYGON
+	db LEAFEON
 	db DRATINI
 	db DRAGONAIR
 	db TOGETIC
@@ -23,7 +23,6 @@ OftenFleeMons:
 	db ZAPDOS
 	db MOLTRES
 	db QUAGSIRE
-	db DELIBIRD
 	db PHANPY
 	db TEDDIURSA
 	db -1

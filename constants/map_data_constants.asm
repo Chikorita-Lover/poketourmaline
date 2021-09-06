@@ -35,8 +35,11 @@ NUM_ENVIRONMENTS EQU const_value - 1
 	const PALETTE_DAY
 	const PALETTE_NITE
 	const PALETTE_MORN
-	const PALETTE_DARK
+	const PALETTE_EVE
 NUM_MAP_PALETTES EQU const_value
+
+IN_DARKNESS_F EQU 3
+IN_DARKNESS EQU 1 << IN_DARKNESS_F ; masked with a PALETTE_* constant
 
 ; FishGroups indexes (see data/wild/fish.asm)
 	const_def
@@ -88,9 +91,9 @@ NUM_FISHGROUPS EQU const_value - 1
 	const SPAWN_CINNABAR
 	const SPAWN_INDIGO
 ; johto
-	const SPAWN_NEW_BARK
+	const SPAWN_TOROMA
 	const SPAWN_CHERRYGROVE
-	const SPAWN_VIOLET
+	const SPAWN_ORMALI
 	const SPAWN_UNION_CAVE
 	const SPAWN_AZALEA
 	const SPAWN_CIANWOOD
@@ -110,9 +113,9 @@ SPAWN_N_A EQU -1
 	const_def
 ; johto
 JOHTO_FLYPOINT EQU const_value
-	const FLY_NEW_BARK
+	const FLY_TOROMA
 	const FLY_CHERRYGROVE
-	const FLY_VIOLET
+	const FLY_ORMALI
 	const FLY_AZALEA
 	const FLY_GOLDENROD
 	const FLY_ECRUTEAK

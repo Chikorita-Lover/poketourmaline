@@ -1,7 +1,7 @@
 LizGossipRandomScript:
 	random 10
 	ifequal 0, .RuinsOfAlph
-	ifequal 1, .Falkner
+	ifequal 1, .Stikulra
 	ifequal 2, .Earl
 	ifequal 3, .SurfPikachu
 	ifequal 4, .MooMooMilk
@@ -16,8 +16,8 @@ LizGossipRandomScript:
 	promptbutton
 	sjump PhoneScript_HangUpText_Female
 
-.Falkner:
-	farwritetext LizFalknerGossipText
+.Stikulra:
+	farwritetext LizStikulraGossipText
 	promptbutton
 	sjump PhoneScript_HangUpText_Female
 

@@ -12,6 +12,7 @@ AlphabeticalPokedexOrder:
 	db ARIADOS
 	db ARTICUNO
 	db AZUMARILL
+	db BALTOY
 	db BAYLEEF
 	db BEEDRILL
 	db BELLOSSOM
@@ -37,7 +38,6 @@ AlphabeticalPokedexOrder:
 	db CROCONAW
 	db CUBONE
 	db CYNDAQUIL
-	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
 	db DITTO
@@ -111,6 +111,7 @@ AlphabeticalPokedexOrder:
 	db LANTURN
 	db LAPRAS
 	db LARVITAR
+	db LEAFEON
 	db LEDIAN
 	db LEDYBA
 	db LICKITUNG
@@ -126,6 +127,7 @@ AlphabeticalPokedexOrder:
 	db MAGNETON
 	db MANKEY
 	db MANTINE
+	db MANTYKE
 	db MAREEP
 	db MARILL
 	db MAROWAK
@@ -171,7 +173,6 @@ AlphabeticalPokedexOrder:
 	db POLIWHIRL
 	db POLIWRATH
 	db PONYTA
-	db PORYGON
 	db PORYGON2
 	db PRIMEAPE
 	db PSYDUCK
@@ -186,7 +187,6 @@ AlphabeticalPokedexOrder:
 	db RATTATA
 	db REMORAID
 	db RHYDON
-	db RHYHORN
 	db SANDSHREW
 	db SANDSLASH
 	db SCIZOR

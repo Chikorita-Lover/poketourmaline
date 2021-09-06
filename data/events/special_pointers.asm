@@ -55,8 +55,8 @@ SpecialsPointers::
 	add_special UnownPuzzle
 	add_special SlotMachine
 	add_special CardFlip
-	add_special UnusedMemoryGame ; unused
-	add_special ClearBGPalettesBufferScreen ; unused
+	add_special PlayerGenderMenu
+	add_special SpawnPlayer
 	add_special FadeOutPalettes
 	add_special BattleTowerFade
 	add_special FadeBlackQuickly
@@ -75,8 +75,8 @@ SpecialsPointers::
 	add_special RestartMapMusic ; bank 0
 	add_special HealMachineAnim
 	add_special SurfStartStep
-	add_special FindPartyMonAboveLevel ; unused
-	add_special FindPartyMonAtLeastThatHappy ; unused
+	add_special LoadMapPals
+	add_special ApplyPals
 	add_special FindPartyMonThatSpecies
 	add_special FindPartyMonThatSpeciesYourTrainerID
 	add_special UnusedCheckUnusedTwoDayTimer ; unused

@@ -114,7 +114,7 @@
 	const SFX_PROTECT                     ; 6f
 	const SFX_SKETCH                      ; 70
 	const SFX_RAIN_DANCE                  ; 71
-	const SFX_AEROBLAST                   ; 72
+	const SFX_COSMIC_POWER                   ; 72
 	const SFX_SPARK                       ; 73
 	const SFX_CURSE                       ; 74
 	const SFX_RAGE                        ; 75

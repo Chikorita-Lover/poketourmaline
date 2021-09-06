@@ -134,10 +134,11 @@ PC_CheckPartyForPokemon:
 	const PLAYERSPCITEM_WITHDRAW_ITEM ; 0
 	const PLAYERSPCITEM_DEPOSIT_ITEM  ; 1
 	const PLAYERSPCITEM_TOSS_ITEM     ; 2
-	const PLAYERSPCITEM_MAIL_BOX      ; 3
-	const PLAYERSPCITEM_DECORATION    ; 4
-	const PLAYERSPCITEM_LOG_OFF       ; 5
-	const PLAYERSPCITEM_TURN_OFF      ; 6
+	const PLAYERSPCITEM_MAIL_BOX      ; 3 unused
+	const PLAYERSPCITEM_GENDER        ; 4
+	const PLAYERSPCITEM_DECORATION    ; 5
+	const PLAYERSPCITEM_LOG_OFF       ; 6
+	const PLAYERSPCITEM_TURN_OFF      ; 7
 
 BillsPC:
 	call PC_PlayChoosePCSound
@@ -276,7 +277,8 @@ PlayersPCMenuData:
 	dw PlayerWithdrawItemMenu, .WithdrawItem
 	dw PlayerDepositItemMenu,  .DepositItem
 	dw PlayerTossItemMenu,     .TossItem
-	dw PlayerMailBoxMenu,      .MailBox
+	dw PlayerMailBoxMenu,      .MailBox ; unused
+	dw PlayerGenderMenu,       .GenderMenu
 	dw PlayerDecorationMenu,   .Decoration
 	dw PlayerLogOffMenu,       .LogOff
 	dw PlayerLogOffMenu,       .TurnOff
@@ -284,8 +286,9 @@ PlayersPCMenuData:
 .WithdrawItem: db "WITHDRAW ITEM@"
 .DepositItem:  db "DEPOSIT ITEM@"
 .TossItem:     db "TOSS ITEM@"
-.MailBox:      db "MAIL BOX@"
+.MailBox:      db "MAIL BOX@" ; unused
 .Decoration:   db "DECORATION@"
+.GenderMenu:   db "CHANGE STYLE@"
 .TurnOff:      db "TURN OFF@"
 .LogOff:       db "LOG OFF@"
 
@@ -297,7 +300,7 @@ PlayersPCMenuData:
 	db PLAYERSPCITEM_WITHDRAW_ITEM
 	db PLAYERSPCITEM_DEPOSIT_ITEM
 	db PLAYERSPCITEM_TOSS_ITEM
-	db PLAYERSPCITEM_MAIL_BOX
+	db PLAYERSPCITEM_GENDER
 	db PLAYERSPCITEM_LOG_OFF
 	db -1 ; end
 
@@ -306,7 +309,7 @@ PlayersPCMenuData:
 	db PLAYERSPCITEM_WITHDRAW_ITEM
 	db PLAYERSPCITEM_DEPOSIT_ITEM
 	db PLAYERSPCITEM_TOSS_ITEM
-	db PLAYERSPCITEM_MAIL_BOX
+	db PLAYERSPCITEM_GENDER
 	db PLAYERSPCITEM_DECORATION
 	db PLAYERSPCITEM_TURN_OFF
 	db -1 ; end
@@ -400,6 +403,10 @@ PlayerWithdrawItemMenu:
 .PlayersPCNoRoomWithdrawText:
 	text_far _PlayersPCNoRoomWithdrawText
 	text_end
+
+PlayerGenderMenu:
+	farcall InitGender
+	ret
 
 PlayerTossItemMenu:
 	call LoadStandardMenuHeader

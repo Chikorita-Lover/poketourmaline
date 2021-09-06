@@ -26,6 +26,8 @@ Tilesets::
 	tileset TilesetLab
 	tileset TilesetFacility
 	tileset TilesetMart
+	tileset TilesetBerryMart
+	tileset TilesetOrmaliStadium
 	tileset TilesetMansion
 	tileset TilesetGameCorner
 	tileset TilesetEliteFourRoom

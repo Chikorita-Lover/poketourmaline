@@ -28,8 +28,8 @@ CHRIS EQU __trainer_class__
 NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
 KRIS EQU __trainer_class__
-	trainerclass FALKNER ; 1
-	const FALKNER1
+	trainerclass STIKULRA ; 1
+	const STIKULRA1
 
 	trainerclass WHITNEY ; 2
 	const WHITNEY1
@@ -53,21 +53,11 @@ KRIS EQU __trainer_class__
 	const CLAIR1
 
 	trainerclass RIVAL1 ; 9
-	const RIVAL1_1_CHIKORITA
-	const RIVAL1_1_CYNDAQUIL
-	const RIVAL1_1_TOTODILE
-	const RIVAL1_2_CHIKORITA
-	const RIVAL1_2_CYNDAQUIL
-	const RIVAL1_2_TOTODILE
-	const RIVAL1_3_CHIKORITA
-	const RIVAL1_3_CYNDAQUIL
-	const RIVAL1_3_TOTODILE
-	const RIVAL1_4_CHIKORITA
-	const RIVAL1_4_CYNDAQUIL
-	const RIVAL1_4_TOTODILE
-	const RIVAL1_5_CHIKORITA
-	const RIVAL1_5_CYNDAQUIL
-	const RIVAL1_5_TOTODILE
+	const STIKE_1
+	const STIKE_2
+	const STIKE_3
+	const STIKE_4
+	const STIKE_5
 
 	trainerclass POKEMON_PROF ; a
 

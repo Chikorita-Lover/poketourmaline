@@ -96,18 +96,18 @@ endc
 ENDM
 
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
-	connection west, Route29, ROUTE_29, 0
-	connection east, Route27, ROUTE_27, 0
+	map_attributes ToromaTown, TOROMA_TOWN, $05, SOUTH
+	connection south, Route29, ROUTE_29, 0
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5
 	connection east, Route29, ROUTE_29, 0
 
-	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
-	connection south, Route32, ROUTE_32, 0
-	connection west, Route36, ROUTE_36, 0
-	connection east, Route31, ROUTE_31, 9
+	map_attributes OrmaliOutskirts, ORMALI_OUTSKIRTS, $71, EAST
+	connection east, OrmaliCity, ORMALI_CITY, 8
+
+	map_attributes OrmaliCity, ORMALI_CITY, $71, WEST
+	connection west, OrmaliOutskirts, ORMALI_OUTSKIRTS, 8
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
 	connection west, Route34, ROUTE_34, -18
@@ -148,16 +148,14 @@ ENDM
 	connection west, Route27, ROUTE_27, 45
 
 	map_attributes Route27, ROUTE_27, $35, WEST | EAST
-	connection west, NewBarkTown, NEW_BARK_TOWN, 0
+	connection west, ToromaTown, TOROMA_TOWN, 0
 	connection east, Route26, ROUTE_26, -45
 
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
-	connection north, Route46, ROUTE_46, 10
-	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
-	connection east, NewBarkTown, NEW_BARK_TOWN, 0
+	map_attributes Route29, ROUTE_29, $71, NORTH
+	connection north, ToromaTown, TOROMA_TOWN, 0
 
 	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
@@ -165,10 +163,10 @@ ENDM
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10
-	connection west, VioletCity, VIOLET_CITY, -9
+	connection west, OrmaliCity, ORMALI_CITY, -9
 
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
-	connection north, VioletCity, VIOLET_CITY, 0
+	connection north, OrmaliCity, ORMALI_CITY, 0
 	connection south, Route33, ROUTE_33, 0
 
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST
@@ -186,7 +184,7 @@ ENDM
 	map_attributes Route36, ROUTE_36, $05, NORTH | SOUTH | EAST
 	connection north, Route37, ROUTE_37, 10
 	connection south, Route35, ROUTE_35, 0
-	connection east, VioletCity, VIOLET_CITY, 0
+	connection east, OrmaliCity, ORMALI_CITY, 0
 
 	map_attributes Route37, ROUTE_37, $05, NORTH | SOUTH
 	connection north, EcruteakCity, ECRUTEAK_CITY, -5
@@ -452,7 +450,7 @@ ENDM
 	map_attributes SilverCaveRoom2, SILVER_CAVE_ROOM_2, $09, 0
 	map_attributes SilverCaveRoom3, SILVER_CAVE_ROOM_3, $09, 0
 	map_attributes SilverCaveItemRooms, SILVER_CAVE_ITEM_ROOMS, $09, 0
-	map_attributes DarkCaveVioletEntrance, DARK_CAVE_VIOLET_ENTRANCE, $09, 0
+	map_attributes DarkCaveOrmaliEntrance, DARK_CAVE_ORMALI_ENTRANCE, $09, 0
 	map_attributes DarkCaveBlackthornEntrance, DARK_CAVE_BLACKTHORN_ENTRANCE, $09, 0
 	map_attributes DragonsDen1F, DRAGONS_DEN_1F, $09, 0
 	map_attributes DragonsDenB1F, DRAGONS_DEN_B1F, $71, 0
@@ -520,18 +518,20 @@ ENDM
 	map_attributes LakeOfRageMagikarpHouse, LAKE_OF_RAGE_MAGIKARP_HOUSE, $00, 0
 	map_attributes Route43MahoganyGate, ROUTE_43_MAHOGANY_GATE, $00, 0
 	map_attributes Route43Gate, ROUTE_43_GATE, $00, 0
-	map_attributes VioletMart, VIOLET_MART, $00, 0
-	map_attributes VioletGym, VIOLET_GYM, $00, 0
+	map_attributes OrmaliMart, ORMALI_MART, $00, 0
+	map_attributes OrmaliGym, ORMALI_GYM, $00, 0
 	map_attributes EarlsPokemonAcademy, EARLS_POKEMON_ACADEMY, $00, 0
-	map_attributes VioletNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
-	map_attributes VioletPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
-	map_attributes VioletKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
+	map_attributes OrmaliNicknameSpeechHouse, ORMALI_NICKNAME_SPEECH_HOUSE, $00, 0
+	map_attributes OrmaliPokecenter1F, ORMALI_POKECENTER_1F, $00, 0
+	map_attributes OrmaliKylesHouse, ORMALI_KYLES_HOUSE, $00, 0
 	map_attributes Route32RuinsOfAlphGate, ROUTE_32_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes Route32Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
 	map_attributes Route35GoldenrodGate, ROUTE_35_GOLDENROD_GATE, $00, 0
 	map_attributes Route35NationalParkGate, ROUTE_35_NATIONAL_PARK_GATE, $00, 0
 	map_attributes Route36RuinsOfAlphGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes Route36NationalParkGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
+	map_attributes OrmaliBallMart, ORMALI_BALL_MART, $00, 0
+	map_attributes OrmaliBerryMart, ORMALI_BERRY_MART, $00, 0
 	map_attributes GoldenrodGym, GOLDENROD_GYM, $00, 0
 	map_attributes GoldenrodBikeShop, GOLDENROD_BIKE_SHOP, $00, 0
 	map_attributes GoldenrodHappinessRater, GOLDENROD_HAPPINESS_RATER, $00, 0
@@ -668,6 +668,8 @@ ENDM
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
 	map_attributes PlayersNeighborsHouse, PLAYERS_NEIGHBORS_HOUSE, $00, 0
+	map_attributes ToromaMart, TOROMA_MART, $00, 0
+	map_attributes ToromaPokecenter1F, TOROMA_POKECENTER_1F, $00, 0
 	map_attributes ElmsHouse, ELMS_HOUSE, $00, 0
 	map_attributes Route26HealHouse, ROUTE_26_HEAL_HOUSE, $00, 0
 	map_attributes DayOfWeekSiblingsHouse, DAY_OF_WEEK_SIBLINGS_HOUSE, $00, 0
@@ -693,4 +695,6 @@ ENDM
 	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
-	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes Route31OrmaliGate, ROUTE_31_ORMALI_GATE, $00, 0
+	map_attributes DevilsShaft1F, DEVILS_SHAFT_1F, $09, 0
+	map_attributes DevilsShaftB1F, DEVILS_SHAFT_B1F, $09, 0

@@ -1160,7 +1160,7 @@ BattleCommand_Critical:
 	cp FARFETCH_D
 	jr nz, .FocusEnergy
 	ld a, [hl]
-	cp STICK
+	cp LEEK
 	jr nz, .FocusEnergy
 
 ; +2 critical level
@@ -1406,20 +1406,15 @@ BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
-	jr z, CheckTypeMatchup
+	jr z, .get_type
 	ld hl, wBattleMonType1
+.get_type
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar ; preserves hl, de, and bc
 CheckTypeMatchup:
-; There is an incorrect assumption about this function made in the AI related code: when
-; the AI calls CheckTypeMatchup (not BattleCheckTypeMatchup), it assumes that placing the
-; offensive type in a will make this function do the right thing. Since a is overwritten,
-; this assumption is incorrect. A simple fix would be to load the move type for the
-; current move into a in BattleCheckTypeMatchup, before falling through, which is
-; consistent with how the rest of the code assumes this code works like.
 	push hl
 	push de
 	push bc
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar
 	ld d, a
 	ld b, [hl]
 	inc hl
@@ -2562,6 +2557,90 @@ DittoMetalPowder:
 	rr c
 	ret
 
+UnevolvedEviolite:
+; get the defender's species
+	ld a, MON_SPECIES
+	call BattlePartyAttr
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [hl]
+	jr nz, .got_species
+	ld a, [wTempEnemyMonSpecies]
+
+.got_species
+; check if the defender has any evolutions
+; hl := EvosAttacksPointers + (species - 1) * 2
+	dec a
+	push hl
+	push bc
+	ld c, a
+	ld b, 0
+	ld hl, EvosAttacksPointers
+	add hl, bc
+	add hl, bc
+; hl := the species' entry from EvosAttacksPointers
+	ld a, BANK(EvosAttacksPointers)
+	call GetFarWord
+; a := the first byte of the species' *EvosAttacks data
+	ld a, BANK("Evolutions and Attacks")
+	call GetFarByte
+; if a == 0, there are no evolutions, so don't boost stats
+	and a
+	pop bc
+	pop hl
+	ret z
+
+; check if the defender's item is Eviolite
+	push bc
+	call GetOpponentItem
+	ld a, b
+	cp HELD_EVIOLITE
+	pop bc
+	ret nz
+
+; boost the relevant defense stat in bc by 50%
+	ld a, c
+	srl a
+	add c
+	ld c, a
+	ret nc
+
+	srl b
+	ld a, b
+	and a
+	jr nz, .done
+	inc b
+.done
+	scf
+	rr c
+	ret
+
+KebiaBerry:
+	; cancel if opponent's move is not correct type
+	call CheckTypeMatchup
+	ld a, MOVE_TYPE
+	cp POISON
+	ret nz
+
+	; cancel if we're not holding the needed berry
+	push bc
+	call GetOpponentItem
+	ld a, [hl]
+	cp KEBIA_BERRY
+	pop bc
+	ret nz
+
+	; cut damage in half and make sure it's at least 1
+	srl b
+	jr nz, .done
+	set 0, b
+.done
+;	push bc
+;	ld hl, KebiaBerryText
+;	jp StdBattleTextbox
+;	pop bc
+	ret
+
 BattleCommand_DamageStats:
 ; damagestats
 
@@ -2647,7 +2726,9 @@ PlayerAttackDamage:
 
 	ld a, [wBattleMonLevel]
 	ld e, a
+	call UnevolvedEviolite
 	call DittoMetalPowder
+	call KebiaBerry
 
 	ld a, 1
 	and a
@@ -2886,7 +2967,9 @@ EnemyAttackDamage:
 
 	ld a, [wEnemyMonLevel]
 	ld e, a
+	call UnevolvedEviolite
 	call DittoMetalPowder
+	call KebiaBerry
 
 	ld a, 1
 	and a
@@ -3877,6 +3960,7 @@ PoisonOpponent:
 	set PSN, [hl]
 	jp UpdateOpponentInParty
 
+BattleCommand_DrainingKiss:
 BattleCommand_DrainTarget:
 ; draintarget
 	call SapHealth

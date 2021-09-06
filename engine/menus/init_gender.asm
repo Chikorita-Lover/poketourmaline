@@ -26,7 +26,7 @@ InitGender:
 	call LoadGenderScreenLightBlueTile
 	call WaitBGMap2
 	call SetPalettes
-	ld hl, AreYouABoyOrAreYouAGirlText
+	ld hl, WhichGenderDoYouPreferText
 	call PrintText
 	ld hl, .MenuHeader
 	call LoadMenuHeader
@@ -42,18 +42,18 @@ InitGender:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 6, 4, 12, 9
+	menu_coords 3, 4, 15, 9
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP | STATICMENU_DISABLE_B ; flags
 	db 2 ; items
-	db "Boy@"
-	db "Girl@"
+	db "MASCULINE@"
+	db "FEMININE@"
 
-AreYouABoyOrAreYouAGirlText:
-	text_far _AreYouABoyOrAreYouAGirlText
+WhichGenderDoYouPreferText:
+	text_far _WhichGenderDoYouPreferText
 	text_end
 
 InitGenderScreen:

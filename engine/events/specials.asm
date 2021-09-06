@@ -291,7 +291,7 @@ StoreSwarmMapIndices::
 	ld a, c
 	and a
 	jr nz, .yanma
-; swarm dark cave violet entrance
+; swarm dark cave ormali entrance
 	ld a, d
 	ld [wDunsparceMapGroup], a
 	ld a, e

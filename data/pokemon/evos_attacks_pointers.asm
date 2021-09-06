@@ -112,7 +112,7 @@ EvosAttacksPointers::
 	dw LickitungEvosAttacks
 	dw KoffingEvosAttacks
 	dw WeezingEvosAttacks
-	dw RhyhornEvosAttacks
+	dw BaltoyEvosAttacks
 	dw RhydonEvosAttacks
 	dw ChanseyEvosAttacks
 	dw TangelaEvosAttacks
@@ -138,7 +138,7 @@ EvosAttacksPointers::
 	dw VaporeonEvosAttacks
 	dw JolteonEvosAttacks
 	dw FlareonEvosAttacks
-	dw PorygonEvosAttacks
+	dw LeafeonEvosAttacks
 	dw OmanyteEvosAttacks
 	dw OmastarEvosAttacks
 	dw KabutoEvosAttacks
@@ -226,7 +226,7 @@ EvosAttacksPointers::
 	dw CorsolaEvosAttacks
 	dw RemoraidEvosAttacks
 	dw OctilleryEvosAttacks
-	dw DelibirdEvosAttacks
+	dw MantykeEvosAttacks
 	dw MantineEvosAttacks
 	dw SkarmoryEvosAttacks
 	dw HoundourEvosAttacks

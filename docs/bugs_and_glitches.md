@@ -969,7 +969,7 @@ This can occur if your party and current PC box are both full when you start the
 
 ### Moon Ball does not boost catch rate
 
-**Fix:** Edit `MoonBallMultiplier` in [engine/items/item_effects.asm](https://github.com/pret/pokecrystal/blob/master/engine/items/item_effects.asm):
+**Fix:** Edit `DuskBallMultiplier` in [engine/items/item_effects.asm](https://github.com/pret/pokecrystal/blob/master/engine/items/item_effects.asm):
 
 ```diff
 -; Moon Stone's constant from Pokémon Red is used.

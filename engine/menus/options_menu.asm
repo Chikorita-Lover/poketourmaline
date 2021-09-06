@@ -76,18 +76,18 @@ _Option:
 StringOptions:
 	db "TEXT SPEED<LF>"
 	db "        :<LF>"
-	db "BATTLE SCENE<LF>"
+	db "ANIMATE BATTLES<LF>"
 	db "        :<LF>"
 	db "BATTLE STYLE<LF>"
 	db "        :<LF>"
 	db "SOUND<LF>"
 	db "        :<LF>"
-	db "PRINT<LF>"
-	db "        :<LF>"
 	db "MENU ACCOUNT<LF>"
 	db "        :<LF>"
 	db "FRAME<LF>"
 	db "        :TYPE<LF>"
+	db ""
+	db ""
 	db "CANCEL@"
 
 GetOptionPointer:

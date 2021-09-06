@@ -223,8 +223,8 @@ PokemonPicPointers::
 	dba_pic KoffingBackpic
 	dba_pic WeezingFrontpic
 	dba_pic WeezingBackpic
-	dba_pic RhyhornFrontpic
-	dba_pic RhyhornBackpic
+	dba_pic BaltoyFrontpic
+	dba_pic BaltoyBackpic
 	dba_pic RhydonFrontpic
 	dba_pic RhydonBackpic
 	dba_pic ChanseyFrontpic
@@ -275,8 +275,8 @@ PokemonPicPointers::
 	dba_pic JolteonBackpic
 	dba_pic FlareonFrontpic
 	dba_pic FlareonBackpic
-	dba_pic PorygonFrontpic
-	dba_pic PorygonBackpic
+	dba_pic LeafeonFrontpic
+	dba_pic LeafeonBackpic
 	dba_pic OmanyteFrontpic
 	dba_pic OmanyteBackpic
 	dba_pic OmastarFrontpic
@@ -454,8 +454,8 @@ PokemonPicPointers::
 	dba_pic RemoraidBackpic
 	dba_pic OctilleryFrontpic
 	dba_pic OctilleryBackpic
-	dba_pic DelibirdFrontpic
-	dba_pic DelibirdBackpic
+	dba_pic MantykeFrontpic
+	dba_pic MantykeBackpic
 	dba_pic MantineFrontpic
 	dba_pic MantineBackpic
 	dba_pic SkarmoryFrontpic

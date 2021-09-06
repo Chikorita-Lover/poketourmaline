@@ -115,7 +115,7 @@ SFX:
 	dba Sfx_Protect
 	dba Sfx_Sketch
 	dba Sfx_RainDance
-	dba Sfx_Aeroblast
+	dba Sfx_CosmicPower
 	dba Sfx_Spark
 	dba Sfx_Curse
 	dba Sfx_Rage

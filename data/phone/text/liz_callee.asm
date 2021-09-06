@@ -71,7 +71,7 @@ LizGenericText:
 	text " to the"
 
 	para "#MON CENTER in"
-	line "VIOLET every day,"
+	line "ORMALI every day,"
 
 	para "so it's doing just"
 	line "fantastic!"

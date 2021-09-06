@@ -65,7 +65,7 @@ CeladonDeptStore3FGameboyKid1Text:
 
 CeladonDeptStore3FGameboyKid2Text:
 	text "Yeah! I'm finally"
-	line "getting a PORYGON!"
+	line "getting a LEAFEON!"
 
 	para "I'm no good at the"
 	line "slots, so I could"
@@ -75,7 +75,7 @@ CeladonDeptStore3FGameboyKid2Text:
 
 	para "…Huh?"
 
-	para "The traded PORYGON"
+	para "The traded LEAFEON"
 	line "turned into a dif-"
 	cont "ferent #MON!"
 	done

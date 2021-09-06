@@ -29,7 +29,7 @@ PlayersNeighborsHouseRadioScript:
 	pause 45
 	writetext PlayerNeighborRadioText3
 	pause 45
-	musicfadeout MUSIC_NEW_BARK_TOWN, 16
+	musicfadeout MUSIC_TOROMA_TOWN, 16
 	writetext PlayerNeighborRadioText4
 	pause 45
 	closetext
@@ -100,8 +100,8 @@ PlayersNeighborsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, NEW_BARK_TOWN, 3
-	warp_event  3,  7, NEW_BARK_TOWN, 3
+	warp_event  2,  7, TOROMA_TOWN, 3
+	warp_event  3,  7, TOROMA_TOWN, 3
 
 	def_coord_events
 

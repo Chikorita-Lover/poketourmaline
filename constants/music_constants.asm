@@ -46,7 +46,7 @@
 	const MUSIC_JOHTO_TRAINER_BATTLE         ; 2a
 	const MUSIC_ROUTE_30                     ; 2b
 	const MUSIC_ECRUTEAK_CITY                ; 2c
-	const MUSIC_VIOLET_CITY                  ; 2d
+	const MUSIC_ORMALI_CITY                  ; 2d
 	const MUSIC_JOHTO_GYM_LEADER_BATTLE      ; 2e
 	const MUSIC_CHAMPION_BATTLE              ; 2f
 	const MUSIC_RIVAL_BATTLE                 ; 30
@@ -61,7 +61,7 @@
 	const MUSIC_ROCKET_ENCOUNTER             ; 39
 	const MUSIC_POKEMANIAC_ENCOUNTER         ; 3a
 	const MUSIC_SAGE_ENCOUNTER               ; 3b
-	const MUSIC_NEW_BARK_TOWN                ; 3c
+	const MUSIC_TOROMA_TOWN                  ; 3c
 	const MUSIC_GOLDENROD_CITY               ; 3d
 	const MUSIC_VERMILION_CITY               ; 3e
 	const MUSIC_POKEMON_CHANNEL              ; 3f

@@ -15,6 +15,8 @@ SweetScentFromMenu:
 	iffalse SweetScentNothing
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .BugCatchingContest
+	playsound SFX_SWEET_SCENT_2
+	waitsfx
 	randomwildmon
 	startbattle
 	reloadmapafterbattle

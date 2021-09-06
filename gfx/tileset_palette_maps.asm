@@ -42,6 +42,12 @@ INCLUDE "gfx/tilesets/facility_palette_map.asm"
 TilesetMartPalMap:
 INCLUDE "gfx/tilesets/mart_palette_map.asm"
 
+TilesetBerryMartPalMap:
+INCLUDE "gfx/tilesets/berry_mart_palette_map.asm"
+
+TilesetOrmaliStadiumPalMap:
+INCLUDE "gfx/tilesets/ormali_stadium_palette_map.asm"
+
 TilesetMansionPalMap:
 INCLUDE "gfx/tilesets/mansion_palette_map.asm"
 

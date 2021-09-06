@@ -387,6 +387,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_DRAINING_KISS,    AI_Smart_LeechHit
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1667,7 +1668,7 @@ AI_Smart_Thief:
 AI_Smart_Conversion2:
 	ld a, [wLastPlayerMove]
 	and a
-	jr nz, .discourage ; should be jr z
+	jr z, .discourage
 
 	push hl
 	dec a
@@ -1743,9 +1744,8 @@ AI_Smart_MeanLook:
 	pop hl
 	jp z, AIDiscourageMove
 
-; 80% chance to greatly encourage this move if the enemy is badly poisoned (buggy).
-; Should check wPlayerSubStatus5 instead.
-	ld a, [wEnemySubStatus5]
+; 80% chance to greatly encourage this move if the player is badly poisoned
+	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TOXIC, a
 	jr nz, .encourage
 

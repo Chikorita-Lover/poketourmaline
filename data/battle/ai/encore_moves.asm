@@ -11,7 +11,7 @@ EncoreMoves:
 	db GROWTH
 	db POISONPOWDER
 	db STRING_SHOT
-	db MEDITATE
+	db POISON_JAB
 	db AGILITY
 	db TELEPORT
 	db SCREECH
@@ -28,7 +28,7 @@ EncoreMoves:
 	db SPIDER_WEB
 	db MIND_READER
 	db FLAME_WHEEL
-	db AEROBLAST
+	db COSMIC_POWER
 	db COTTON_SPORE
 	db POWDER_SNOW
 	db -1 ; end

@@ -721,10 +721,10 @@ JohtoGrassWildMons:
 	db 22, GOLBAT
 	db 22, GOLBAT
 	; nite
-	db 21, DELIBIRD
+	db 22, ZUBAT
 	db 22, ZUBAT
 	db 22, GOLBAT
-	db 23, DELIBIRD
+	db 23, ZUBAT
 	db 24, GOLBAT
 	db 22, GOLBAT
 	db 22, GOLBAT
@@ -749,10 +749,10 @@ JohtoGrassWildMons:
 	db 23, GOLBAT
 	db 22, JYNX
 	; nite
-	db 22, DELIBIRD
-	db 23, ZUBAT
+	db 22, ZUBAT
+	db 22, ZUBAT
 	db 23, GOLBAT
-	db 24, DELIBIRD
+	db 23, ZUBAT
 	db 25, GOLBAT
 	db 23, GOLBAT
 	db 22, SNEASEL
@@ -777,10 +777,10 @@ JohtoGrassWildMons:
 	db 22, JYNX
 	db 24, JYNX
 	; nite
-	db 23, DELIBIRD
+	db 24, ZUBAT
 	db 24, ZUBAT
 	db 24, GOLBAT
-	db 25, DELIBIRD
+	db 25, ZUBAT
 	db 26, GOLBAT
 	db 22, SNEASEL
 	db 24, SNEASEL
@@ -805,10 +805,10 @@ JohtoGrassWildMons:
 	db 22, JYNX
 	db 24, JYNX
 	; nite
-	db 23, DELIBIRD
+	db 23, ZUBAT
 	db 24, ZUBAT
 	db 24, GOLBAT
-	db 25, DELIBIRD
+	db 25, ZUBAT
 	db 26, GOLBAT
 	db 22, SNEASEL
 	db 24, SNEASEL
@@ -833,10 +833,10 @@ JohtoGrassWildMons:
 	db 24, JYNX
 	db 26, JYNX
 	; nite
-	db 24, DELIBIRD
+	db 24, ZUBAT
 	db 25, ZUBAT
 	db 25, GOLBAT
-	db 26, DELIBIRD
+	db 25, ZUBAT
 	db 22, SNEASEL
 	db 24, SNEASEL
 	db 26, SNEASEL
@@ -1178,7 +1178,7 @@ JohtoGrassWildMons:
 	db 52, PARASECT
 	end_grass_wildmons
 
-	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
+	def_grass_wildmons DARK_CAVE_ORMALI_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 3, GEODUDE
@@ -1237,29 +1237,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 2, PIDGEY
-	db 2, SENTRET
-	db 3, PIDGEY
-	db 3, SENTRET
-	db 2, RATTATA
-	db 3, HOPPIP
-	db 3, HOPPIP
+	db 3, SPEAROW
+	db 4, SENTRET
+	db 3, SPEAROW
+	db 4, EKANS
+	db 3, EKANS
+	db 4, LEDYBA
+	db 4, LEDYBA
 	; day
-	db 2, PIDGEY
-	db 2, SENTRET
-	db 3, PIDGEY
-	db 3, SENTRET
-	db 2, RATTATA
-	db 3, HOPPIP
-	db 3, HOPPIP
+	db 3, SPEAROW
+	db 4, SENTRET
+	db 3, SPEAROW
+	db 4, EKANS
+	db 3, EKANS
+	db 4, JIGGLYPUFF
+	db 4, JIGGLYPUFF
 	; nite
-	db 2, HOOTHOOT
-	db 2, RATTATA
 	db 3, HOOTHOOT
-	db 3, RATTATA
-	db 2, RATTATA
-	db 3, HOOTHOOT
-	db 3, HOOTHOOT
+	db 3, SPEAROW
+	db 4, HOOTHOOT
+	db 4, EKANS
+	db 3, EKANS
+	db 4, JIGGLYPUFF
+	db 4, JIGGLYPUFF
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_30
@@ -1708,6 +1708,118 @@ JohtoGrassWildMons:
 	db 40, GOLBAT
 	db 44, GOLBAT
 	db 44, GOLBAT
+	end_grass_wildmons
+
+	def_grass_wildmons DEVILS_SHAFT_1F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 3, BALTOY
+	db 3, SPINARAK
+	db 4, BALTOY
+	db 4, SPINARAK
+	db 3, STARYU
+	db 4, STARYU
+	db 5, CLEFAIRY
+	; day
+	db 3, BALTOY
+	db 3, SPINARAK
+	db 4, BALTOY
+	db 4, SPINARAK
+	db 3, STARYU
+	db 4, STARYU
+	db 5, CLEFAIRY
+	; nite
+	db 3, BALTOY
+	db 3, SPINARAK
+	db 4, BALTOY
+	db 4, SPINARAK
+	db 3, STARYU
+	db 4, STARYU
+	db 5, CLEFAIRY
+	end_grass_wildmons
+
+	def_grass_wildmons DEVILS_SHAFT_B1F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 4, BALTOY
+	db 4, SPINARAK
+	db 5, BALTOY
+	db 5, SPINARAK
+	db 4, STARYU
+	db 5, STARYU
+	db 6, CLEFAIRY
+	; day
+	db 4, BALTOY
+	db 4, SPINARAK
+	db 5, BALTOY
+	db 5, SPINARAK
+	db 4, STARYU
+	db 5, STARYU
+	db 6, CLEFAIRY
+	; nite
+	db 4, BALTOY
+	db 4, SPINARAK
+	db 5, BALTOY
+	db 5, SPINARAK
+	db 4, STARYU
+	db 5, STARYU
+	db 6, CLEFAIRY
+	end_grass_wildmons
+
+	def_grass_wildmons ORMALI_OUTSKIRTS
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 10, NIDORAN_F
+	db 10, NIDORAN_M
+	db 10, SANDSHREW
+	db 11, SANDSHREW
+	db 10, HYPNO
+	db 11, HYPNO
+	db 12, HYPNO
+	; day
+	db 10, NIDORAN_F
+	db 10, NIDORAN_M
+	db 10, SANDSHREW
+	db 11, SANDSHREW
+	db 10, HYPNO
+	db 11, HYPNO
+	db 12, HYPNO
+	; nite
+	db 10, NIDORAN_F
+	db 10, NIDORAN_M
+	db 10, ODDISH
+	db 11, ODDISH
+	db 10, GASTLY
+	db 11, GASTLY
+	db 12, GASTLY
+	end_grass_wildmons
+	
+	def_grass_wildmons ORMALI_CITY
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 10, SPINARAK
+	db 10, SPINARAK
+	db 11, SPINARAK
+	db 11, PHANPY
+	db 10, PHANPY
+	db 11, ODDISH
+	db 12, ODDISH
+	; day
+	db 10, SPINARAK
+	db 10, SPINARAK
+	db 11, SPINARAK
+	db 11, PHANPY
+	db 10, PHANPY
+	db 10, PHANPY
+	db 11, PHANPY
+	; nite
+	db 10, ODDISH
+	db 10, ODDISH
+	db 11, ODDISH
+	db 11, SPINARAK
+	db 10, SPINARAK
+	db 11, GASTLY
+	db 12, GASTLY
 	end_grass_wildmons
 
 	db -1 ; end

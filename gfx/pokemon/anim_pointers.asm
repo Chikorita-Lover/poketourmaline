@@ -110,7 +110,7 @@ AnimationPointers:
 	dw LickitungAnimation
 	dw KoffingAnimation
 	dw WeezingAnimation
-	dw RhyhornAnimation
+	dw BaltoyAnimation
 	dw RhydonAnimation
 	dw ChanseyAnimation
 	dw TangelaAnimation
@@ -136,7 +136,7 @@ AnimationPointers:
 	dw VaporeonAnimation
 	dw JolteonAnimation
 	dw FlareonAnimation
-	dw PorygonAnimation
+	dw LeafeonAnimation
 	dw OmanyteAnimation
 	dw OmastarAnimation
 	dw KabutoAnimation
@@ -224,7 +224,7 @@ AnimationPointers:
 	dw CorsolaAnimation
 	dw RemoraidAnimation
 	dw OctilleryAnimation
-	dw DelibirdAnimation
+	dw MantykeAnimation
 	dw MantineAnimation
 	dw SkarmoryAnimation
 	dw HoundourAnimation

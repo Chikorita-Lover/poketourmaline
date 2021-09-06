@@ -412,7 +412,7 @@ TeacherShirleyBeatenText:
 TeacherShirleyAfterBattleText:
 	text "We're on a field"
 	line "trip to the RUINS"
-	cont "outside VIOLET."
+	cont "outside ORMALI."
 	done
 
 SchoolboyNateSeenText:

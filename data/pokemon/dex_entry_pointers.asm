@@ -111,7 +111,7 @@ PokedexDataPointerTable:
 	dw LickitungPokedexEntry
 	dw KoffingPokedexEntry
 	dw WeezingPokedexEntry
-	dw RhyhornPokedexEntry
+	dw BaltoyPokedexEntry
 	dw RhydonPokedexEntry
 	dw ChanseyPokedexEntry
 	dw TangelaPokedexEntry
@@ -137,7 +137,7 @@ PokedexDataPointerTable:
 	dw VaporeonPokedexEntry
 	dw JolteonPokedexEntry
 	dw FlareonPokedexEntry
-	dw PorygonPokedexEntry
+	dw LeafeonPokedexEntry
 	dw OmanytePokedexEntry
 	dw OmastarPokedexEntry
 	dw KabutoPokedexEntry
@@ -225,7 +225,7 @@ PokedexDataPointerTable:
 	dw CorsolaPokedexEntry
 	dw RemoraidPokedexEntry
 	dw OctilleryPokedexEntry
-	dw DelibirdPokedexEntry
+	dw MantykePokedexEntry
 	dw MantinePokedexEntry
 	dw SkarmoryPokedexEntry
 	dw HoundourPokedexEntry

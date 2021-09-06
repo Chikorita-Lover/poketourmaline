@@ -30,7 +30,7 @@
 	const FIRE_STONE   ; 16
 	const THUNDERSTONE ; 17
 	const WATER_STONE  ; 18
-	const ITEM_19      ; 19
+	const EVIOLITE     ; 19
 	const HP_UP        ; 1a
 	const PROTEIN      ; 1b
 	const IRON         ; 1c
@@ -50,18 +50,18 @@
 	const SUPER_REPEL  ; 2a
 	const MAX_REPEL    ; 2b
 	const DIRE_HIT     ; 2c
-	const ITEM_2D      ; 2d
+	const JABOCA_BERRY ; 2d
 	const FRESH_WATER  ; 2e
 	const SODA_POP     ; 2f
 	const LEMONADE     ; 30
 	const X_ATTACK     ; 31
-	const ITEM_32      ; 32
+	const APICOT_BERRY ; 32
 	const X_DEFEND     ; 33
 	const X_SPEED      ; 34
 	const X_SPECIAL    ; 35
 	const COIN_CASE    ; 36
 	const ITEMFINDER   ; 37
-	const POKE_FLUTE   ; 38
+	const KEBIA_BERRY  ; 38
 	const EXP_SHARE    ; 39
 	const OLD_ROD      ; 3a
 	const GOOD_ROD     ; 3b
@@ -79,13 +79,13 @@
 	const SILVER_WING  ; 47
 	const MOOMOO_MILK  ; 48
 	const QUICK_CLAW   ; 49
-	const PSNCUREBERRY ; 4a
+	const PECHA_BERRY ; 4a
 	const GOLD_LEAF    ; 4b
 	const SOFT_SAND    ; 4c
 	const SHARP_BEAK   ; 4d
-	const PRZCUREBERRY ; 4e
-	const BURNT_BERRY  ; 4f
-	const ICE_BERRY    ; 50
+	const CHERI_BERRY ; 4e
+	const ASPEAR_BERRY  ; 4f
+	const RAWST_BERRY    ; 50
 	const POISON_BARB  ; 51
 	const KINGS_ROCK   ; 52
 	const BITTER_BERRY ; 53
@@ -110,11 +110,11 @@
 	const BLACKGLASSES ; 66
 	const SLOWPOKETAIL ; 67
 	const PINK_BOW     ; 68
-	const STICK        ; 69
+	const LEEK         ; 69
 	const SMOKE_BALL   ; 6a
 	const NEVERMELTICE ; 6b
 	const MAGNET       ; 6c
-	const MIRACLEBERRY ; 6d
+	const LUM_BERRY ; 6d
 	const PEARL        ; 6e
 	const BIG_PEARL    ; 6f
 	const EVERSTONE    ; 70
@@ -155,7 +155,7 @@
 	const ITEM_93      ; 93
 	const ITEM_94      ; 94
 	const ITEM_95      ; 95
-	const MYSTERYBERRY ; 96
+	const LEPPA_BERRY ; 96
 	const DRAGON_SCALE ; 97
 	const BERSERK_GENE ; 98
 	const ITEM_99      ; 99
@@ -170,7 +170,7 @@
 	const ITEM_A2      ; a2
 	const LIGHT_BALL   ; a3
 	const FRIEND_BALL  ; a4
-	const MOON_BALL    ; a5
+	const DUSK_BALL    ; a5
 	const LOVE_BALL    ; a6
 	const NORMAL_BOX   ; a7
 	const GORGEOUS_BOX ; a8

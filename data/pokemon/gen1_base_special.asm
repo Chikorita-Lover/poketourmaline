@@ -112,7 +112,7 @@ KantoMonSpecials:
 	db  60 ; LICKITUNG
 	db  60 ; KOFFING
 	db  85 ; WEEZING
-	db  30 ; RHYHORN
+	db  30 ; BALTOY
 	db  45 ; RHYDON
 	db 105 ; CHANSEY
 	db 100 ; TANGELA
@@ -138,7 +138,7 @@ KantoMonSpecials:
 	db 110 ; VAPOREON
 	db 110 ; JOLTEON
 	db 110 ; FLAREON
-	db  75 ; PORYGON
+	db  75 ; LEAFEON
 	db  90 ; OMANYTE
 	db 115 ; OMASTAR
 	db  45 ; KABUTO

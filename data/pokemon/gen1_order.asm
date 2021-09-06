@@ -17,7 +17,7 @@ Pokered_MonIndices:
 	db NIDORAN_F
 	db NIDOQUEEN
 	db CUBONE
-	db RHYHORN
+	db BALTOY
 	db LAPRAS
 	db ARCANINE
 	db MEW
@@ -85,7 +85,7 @@ Pokered_MonIndices:
 	db NINETALES
 	db PIKACHU
 	db RAICHU
-	db DELIBIRD ; MISSINGNO.
+	db MANTYKE ; MISSINGNO.
 	db MANTINE ; MISSINGNO.
 	db DRATINI
 	db DRAGONAIR
@@ -169,7 +169,7 @@ Pokered_MonIndices:
 	db NIDORINO
 	db NIDORINA
 	db GEODUDE
-	db PORYGON
+	db LEAFEON
 	db AERODACTYL
 	db RAIKOU ; MISSINGNO.
 	db MAGNEMITE

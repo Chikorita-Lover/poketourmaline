@@ -254,7 +254,7 @@ Route46_MapEvents:
 	def_warp_events
 	warp_event  7, 33, ROUTE_29_ROUTE_46_GATE, 1
 	warp_event  8, 33, ROUTE_29_ROUTE_46_GATE, 2
-	warp_event 14,  5, DARK_CAVE_VIOLET_ENTRANCE, 3
+	warp_event 14,  5, DARK_CAVE_ORMALI_ENTRANCE, 3
 
 	def_coord_events
 

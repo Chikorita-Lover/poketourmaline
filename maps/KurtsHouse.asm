@@ -79,7 +79,7 @@ Kurt1:
 	checkevent EVENT_GAVE_KURT_BLU_APRICORN
 	iftrue .GiveLureBall
 	checkevent EVENT_GAVE_KURT_YLW_APRICORN
-	iftrue .GiveMoonBall
+	iftrue .GiveDuskBall
 	checkevent EVENT_GAVE_KURT_GRN_APRICORN
 	iftrue .GiveFriendBall
 	checkevent EVENT_GAVE_KURT_WHT_APRICORN
@@ -209,12 +209,12 @@ Kurt1:
 	clearevent EVENT_GAVE_KURT_BLU_APRICORN
 	sjump ._ThatTurnedOutGreat
 
-.GiveMoonBall:
+.GiveDuskBall:
 	checkflag ENGINE_KURT_MAKING_BALLS
 	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
-	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar DUSK_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_YLW_APRICORN
 	sjump ._ThatTurnedOutGreat

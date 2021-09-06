@@ -110,7 +110,7 @@ AnimationIdlePointers:
 	dw LickitungAnimationIdle
 	dw KoffingAnimationIdle
 	dw WeezingAnimationIdle
-	dw RhyhornAnimationIdle
+	dw BaltoyAnimationIdle
 	dw RhydonAnimationIdle
 	dw ChanseyAnimationIdle
 	dw TangelaAnimationIdle
@@ -136,7 +136,7 @@ AnimationIdlePointers:
 	dw VaporeonAnimationIdle
 	dw JolteonAnimationIdle
 	dw FlareonAnimationIdle
-	dw PorygonAnimationIdle
+	dw LeafeonAnimationIdle
 	dw OmanyteAnimationIdle
 	dw OmastarAnimationIdle
 	dw KabutoAnimationIdle
@@ -224,7 +224,7 @@ AnimationIdlePointers:
 	dw CorsolaAnimationIdle
 	dw RemoraidAnimationIdle
 	dw OctilleryAnimationIdle
-	dw DelibirdAnimationIdle
+	dw MantykeAnimationIdle
 	dw MantineAnimationIdle
 	dw SkarmoryAnimationIdle
 	dw HoundourAnimationIdle

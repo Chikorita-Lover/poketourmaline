@@ -72,7 +72,7 @@ Route32CooltrainerMContinueScene:
 	sjump .GotMiracleSeed
 
 .DontHaveZephyrBadge:
-	writetext Route32CooltrainerMText_VioletGym
+	writetext Route32CooltrainerMText_OrmaliGym
 	waitbutton
 	closetext
 	end
@@ -92,7 +92,7 @@ Route32CooltrainerMStopsYouScene:
 	waitbutton
 	closetext
 	follow PLAYER, ROUTE32_COOLTRAINER_M
-	applymovement PLAYER, Movement_Route32CooltrainerMPushesYouBackToViolet
+	applymovement PLAYER, Movement_Route32CooltrainerMPushesYouBackToOrmali
 	stopfollow
 	turnobject PLAYER, DOWN
 	scall Route32CooltrainerMContinueScene
@@ -509,7 +509,7 @@ Route32HiddenGreatBall:
 Route32HiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION
 
-Movement_Route32CooltrainerMPushesYouBackToViolet:
+Movement_Route32CooltrainerMPushesYouBackToOrmali:
 	step UP
 	step UP
 	step_end
@@ -546,7 +546,7 @@ Route32CooltrainerMText_UnusedSproutTower:
 	line "SPROUT TOWER?"
 
 	para "If you ever visit"
-	line "VIOLET CITY, "
+	line "ORMALI CITY, "
 
 	para "they'll expect you"
 	line "to train there."
@@ -556,7 +556,7 @@ Route32CooltrainerMText_UnusedSproutTower:
 	cont "SPROUT TOWER!"
 	done
 
-Route32CooltrainerMText_VioletGym:
+Route32CooltrainerMText_OrmaliGym:
 	text "Have you gone to"
 	line "the #MON GYM?"
 
@@ -577,7 +577,7 @@ Route32CooltrainerMText_HaveThisSeed:
 	line "the training you"
 
 	para "gave them around"
-	line "VIOLET CITY."
+	line "ORMALI CITY."
 
 	para "The training at"
 	line "the GYM must have"
@@ -586,7 +586,7 @@ Route32CooltrainerMText_HaveThisSeed:
 	line "helpful."
 
 	para "As a souvenir of"
-	line "VIOLET CITY, take"
+	line "ORMALI CITY, take"
 	cont "this."
 
 	para "It increases the"
@@ -596,7 +596,7 @@ Route32CooltrainerMText_HaveThisSeed:
 
 Route32CooltrainerMText_ExperiencesShouldBeUseful:
 	text "Your experiences"
-	line "in VIOLET CITY"
+	line "in ORMALI CITY"
 
 	para "should be useful"
 	line "for your journey."
@@ -814,9 +814,9 @@ PicnickerLiz1AfterText:
 
 BirdKeeperPeterSeenText:
 	text "That BADGE! It's"
-	line "from VIOLET CITY!"
+	line "from ORMALI CITY!"
 
-	para "You beat FALKNER?"
+	para "You beat STIKULRA?"
 	done
 
 BirdKeeperPeterBeatenText:
@@ -827,7 +827,7 @@ BirdKeeperPeterBeatenText:
 BirdKeeperPeterAfterText:
 	text "I should train"
 	line "again at the GYM"
-	cont "in VIOLET CITY."
+	cont "in ORMALI CITY."
 	done
 
 Route32UnusedText: ; unreferenced
@@ -906,7 +906,7 @@ FriedaNotFridayText:
 Route32SignText:
 	text "ROUTE 32"
 
-	para "VIOLET CITY -"
+	para "ORMALI CITY -"
 	line "AZALEA TOWN"
 	done
 

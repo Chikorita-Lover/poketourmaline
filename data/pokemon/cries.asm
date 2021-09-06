@@ -116,8 +116,8 @@ PokemonCries::
 	mon_cry CRY_SEEL,          0,  256 ; LICKITUNG
 	mon_cry CRY_GOLEM,       230,  349 ; KOFFING
 	mon_cry CRY_GOLEM,       255,  383 ; WEEZING
-	mon_cry CRY_CHARMANDER,    0,  256 ; RHYHORN
-	mon_cry CRY_RHYDON,        0,  256 ; RHYDON
+	mon_cry CRY_SPEAROW,     255,  170 ; BALTOY
+	mon_cry CRY_RHYDON,        0,  256 ; CLAYDOL
 	mon_cry CRY_PIDGEOTTO,    10,  320 ; CHANSEY
 	mon_cry CRY_GOLEM,         0,  256 ; TANGELA
 	mon_cry CRY_KANGASKHAN,    0,  256 ; KANGASKHAN
@@ -142,7 +142,7 @@ PokemonCries::
 	mon_cry CRY_VENONAT,     170,  383 ; VAPOREON
 	mon_cry CRY_VENONAT,      61,  256 ; JOLTEON
 	mon_cry CRY_VENONAT,      16,  160 ; FLAREON
-	mon_cry CRY_WEEPINBELL,  170,  383 ; PORYGON
+	mon_cry CRY_WEEPINBELL,  170,  383 ; LEAFEON
 	mon_cry CRY_GROWLITHE,   240,  129 ; OMANYTE
 	mon_cry CRY_GROWLITHE,   255,  192 ; OMASTAR
 	mon_cry CRY_CATERPIE,    187,  192 ; KABUTO
@@ -230,7 +230,7 @@ PokemonCries::
 	mon_cry CRY_MAGCARGO,    161,  232 ; CORSOLA
 	mon_cry CRY_SUNFLORA,     13,  256 ; REMORAID
 	mon_cry CRY_TOTODILE,      0,  384 ; OCTILLERY
-	mon_cry CRY_TEDDIURSA,     2,  106 ; DELIBIRD
+	mon_cry CRY_MARILL,      255,  216 ; MANTYKE
 	mon_cry CRY_MANTINE,    -190,  240 ; MANTINE
 	mon_cry CRY_AMPHAROS,   2217,  384 ; SKARMORY
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; HOUNDOUR

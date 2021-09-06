@@ -29,11 +29,11 @@ WadePhoneCalleeScript:
 	farsjump PhoneScript_BugCatchingContest
 
 .WantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
+	getlandmarkname STRING_BUFFER_5, LANDMARK_PEWTER_CITY
 	farsjump WadeQuickBattleScript
 
 .HasItem:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
+	getlandmarkname STRING_BUFFER_5, LANDMARK_PEWTER_CITY
 	farsjump WadeComeQuickScript
 
 WadePhoneCallerScript:
@@ -74,7 +74,7 @@ WadeTuesdayNight:
 	setflag ENGINE_WADE_TUESDAY_NIGHT
 
 WadeWantsBattle2:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
+	getlandmarkname STRING_BUFFER_5, LANDMARK_PEWTER_CITY
 	setflag ENGINE_WADE_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -83,27 +83,27 @@ WadeFoundRare:
 
 WadeHasItem2:
 	setflag ENGINE_WADE_HAS_ITEM
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_31
+	getlandmarkname STRING_BUFFER_5, LANDMARK_PEWTER_CITY
 	clearevent EVENT_WADE_HAS_BERRY
-	clearevent EVENT_WADE_HAS_PSNCUREBERRY
-	clearevent EVENT_WADE_HAS_PRZCUREBERRY
+	clearevent EVENT_WADE_HAS_PECHA_BERRY
+	clearevent EVENT_WADE_HAS_CHERI_BERRY
 	clearevent EVENT_WADE_HAS_BITTER_BERRY
 	random 4
 	ifequal 0, .Berry
-	ifequal 1, .PsnCureBerry
-	ifequal 2, .PrzCureBerry
+	ifequal 1, .PechaBerry
+	ifequal 2, .CheriBerry
 	ifequal 3, .Bitterberry
 
 .Berry:
 	setevent EVENT_WADE_HAS_BERRY
 	sjump .FoundBerry
 
-.PsnCureBerry:
-	setevent EVENT_WADE_HAS_PSNCUREBERRY
+.PechaBerry:
+	setevent EVENT_WADE_HAS_PECHA_BERRY
 	sjump .FoundBerry
 
-.PrzCureBerry:
-	setevent EVENT_WADE_HAS_PRZCUREBERRY
+.CheriBerry:
+	setevent EVENT_WADE_HAS_CHERI_BERRY
 	sjump .FoundBerry
 
 .Bitterberry:

@@ -337,3 +337,21 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta::
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+TilesetOrmaliStadiumGFX::
+INCBIN "gfx/tilesets/ormali_stadium.2bpp.lz"
+
+TilesetOrmaliStadiumMeta::
+INCBIN "data/tilesets/ormali_stadium_metatiles.bin"
+
+TilesetOrmaliStadiumColl::
+INCLUDE "data/tilesets/ormali_stadium_collision.asm"
+
+TilesetBerryMartGFX::
+INCBIN "gfx/tilesets/berry_mart.2bpp.lz"
+
+TilesetBerryMartMeta::
+INCBIN "data/tilesets/berry_mart_metatiles.bin"
+
+TilesetBerryMartColl::
+INCLUDE "data/tilesets/berry_mart_collision.asm"

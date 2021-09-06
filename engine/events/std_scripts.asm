@@ -14,7 +14,7 @@ StdScripts::
 	add_stdscript TownMapScript
 	add_stdscript WindowScript
 	add_stdscript TVScript
-	add_stdscript HomepageScript ; unused
+	add_stdscript DresserScript
 	add_stdscript Radio1Script
 	add_stdscript Radio2Script
 	add_stdscript TrashCanScript
@@ -65,6 +65,8 @@ PokecenterNurseScript:
 	iftrue .morn
 	checktime DAY
 	iftrue .day
+	checktime EVE
+	iftrue .eve
 	checktime NITE
 	iftrue .nite
 	sjump .ok
@@ -88,6 +90,17 @@ PokecenterNurseScript:
 	sjump .ok
 .day_comcenter
 	farwritetext PokeComNurseDayText
+	promptbutton
+	sjump .ok
+
+.eve
+	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
+	iftrue .eve_comcenter
+	farwritetext NurseEveText
+	promptbutton
+	sjump .ok
+.eve_comcenter
+	farwritetext PokeComNurseEveText
 	promptbutton
 	sjump .ok
 
@@ -202,8 +215,26 @@ TVScript:
 	closetext
 	end
 
-HomepageScript:
-	farjumptext HomepageText
+DresserScript:
+	opentext
+	farwritetext DresserText1
+	yesorno
+	iftrue .access_dresser
+	closetext
+	end
+.access_dresser
+	special PlayerGenderMenu
+	playsound SFX_TAIL_WHIP
+	waitsfx
+	special LoadMapPals
+	special ApplyPals
+	special RestartMapMusic
+	special SpawnPlayer
+	opentext
+	farwritetext DresserText2
+	waitbutton
+	closetext
+	end
 
 Radio1Script:
 	opentext
@@ -498,7 +529,7 @@ InitializeEventsScript:
 	setevent EVENT_AZALEA_TOWN_SLOWPOKES
 	setevent EVENT_KURTS_HOUSE_SLOWPOKE
 	setevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
-	setevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+	setevent EVENT_ELMS_AIDE_IN_ORMALI_POKEMON_CENTER
 	setevent EVENT_COP_IN_ELMS_LAB
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
 	setevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST

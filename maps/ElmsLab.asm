@@ -271,9 +271,10 @@ ElmDirectionsScript:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
+	setflag ENGINE_POKEDEX
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
-	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	setmapscene TOROMA_TOWN, SCENE_FINISHED
 	end
 
 ElmDescribesMrPokemonScript:
@@ -565,7 +566,7 @@ CopScript:
 
 ElmsLabWindow:
 	opentext
-	checkflag ENGINE_FLYPOINT_VIOLET
+	checkflag ENGINE_FLYPOINT_ORMALI
 	iftrue .Normal
 	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	iftrue .BreakIn
@@ -1019,7 +1020,7 @@ ElmAfterTheftText5:
 
 	para "The closest GYM"
 	line "would be the one"
-	cont "in VIOLET CITY."
+	cont "in ORMALI CITY."
 	done
 
 ElmAfterTheftText6:
@@ -1050,7 +1051,7 @@ ElmAideHasEggText:
 	para "He should have met"
 	line "you with the EGG"
 
-	para "at VIOLET CITY's"
+	para "at ORMALI CITY's"
 	line "#MON CENTER."
 
 	para "You must have just"
@@ -1371,8 +1372,8 @@ ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 11, NEW_BARK_TOWN, 1
-	warp_event  5, 11, NEW_BARK_TOWN, 1
+	warp_event  4, 11, TOROMA_TOWN, 1
+	warp_event  5, 11, TOROMA_TOWN, 1
 
 	def_coord_events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript

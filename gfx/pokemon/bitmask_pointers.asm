@@ -110,7 +110,7 @@ BitmasksPointers:
 	dw LickitungBitmasks
 	dw KoffingBitmasks
 	dw WeezingBitmasks
-	dw RhyhornBitmasks
+	dw BaltoyBitmasks
 	dw RhydonBitmasks
 	dw ChanseyBitmasks
 	dw TangelaBitmasks
@@ -136,7 +136,7 @@ BitmasksPointers:
 	dw VaporeonBitmasks
 	dw JolteonBitmasks
 	dw FlareonBitmasks
-	dw PorygonBitmasks
+	dw LeafeonBitmasks
 	dw OmanyteBitmasks
 	dw OmastarBitmasks
 	dw KabutoBitmasks
@@ -224,7 +224,7 @@ BitmasksPointers:
 	dw CorsolaBitmasks
 	dw RemoraidBitmasks
 	dw OctilleryBitmasks
-	dw DelibirdBitmasks
+	dw MantykeBitmasks
 	dw MantineBitmasks
 	dw SkarmoryBitmasks
 	dw HoundourBitmasks

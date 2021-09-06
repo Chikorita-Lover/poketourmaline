@@ -27,7 +27,6 @@ CharmanderEggMoves:
 	db ROCK_SLIDE
 	db BITE
 	db OUTRAGE
-	db BEAT_UP
 	db -1 ; end
 
 SquirtleEggMoves:
@@ -66,7 +65,6 @@ EkansEggMoves:
 	db PURSUIT
 	db SLAM
 	db SPITE
-	db BEAT_UP
 	db CRUNCH
 	db -1 ; end
 
@@ -85,7 +83,6 @@ NidoranFEggMoves:
 	db FOCUS_ENERGY
 	db CHARM
 	db COUNTER
-	db BEAT_UP
 	db -1 ; end
 
 NidoranMEggMoves:
@@ -95,7 +92,6 @@ NidoranMEggMoves:
 	db CONFUSION
 	db AMNESIA
 	db COUNTER
-	db BEAT_UP
 	db -1 ; end
 
 VulpixEggMoves:
@@ -142,7 +138,6 @@ DiglettEggMoves:
 	db SCREECH
 	db ANCIENTPOWER
 	db PURSUIT
-	db BEAT_UP
 	db -1 ; end
 
 MeowthEggMoves:
@@ -166,10 +161,9 @@ PsyduckEggMoves:
 MankeyEggMoves:
 	db ROCK_SLIDE
 	db FORESIGHT
-	db MEDITATE
+	db POISON_JAB
 	db COUNTER
 	db REVERSAL
-	db BEAT_UP
 	db -1 ; end
 
 GrowlitheEggMoves:
@@ -196,7 +190,7 @@ AbraEggMoves:
 
 MachopEggMoves:
 	db LIGHT_SCREEN
-	db MEDITATE
+	db POISON_JAB
 	db ROLLING_KICK
 	db ENCORE
 	db -1 ; end
@@ -333,7 +327,7 @@ KoffingEggMoves:
 	db PAIN_SPLIT
 	db -1 ; end
 
-RhyhornEggMoves:
+BaltoyEggMoves:
 	db CRUNCH
 	db REVERSAL
 	db ROCK_SLIDE
@@ -344,7 +338,6 @@ RhyhornEggMoves:
 	db -1 ; end
 
 ChanseyEggMoves:
-	db PRESENT
 	db METRONOME
 	db HEAL_BELL
 	db -1 ; end
@@ -510,13 +503,11 @@ ChinchouEggMoves:
 PichuEggMoves:
 	db REVERSAL
 	db BIDE
-	db PRESENT
 	db ENCORE
 	db DOUBLESLAP
 	db -1 ; end
 
 CleffaEggMoves:
-	db PRESENT
 	db METRONOME
 	db AMNESIA
 	db BELLY_DRUM
@@ -526,12 +517,10 @@ CleffaEggMoves:
 
 IgglybuffEggMoves:
 	db PERISH_SONG
-	db PRESENT
 	db FAINT_ATTACK
 	db -1 ; end
 
 TogepiEggMoves:
-	db PRESENT
 	db MIRROR_MOVE
 	db PECK
 	db FORESIGHT
@@ -557,7 +546,6 @@ MareepEggMoves:
 
 MarillEggMoves:
 	db LIGHT_SCREEN
-	db PRESENT
 	db AMNESIA
 	db FUTURE_SIGHT
 	db BELLY_DRUM
@@ -588,7 +576,6 @@ AipomEggMoves:
 	db SPITE
 	db SLAM
 	db DOUBLESLAP
-	db BEAT_UP
 	db -1 ; end
 
 YanmaEggMoves:
@@ -622,7 +609,6 @@ GirafarigEggMoves:
 	db AMNESIA
 	db FORESIGHT
 	db FUTURE_SIGHT
-	db BEAT_UP
 	db -1 ; end
 
 PinecoEggMoves:
@@ -651,7 +637,6 @@ SnubbullEggMoves:
 	db METRONOME
 	db FAINT_ATTACK
 	db REFLECT
-	db PRESENT
 	db CRUNCH
 	db HEAL_BELL
 	db LICK
@@ -720,19 +705,14 @@ RemoraidEggMoves:
 	db SCREECH
 	db -1 ; end
 
-DelibirdEggMoves:
-	db AURORA_BEAM
-	db QUICK_ATTACK
-	db FUTURE_SIGHT
-	db SPLASH
-	db RAPID_SPIN
-	db -1 ; end
-
-MantineEggMoves:
+MantykeEggMoves:
 	db TWISTER
 	db HYDRO_PUMP
 	db HAZE
 	db SLAM
+	db ROCK_SLIDE
+	db MIRROR_COAT
+	db SPLASH
 	db -1 ; end
 
 SkarmoryEggMoves:
@@ -749,7 +729,6 @@ HoundourEggMoves:
 	db COUNTER
 	db SPITE
 	db REVERSAL
-	db BEAT_UP
 	db -1 ; end
 
 PhanpyEggMoves:
@@ -775,14 +754,14 @@ TyrogueEggMoves:
 	db -1 ; end
 
 SmoochumEggMoves:
-	db MEDITATE
+	db POISON_JAB
 	db -1 ; end
 
 ElekidEggMoves:
 	db KARATE_CHOP
 	db BARRIER
 	db ROLLING_KICK
-	db MEDITATE
+	db POISON_JAB
 	db CROSS_CHOP
 	db -1 ; end
 
@@ -795,7 +774,6 @@ MagbyEggMoves:
 	db -1 ; end
 
 MiltankEggMoves:
-	db PRESENT
 	db REVERSAL
 	db SEISMIC_TOSS
 	db -1 ; end

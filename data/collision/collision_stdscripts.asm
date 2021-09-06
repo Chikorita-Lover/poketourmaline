@@ -7,6 +7,7 @@ ENDM
 
 TileCollisionStdScripts:
 	; collision type, std script
+	stdcoll COLL_DRESSER,        DresserScript
 	stdcoll COLL_BOOKSHELF,      MagazineBookshelfScript
 	stdcoll COLL_PC,             PCScript
 	stdcoll COLL_RADIO,          Radio1Script

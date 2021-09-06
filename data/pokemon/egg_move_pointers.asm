@@ -110,7 +110,7 @@ EggMovePointers::
 	dw LickitungEggMoves
 	dw KoffingEggMoves
 	dw NoEggMoves
-	dw RhyhornEggMoves
+	dw BaltoyEggMoves
 	dw NoEggMoves
 	dw ChanseyEggMoves
 	dw TangelaEggMoves
@@ -224,8 +224,8 @@ EggMovePointers::
 	dw CorsolaEggMoves
 	dw RemoraidEggMoves
 	dw NoEggMoves
-	dw DelibirdEggMoves
-	dw MantineEggMoves
+	dw MantykeEggMoves
+	dw NoEggMoves
 	dw SkarmoryEggMoves
 	dw HoundourEggMoves
 	dw NoEggMoves

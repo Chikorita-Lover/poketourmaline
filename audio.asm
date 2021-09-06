@@ -21,7 +21,7 @@ INCLUDE "audio/music/darkcave.asm"
 INCLUDE "audio/music/johtogymbattle.asm"
 INCLUDE "audio/music/championbattle.asm"
 INCLUDE "audio/music/ssaqua.asm"
-INCLUDE "audio/music/newbarktown.asm"
+INCLUDE "audio/music/toromatown.asm"
 INCLUDE "audio/music/goldenrodcity.asm"
 INCLUDE "audio/music/vermilioncity.asm"
 INCLUDE "audio/music/titlescreen.asm"
@@ -68,7 +68,7 @@ INCLUDE "audio/music/route30.asm"
 
 SECTION "Songs 3", ROMX
 
-INCLUDE "audio/music/violetcity.asm"
+INCLUDE "audio/music/ormalicity.asm"
 INCLUDE "audio/music/route29.asm"
 INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/healpokemon.asm"

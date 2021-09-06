@@ -1,4 +1,4 @@
-Icons: ; used only for BANK(Icons)
+SECTION "Mon Icons 1", ROMX
 
 NullIcon:
 PoliwagIcon:      INCBIN "gfx/icons/poliwag.2bpp"
@@ -39,3 +39,12 @@ GyaradosIcon:     INCBIN "gfx/icons/gyarados.2bpp"
 SlowpokeIcon:     INCBIN "gfx/icons/slowpoke.2bpp"
 SudowoodoIcon:    INCBIN "gfx/icons/sudowoodo.2bpp"
 BigmonIcon:       INCBIN "gfx/icons/bigmon.2bpp"
+
+SECTION "Mon Icons 2", ROMX
+
+BeedrillIcon:     INCBIN "gfx/icons/beedrill.2bpp"
+SpearowIcon:      INCBIN "gfx/icons/spearow.2bpp"
+EkansIcon:        INCBIN "gfx/icons/ekans.2bpp"
+TogepiIcon:       INCBIN "gfx/icons/togepi.2bpp"
+TogeticIcon:      INCBIN "gfx/icons/togetic.2bpp"
+BaltoyIcon:       INCBIN "gfx/icons/baltoy.2bpp"
