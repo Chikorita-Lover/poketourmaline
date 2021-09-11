@@ -1062,3 +1062,6 @@ OrmaliBerryMart_Blocks:
 
 OrmaliOutskirts_Blocks:
 	INCBIN "maps/OrmaliOutskirts.blk"
+
+OrmaliSubway_Blocks:
+	INCBIN "maps/Subway.blk"

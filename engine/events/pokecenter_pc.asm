@@ -9,8 +9,9 @@
 	const PCPCITEM_PLAYERS_PC   ; 0
 	const PCPCITEM_BILLS_PC     ; 1
 	const PCPCITEM_OAKS_PC      ; 2
-	const PCPCITEM_HALL_OF_FAME ; 3
-	const PCPCITEM_TURN_OFF     ; 4
+	const PCPCITEM_MOMS_PC      ; 3
+	const PCPCITEM_HALL_OF_FAME ; 4
+	const PCPCITEM_TURN_OFF     ; 5
 
 PokemonCenterPC:
 	call PC_CheckPartyForPokemon
@@ -58,12 +59,14 @@ PokemonCenterPC:
 	dw PlayersPC,    .String_PlayersPC
 	dw BillsPC,      .String_BillsPC
 	dw OaksPC,       .String_OaksPC
+	dw MomsPC,       .String_MomsPC
 	dw HallOfFamePC, .String_HallOfFame
 	dw TurnOffPC,    .String_TurnOff
 
 .String_PlayersPC:  db "<PLAYER>'s PC@"
 .String_BillsPC:    db "BILL's PC@"
 .String_OaksPC:     db "PROF.OAK's PC@"
+.String_MomsPC:     db "MOM's PC@"
 .String_HallOfFame: db "HALL OF FAME@"
 .String_TurnOff:    db "TURN OFF@"
 
@@ -71,24 +74,27 @@ PokemonCenterPC:
 ; entries correspond to PCPC_* constants
 
 	; PCPC_BEFORE_POKEDEX
-	db 3
+	db 4
 	db PCPCITEM_BILLS_PC
 	db PCPCITEM_PLAYERS_PC
+	db PCPCITEM_MOMS_PC
 	db PCPCITEM_TURN_OFF
 	db -1 ; end
 
 	; PCPC_BEFORE_HOF
-	db 4
+	db 5
 	db PCPCITEM_BILLS_PC
 	db PCPCITEM_PLAYERS_PC
+	db PCPCITEM_MOMS_PC
 	db PCPCITEM_OAKS_PC
 	db PCPCITEM_TURN_OFF
 	db -1 ; end
 
 	; PCPC_POSTGAME
-	db 5
+	db 6
 	db PCPCITEM_BILLS_PC
 	db PCPCITEM_PLAYERS_PC
+	db PCPCITEM_MOMS_PC
 	db PCPCITEM_OAKS_PC
 	db PCPCITEM_HALL_OF_FAME
 	db PCPCITEM_TURN_OFF
@@ -163,6 +169,20 @@ OaksPC:
 	call PC_DisplayText
 	farcall ProfOaksPC
 	and a
+	ret
+
+MomsPC:
+	call PC_PlayChoosePCSound
+	ld hl, PokecenterMomsPCText
+	call PrintText
+	call JoyWaitAorB
+	farcall BankOfMom
+	call JoyWaitAorB
+	ld hl, PokecenterPCMomsClosedText
+	call PrintText
+	call JoyWaitAorB
+	ld hl, PokecenterPCWhoseText
+	call PrintText
 	ret
 
 HallOfFamePC:
@@ -683,4 +703,12 @@ PokecenterOaksPCText:
 
 PokecenterPCOaksClosedText:
 	text_far _PokecenterPCOaksClosedText
+	text_end
+
+PokecenterMomsPCText:
+	text_far _PokecenterMomsPCText
+	text_end
+
+PokecenterPCMomsClosedText:
+	text_far _PokecenterPCMomsClosedText
 	text_end

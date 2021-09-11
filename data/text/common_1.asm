@@ -4,14 +4,14 @@ _FruitBearingTreeText::
 	done
 
 _HeyItsFruitText::
-	text "Hey! It's"
+	text "Hey! It's a"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
 	done
 
 _ObtainedFruitText::
-	text "Obtained"
+	text "Obtained a"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
@@ -1586,9 +1586,11 @@ _MomLeavingText3::
 	done
 
 _MomIsThisAboutYourMoneyText::
-	text "Hi! Welcome home!"
-	line "You're trying very"
-	cont "hard, I see."
+	text "Hi, <PLAYER>!"
+	line "Great to see you!"
+	
+	para "You're trying very"
+	line "hard, I see."
 
 	para "I've kept your"
 	line "room tidy."
@@ -1618,23 +1620,23 @@ _MomSaveMoneyText::
 	done
 
 _MomHaventSavedThatMuchText::
-	text "You haven't saved"
-	line "that much."
+	text "Sorry, you haven't"
+	line "saved that much."
 	prompt
 
 _MomNotEnoughRoomInWalletText::
-	text "You can't take"
-	line "that much."
+	text "Sorry, you have"
+	line "no room for that."
 	prompt
 
 _MomInsufficientFundsInWalletText::
-	text "You don't have"
-	line "that much."
+	text "Sorry, you don't"
+	line "have that much."
 	prompt
 
 _MomNotEnoughRoomInBankText::
-	text "You can't save"
-	line "that much."
+	text "Sorry, I can't"
+	line "save that much."
 	prompt
 
 _MomStartSavingMoneyText::
@@ -1655,9 +1657,9 @@ _MomTakenMoneyText::
 	line "give up!"
 	done
 
-_MomJustDoWhatYouCanText::
-	text "Just do what"
-	line "you can."
+_MomDontWorkYourselfTooHardText::
+	text "Don't work your-"
+	line "self too hard!"
 	done
 
 _DaycareDummyText::

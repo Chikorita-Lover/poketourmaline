@@ -8,23 +8,24 @@ Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	table_width 4, Landmarks
 	landmark  -8, -16, SpecialMapName
-	landmark  20, 100, ToromaTownName
-	landmark  24, 108, Route3Name
-	landmark  36, 108, DevilsShaftName
-	landmark  48, 108, OrmaliOutskirtsName
-	landmark  60, 108, OrmaliCityName
-	landmark  60,  92, Route1Name
-	landmark  52,  68, UnionCaveName
-	landmark  68,  68, GoldenrodCityName
-	landmark  60,  52, Route4Name
-	landmark  36,  36, EsmaraTownName
-	landmark  44,  36, IlexForestName
-	landmark  84,  40, ShinaiaForestName
-	landmark 100,  44, ShinaiaTownName
-	landmark 100,  32, Route5Name
-	landmark 100,  20, ToparaTownName
-	landmark  76, 108, Route2Name
-	landmark 108, 108, CianwoodCityName
+	landmark  20, 108, ToromaTownName
+	landmark  24, 116, Route3Name
+	landmark  36, 116, DevilsShaftName
+	landmark  48, 116, OrmaliOutskirtsName
+	landmark  60, 116, OrmaliCityName
+	landmark  60,  96, Route1Name
+	landmark  52,  76, UnionCaveName
+	landmark  68,  76, GoldenrodCityName
+	landmark  60,  56, Route4Name
+	landmark  44,  44, IlexForestName
+	landmark  36,  44, EsmaraTownName
+	landmark  96,  48, ShinaiaForestName
+	landmark 100,  52, ShinaiaTownName
+	landmark 100,  36, Route5Name
+	landmark 100,  28, ToparaTownName
+	landmark  76, 116, Route2Name
+	landmark  92, 116, IcePathName
+	landmark 108, 116, CianwoodCityName
 	landmark 132,  68, MountVolatteName
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 108, PalletTownName

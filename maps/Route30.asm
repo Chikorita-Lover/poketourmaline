@@ -1,8 +1,7 @@
 	object_const_def
 	const ROUTE30_YOUNGSTER1
 	const ROUTE30_YOUNGSTER2
-	const ROUTE30_YOUNGSTER3
-	const ROUTE30_BUG_CATCHER
+	const ROUTE30_MYCOMANIAC
 	const ROUTE30_YOUNGSTER4
 	const ROUTE30_MONSTER1
 	const ROUTE30_MONSTER2
@@ -183,24 +182,13 @@ TrainerYoungsterJoey:
 	jumpstd RematchGiftMScript
 	end
 
-TrainerYoungsterMikey:
-	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
+TrainerMycomaniacDon:
+	trainer MYCOMANIAC, DON, EVENT_BEAT_MYCOMANIAC_DON, MycomaniacDonSeenText, MycomaniacDonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext YoungsterMikeyAfterText
-	waitbutton
-	closetext
-	end
-
-TrainerBugCatcherDon:
-	trainer BUG_CATCHER, DON, EVENT_BEAT_BUG_CATCHER_DON, BugCatcherDonSeenText, BugCatcherDonBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext BugCatcherDonAfterText
+	writetext MycomaniacDonAfterText
 	waitbutton
 	closetext
 	end
@@ -299,41 +287,18 @@ YoungsterJoey1AfterText:
 	cont "matter what!"
 	done
 
-YoungsterMikeySeenText:
-	text "You're a #MON"
-	line "trainer, right?"
-
-	para "Then you have to"
-	line "battle!"
-	done
-
-YoungsterMikeyBeatenText:
-	text "That's strange."
-	line "I won before."
-	done
-
-YoungsterMikeyAfterText:
-	text "Becoming a good"
-	line "trainer is really"
-	cont "tough."
-
-	para "I'm going to bat-"
-	line "tle other people"
-	cont "to get better."
-	done
-
-BugCatcherDonSeenText:
+MycomaniacDonSeenText:
 	text "Instead of a bug"
 	line "#MON, I found"
 	cont "a trainer!"
 	done
 
-BugCatcherDonBeatenText:
+MycomaniacDonBeatenText:
 	text "Argh! You're too"
 	line "strong!"
 	done
 
-BugCatcherDonAfterText:
+MycomaniacDonAfterText:
 	text "I ran out of #"
 	line "BALLS while I was"
 	cont "catching #MON."
@@ -423,8 +388,7 @@ Route30_MapEvents:
 	def_object_events
 	object_event  5, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, YoungsterJoey_ImportantBattleScript, EVENT_ROUTE_30_BATTLE
 	object_event  2, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, EVENT_ROUTE_30_YOUNGSTER_JOEY
-	object_event  5, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
-	object_event  1,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDon, -1
+	object_event  1,  7, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMycomaniacDon, -1
 	object_event  7, 30, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
 	object_event  5, 24, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_30_BATTLE
 	object_event  5, 25, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_30_BATTLE

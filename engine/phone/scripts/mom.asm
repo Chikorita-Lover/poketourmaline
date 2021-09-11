@@ -27,31 +27,29 @@ MomPhoneLandmark:
 
 MomPhoneInTown:
 	readvar VAR_MAPGROUP
-	ifequal GROUP_TOROMA_TOWN, .newbark
-	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
+	ifequal GROUP_TOROMA_TOWN, .toroma
 	ifequal GROUP_ORMALI_CITY, .ormali
-	ifequal GROUP_AZALEA_TOWN, .azalea
+	ifequal GROUP_AZALEA_TOWN, .esmara
 	ifequal GROUP_GOLDENROD_CITY, .goldenrod
 	farwritetext MomPhoneGenericAreaText
 	promptbutton
 	sjump MomSavingMoney
 
-.newbark
+.toroma
 	farwritetext MomPhoneToromaText
 	promptbutton
 	sjump MomSavingMoney
 
-.cherrygrove
-	farwritetext MomPhoneCherrygroveText
+.ormali
+	farwritetext MomPhoneOrmaliText
 	promptbutton
 	sjump MomSavingMoney
 
-.ormali
-	getlandmarkname STRING_BUFFER_4, LANDMARK_PEWTER_CITY
-	sjump MomPhoneLandmark
-.azalea
-	getlandmarkname STRING_BUFFER_4, LANDMARK_PEWTER_CITY
-	sjump MomPhoneLandmark
+.esmara
+	farwritetext MomPhoneEsmaraText
+	promptbutton
+	sjump MomSavingMoney
+
 .goldenrod
 	getlandmarkname STRING_BUFFER_4, LANDMARK_PEWTER_CITY
 	sjump MomPhoneLandmark

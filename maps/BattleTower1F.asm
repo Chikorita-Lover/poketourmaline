@@ -2,7 +2,7 @@
 	const BATTLETOWER1F_RECEPTIONIST
 	const BATTLETOWER1F_YOUNGSTER
 	const BATTLETOWER1F_COOLTRAINER_F
-	const BATTLETOWER1F_BUG_CATCHER
+	const BATTLETOWER1F_MYCOMANIAC
 	const BATTLETOWER1F_GRANNY
 
 BattleTower1F_MapScripts:
@@ -256,8 +256,8 @@ BattleTower1FYoungsterScript:
 BattleTower1FCooltrainerFScript:
 	jumptextfaceplayer Text_BattleTowerCooltrainerF
 
-BattleTower1FBugCatcherScript:
-	jumptextfaceplayer Text_BattleTowerBugCatcher
+BattleTower1FMycomaniacScript:
+	jumptextfaceplayer Text_BattleTowerMycomaniac
 
 BattleTower1FGrannyScript:
 	jumptextfaceplayer Text_BattleTowerGranny
@@ -780,7 +780,7 @@ Text_BattleTowerGranny:
 	line "winning battles."
 	done
 
-Text_BattleTowerBugCatcher:
+Text_BattleTowerMycomaniac:
 	text "I'm trying to see"
 	line "how far I can go"
 
@@ -808,5 +808,5 @@ BattleTower1F_MapEvents:
 	object_event  7,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FReceptionistScript, -1
 	object_event 14,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BattleTower1FYoungsterScript, -1
 	object_event  4,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTower1FCooltrainerFScript, -1
-	object_event  1,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BattleTower1FBugCatcherScript, -1
+	object_event  1,  3, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BattleTower1FMycomaniacScript, -1
 	object_event 14,  3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FGrannyScript, -1

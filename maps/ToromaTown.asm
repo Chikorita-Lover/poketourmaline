@@ -1,6 +1,6 @@
 	object_const_def
 	const TOROMATOWN_TEACHER
-	const TOROMATOWN_BUG_CATCHER
+	const TOROMATOWN_MYCOMANIAC
 	const TOROMATOWN_LASS
 	const TOROMATOWN_FISHER
 
@@ -102,7 +102,7 @@ ToromaTownTeacherScript:
 	closetext
 	end
 
-ToromaTownBugCatcherScript:
+ToromaTownMycomaniacScript:
 	jumptextfaceplayer Text_DevilDancerRumor
 
 ToromaTownLassScript:
@@ -286,6 +286,6 @@ ToromaTown_MapEvents:
 
 	def_object_events
 	object_event 15, 13, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ToromaTownTeacherScript, -1
-	object_event 29, 13, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownBugCatcherScript, -1
+	object_event 29, 13, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownMycomaniacScript, -1
 	object_event 23,  6, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ToromaTownLassScript, -1
 	object_event  6,  6, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownFisherScript, -1

@@ -37,10 +37,10 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; SKIER
 	dn  6,  8,  8,  8 ; TEACHER
 	dn  7, 13,  8,  7 ; SABRINA
-	dn  9,  8,  8,  8 ; BUG_CATCHER
+	dn  7, 10,  7,  9 ; MYCOMANIAC
 	dn  9,  8,  8,  8 ; FISHER
 	dn  9,  8,  8,  8 ; SWIMMERM
-	dn  7,  8,  8,  8 ; SWIMMERF
+	dn  7,  8, 10,  8 ; SWIMMERF
 	dn  9,  8,  8,  8 ; SAILOR
 	dn  9,  8,  8,  8 ; SUPER_NERD
 	dn  9,  8,  8,  8 ; RIVAL2

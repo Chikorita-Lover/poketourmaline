@@ -789,36 +789,42 @@ GolduckEvosAttacks:
 	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-MankeyEvosAttacks:
-	db EVOLVE_LEVEL, 28, PRIMEAPE
+ShroomishEvosAttacks:
+	db EVOLVE_LEVEL, 23, BRELOOM
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 9, LOW_KICK
-	db 15, KARATE_CHOP
-	db 21, FURY_SWIPES
-	db 27, FOCUS_ENERGY
-	db 33, SEISMIC_TOSS
-	db 39, CROSS_CHOP
-	db 45, SCREECH
-	db 51, THRASH
+	db 1, ABSORB
+	db 1, TACKLE
+	db 5, STUN_SPORE
+	db 8, LEECH_SEED
+	db 12, MEGA_DRAIN
+	db 15, HEADBUTT
+	db 19, POISONPOWDER
+	db 22, SLEEP_POWDER
+	db 26, GIGA_DRAIN
+	db 29, GROWTH
+	db 33, TOXIC
+	db 36, PETAL_DANCE ; TODO: SEED_BOMB
+	db 40, SPORE
 	db 0 ; no more level-up moves
 
-PrimeapeEvosAttacks:
+BreloomEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 1, LOW_KICK
-	db 1, RAGE
-	db 9, LOW_KICK
-	db 15, KARATE_CHOP
-	db 21, FURY_SWIPES
-	db 27, FOCUS_ENERGY
-	db 28, RAGE
-	db 36, SEISMIC_TOSS
-	db 45, CROSS_CHOP
-	db 54, SCREECH
-	db 63, THRASH
+	db 1, ABSORB
+	db 1, TACKLE
+	db 1, STUN_SPORE
+	db 1, LEECH_SEED
+	db 5, STUN_SPORE
+	db 8, LEECH_SEED
+	db 12, MEGA_DRAIN
+	db 15, HEADBUTT
+	db 19, SWIFT ; TODO: FEINT
+	db 22, COUNTER
+	db 23, MACH_PUNCH
+	db 28, KARATE_CHOP
+	db 33, MIND_READER
+	db 39, SUBMISSION
+	db 44, PETAL_DANCE ; TODO: SEED_BOMB
+	db 50, DYNAMICPUNCH
 	db 0 ; no more level-up moves
 
 GrowlitheEvosAttacks:
@@ -922,14 +928,15 @@ MachopEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
-	db 7, FOCUS_ENERGY
-	db 13, KARATE_CHOP
-	db 19, SEISMIC_TOSS
-	db 25, FORESIGHT
-	db 31, VITAL_THROW
-	db 37, CROSS_CHOP
+	db 3, FOCUS_ENERGY
+	db 7, KARATE_CHOP
+	db 9, FORESIGHT
+	db 15, SEISMIC_TOSS
+	db 25, VITAL_THROW
+	db 33, SUBMISSION
+	db 39, CROSS_CHOP
 	db 43, SCARY_FACE
-	db 49, SUBMISSION
+	db 45, DYNAMICPUNCH
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
@@ -938,14 +945,16 @@ MachokeEvosAttacks:
 	db 1, LOW_KICK
 	db 1, LEER
 	db 1, FOCUS_ENERGY
-	db 8, FOCUS_ENERGY
-	db 15, KARATE_CHOP
-	db 19, SEISMIC_TOSS
-	db 25, FORESIGHT
-	db 34, VITAL_THROW
-	db 43, CROSS_CHOP
-	db 52, SCARY_FACE
-	db 61, SUBMISSION
+	db 1, KARATE_CHOP
+	db 3, FOCUS_ENERGY
+	db 7, KARATE_CHOP
+	db 9, FORESIGHT
+	db 15, SEISMIC_TOSS
+	db 25, VITAL_THROW
+	db 37, SUBMISSION
+	db 47, CROSS_CHOP
+	db 53, SCARY_FACE
+	db 57, DYNAMICPUNCH
 	db 0 ; no more level-up moves
 
 MachampEvosAttacks:
@@ -953,14 +962,16 @@ MachampEvosAttacks:
 	db 1, LOW_KICK
 	db 1, LEER
 	db 1, FOCUS_ENERGY
-	db 8, FOCUS_ENERGY
-	db 15, KARATE_CHOP
-	db 19, SEISMIC_TOSS
-	db 25, FORESIGHT
-	db 34, VITAL_THROW
-	db 43, CROSS_CHOP
-	db 52, SCARY_FACE
-	db 61, SUBMISSION
+	db 1, KARATE_CHOP
+	db 3, FOCUS_ENERGY
+	db 7, KARATE_CHOP
+	db 9, FORESIGHT
+	db 15, SEISMIC_TOSS
+	db 25, VITAL_THROW
+	db 37, SUBMISSION
+	db 47, CROSS_CHOP
+	db 53, SCARY_FACE
+	db 57, DYNAMICPUNCH
 	db 0 ; no more level-up moves
 
 BellsproutEvosAttacks:

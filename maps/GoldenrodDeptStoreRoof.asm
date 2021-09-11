@@ -6,7 +6,7 @@
 	const GOLDENRODDEPTSTOREROOF_SUPER_NERD
 	const GOLDENRODDEPTSTOREROOF_POKEFAN_M
 	const GOLDENRODDEPTSTOREROOF_TEACHER
-	const GOLDENRODDEPTSTOREROOF_BUG_CATCHER
+	const GOLDENRODDEPTSTOREROOF_MYCOMANIAC
 
 GoldenrodDeptStoreRoof_MapScripts:
 	def_scene_scripts
@@ -77,8 +77,8 @@ GoldenrodDeptStoreRoofPokefanMScript:
 GoldenrodDeptStoreRoofTeacherScript:
 	jumptextfaceplayer GoldenrodDeptStoreRoofTeacherText
 
-GoldenrodDeptStoreRoofBugCatcherScript:
-	jumptextfaceplayer GoldenrodDeptStoreRoofBugCatcherText
+GoldenrodDeptStoreRoofMycomaniacScript:
+	jumptextfaceplayer GoldenrodDeptStoreRoofMycomaniacText
 
 Binoculars1:
 	jumptext Binoculars1Text
@@ -149,7 +149,7 @@ GoldenrodDeptStoreRoofTeacherText:
 	line "my PACK's crammed!"
 	done
 
-GoldenrodDeptStoreRoofBugCatcherText:
+GoldenrodDeptStoreRoofMycomaniacText:
 	text "My #MON always"
 	line "get paralyzed or"
 
@@ -231,4 +231,4 @@ GoldenrodDeptStoreRoof_MapEvents:
 	object_event 14,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofSuperNerdScript, EVENT_GOLDENROD_SALE_ON
 	object_event  7,  0, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofPokefanMScript, EVENT_GOLDENROD_SALE_OFF
 	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofTeacherScript, EVENT_GOLDENROD_SALE_OFF
-	object_event  1,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofBugCatcherScript, EVENT_GOLDENROD_SALE_OFF
+	object_event  1,  6, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofMycomaniacScript, EVENT_GOLDENROD_SALE_OFF

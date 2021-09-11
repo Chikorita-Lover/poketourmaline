@@ -1,7 +1,7 @@
 	object_const_def
-	const ROUTE2_BUG_CATCHER1
-	const ROUTE2_BUG_CATCHER2
-	const ROUTE2_BUG_CATCHER3
+	const ROUTE2_MYCOMANIAC1
+	const ROUTE2_MYCOMANIAC2
+	const ROUTE2_MYCOMANIAC3
 	const ROUTE2_POKE_BALL1
 	const ROUTE2_POKE_BALL2
 	const ROUTE2_POKE_BALL3
@@ -13,35 +13,35 @@ Route2_MapScripts:
 
 	def_callbacks
 
-TrainerBugCatcherRob:
-	trainer BUG_CATCHER, ROB, EVENT_BEAT_BUG_CATCHER_ROB, BugCatcherRobSeenText, BugCatcherRobBeatenText, 0, .Script
+TrainerMycomaniacRob:
+	trainer MYCOMANIAC, ROB, EVENT_BEAT_MYCOMANIAC_ROB, MycomaniacRobSeenText, MycomaniacRobBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcherRobAfterBattleText
+	writetext MycomaniacRobAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherEd:
-	trainer BUG_CATCHER, ED, EVENT_BEAT_BUG_CATCHER_ED, BugCatcherEdSeenText, BugCatcherEdBeatenText, 0, .Script
+TrainerMycomaniacEd:
+	trainer MYCOMANIAC, ED, EVENT_BEAT_MYCOMANIAC_ED, MycomaniacEdSeenText, MycomaniacEdBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcherEdAfterBattleText
+	writetext MycomaniacEdAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherDoug:
-	trainer BUG_CATCHER, DOUG, EVENT_BEAT_BUG_CATCHER_DOUG, BugCatcherDougSeenText, BugCatcherDougBeatenText, 0, .Script
+TrainerMycomaniacDoug:
+	trainer MYCOMANIAC, DOUG, EVENT_BEAT_MYCOMANIAC_DOUG, MycomaniacDougSeenText, MycomaniacDougBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcherDougAfterBattleText
+	writetext MycomaniacDougAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -79,23 +79,23 @@ Route2HiddenFullRestore:
 Route2HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_2_HIDDEN_REVIVE
 
-BugCatcherRobSeenText:
+MycomaniacRobSeenText:
 	text "My bug #MON are"
 	line "tough. Prepare to"
 	cont "lose!"
 	done
 
-BugCatcherRobBeatenText:
+MycomaniacRobBeatenText:
 	text "I was whipped…"
 	done
 
-BugCatcherRobAfterBattleText:
+MycomaniacRobAfterBattleText:
 	text "I'm going to look"
 	line "for stronger bug"
 	cont "#MON."
 	done
 
-BugCatcherEdSeenText:
+MycomaniacEdSeenText:
 	text "If you walk in"
 	line "tall grass wearing"
 
@@ -103,26 +103,26 @@ BugCatcherEdSeenText:
 	line "nicks and cuts?"
 	done
 
-BugCatcherEdBeatenText:
+MycomaniacEdBeatenText:
 	text "Ouch, ouch, ouch!"
 	done
 
-BugCatcherEdAfterBattleText:
+MycomaniacEdAfterBattleText:
 	text "They'll really"
 	line "sting when you"
 	cont "take a bath."
 	done
 
-BugCatcherDougSeenText:
+MycomaniacDougSeenText:
 	text "Why don't girls"
 	line "like bug #MON?"
 	done
 
-BugCatcherDougBeatenText:
+MycomaniacDougBeatenText:
 	text "No good!"
 	done
 
-BugCatcherDougAfterBattleText:
+MycomaniacDougAfterBattleText:
 	text "Bug #MON squish"
 	line "like plush toys"
 
@@ -165,9 +165,9 @@ Route2_MapEvents:
 	bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive
 
 	def_object_events
-	object_event 10, 45, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherRob, -1
-	object_event  6,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherEd, -1
-	object_event  0, 40, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDoug, -1
+	object_event 10, 45, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerMycomaniacRob, -1
+	object_event  6,  4, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMycomaniacEd, -1
+	object_event  0, 40, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMycomaniacDoug, -1
 	object_event  0, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2DireHit, EVENT_ROUTE_2_DIRE_HIT
 	object_event  2, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2MaxPotion, EVENT_ROUTE_2_MAX_POTION
 	object_event 19,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Carbos, EVENT_ROUTE_2_CARBOS

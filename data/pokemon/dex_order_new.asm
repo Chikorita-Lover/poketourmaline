@@ -139,8 +139,8 @@ NewPokedexOrder:
 	db AZUMARILL
 	db DIGLETT
 	db DUGTRIO
-	db MANKEY
-	db PRIMEAPE
+	db SHROOMISH
+	db BRELOOM
 	db MEOWTH
 	db PERSIAN
 	db PSYDUCK

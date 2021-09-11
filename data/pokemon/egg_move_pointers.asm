@@ -55,7 +55,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw PsyduckEggMoves
 	dw NoEggMoves
-	dw MankeyEggMoves
+	dw ShroomishEggMoves
 	dw NoEggMoves
 	dw GrowlitheEggMoves
 	dw NoEggMoves
@@ -110,7 +110,7 @@ EggMovePointers::
 	dw LickitungEggMoves
 	dw KoffingEggMoves
 	dw NoEggMoves
-	dw BaltoyEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw ChanseyEggMoves
 	dw TangelaEggMoves

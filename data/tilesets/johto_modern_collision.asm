@@ -43,7 +43,7 @@
 	tilecoll WALL, WALL, WALL, WALL ; 2a
 	tilecoll WALL, WALL, WALL, WALL ; 2b
 	tilecoll WALL, WALL, WALL, WALL ; 2c
-	tilecoll WALL, WALL, WALL, DOOR ; 2d
+	tilecoll WALL, WALL, WALL, WALL ; 2d
 	tilecoll WALL, WALL, WALL, WALL ; 2e
 	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, FLOOR, FLOOR ; 2f
 	tilecoll BUOY, BUOY, BUOY, WATER ; 30
@@ -59,7 +59,7 @@
 	tilecoll WATER, BUOY, BUOY, BUOY ; 3a
 	tilecoll FLOOR, FLOOR, HEADBUTT_TREE, HEADBUTT_TREE ; 3b
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 3c
-	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; 3d
+	tilecoll WALL, WALL, WALL, WALL ; 3d
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 3e
 	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, HEADBUTT_TREE, HEADBUTT_TREE ; 3f
 	tilecoll WALL, WALL, WALL, FLOOR ; 40
@@ -88,16 +88,16 @@
 	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; 57
 	tilecoll WATER, WATER, WATER, WATER ; 58
 	tilecoll WATER, WATER, WATER, WATER ; 59
-	tilecoll HOP_DOWN, FLOOR, WALL, FLOOR ; 5a
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 5b
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 5a
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 5b
 	tilecoll HOP_DOWN, FLOOR, WALL, FLOOR ; 5c
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 5d
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 5e
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 5f
-	tilecoll WATER, WATER, WALL, WALL ; 60
-	tilecoll WATER, WATER, WALL, WALL ; 61
-	tilecoll WATER, WATER, WALL, WALL ; 62
-	tilecoll WATER, WATER, WATER, WATER ; 63
+	tilecoll WALL, WALL, WALL, WALL ; 60
+	tilecoll WALL, WALL, WALL, WALL ; 61
+	tilecoll WALL, WALL, WALL, WALL ; 62
+	tilecoll WALL, WALL, WALL, WALL ; 63
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 64
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 65
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 66
@@ -113,7 +113,7 @@
 	tilecoll UP_WALL, UP_WALL, FLOOR, FLOOR ; 70
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 71
 	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; 72
-	tilecoll HOP_DOWN, FLOOR, WALL, CAVE ; 73
+	tilecoll WALL, WALL, WALL, CAVE ; 73
 	tilecoll WALL, CAVE, HOP_RIGHT, WALL ; 74
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 75
 	tilecoll WATER, WATER, WATER, WATER ; 76
@@ -125,4 +125,4 @@
 	tilecoll WALL, WALL, WALL, WALL ; 7c
 	tilecoll WALL, WALL, WALL, WALL ; 7d
 	tilecoll WALL, WALL, WALL, WALL ; 7e
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 7f
+	tilecoll WALL, WALL, WALL, WALL ; 7f

@@ -1,6 +1,6 @@
 	object_const_def
 	const ORMALIBALLMART_CLERK
-	const ORMALIBALLMART_BUG_CATCHER
+	const ORMALIBALLMART_MYCOMANIAC
 	const ORMALIBALLMART_COOLTRAINER_F
 
 OrmaliBallMart_MapScripts:
@@ -14,13 +14,13 @@ OrmaliBallMartClerkScript:
 	closetext
 	end
 
-OrmaliBallMartBugCatcherScript:
-	jumptextfaceplayer OrmaliBallMartBugCatcherText
+OrmaliBallMartMycomaniacScript:
+	jumptextfaceplayer OrmaliBallMartMycomaniacText
 
 OrmaliBallMartCooltrainerFScript:
 	jumptextfaceplayer OrmaliBallMartCooltrainerFText
 
-OrmaliBallMartBugCatcherText:
+OrmaliBallMartMycomaniacText:
 	text "You can make di-"
 	line "fferent types of"
 
@@ -59,6 +59,6 @@ OrmaliBallMart_MapEvents:
 
 	def_object_events
 	object_event  6,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliBallMartClerkScript, -1
-	object_event  8, 11, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliBallMartBugCatcherScript, -1
+	object_event  8, 11, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliBallMartMycomaniacScript, -1
 	object_event 10,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliBallMartCooltrainerFScript, -1
 	object_event  3,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliBallMartCooltrainerFScript, -1

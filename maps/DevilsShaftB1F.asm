@@ -1,10 +1,26 @@
 	object_const_def
+	const DEVILSSHAFTB1F_HIKER
 	const DEVILSSHAFTB1F_STIKE
+	const DEVILSSHAFTB1F_POKE_BALL
 
 DevilsShaftB1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+TrainerHikerStikony:
+	trainer HIKER, STIKONY, EVENT_BEAT_HIKER_STIKONY, HikerStikonySeenText, HikerStikonyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext HikerStikonyAfterText
+	waitbutton
+	closetext
+	end
+
+DevilsShaftB1FPokeBall:
+	itemball POKE_BALL
 
 DevilsShaftB1F_StikeEncounterScene:
 	turnobject PLAYER, UP
@@ -98,6 +114,36 @@ DevilsShaftB1F_StikeYouWonText:
 	cont "go, see ya."
 	done
 
+HikerStikonySeenText:
+	text "This here's a"
+	line "great place to"
+	cont "camp!"
+
+	para "If you want it,"
+	line "you're gonna have"
+
+	para "to beat me in"
+	line "battle!"
+	done
+
+HikerStikonyBeatenText:
+	text "Woah there! Maybe"
+	line "we can just share?"
+	done
+
+HikerStikonyAfterText:
+	text "How are ya farin'"
+	line "against these"
+	cont "SPINARAK?"
+
+	para "Their attacks"
+	line "often poison my"
+	cont "#MON."
+
+	para "That's why I"
+	line "brought ANTIDOTE!"
+	done
+
 DevilsShaftB1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -111,4 +157,6 @@ DevilsShaftB1F_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 17, 22, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  6, 11, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerHikerStikony, -1
+	object_event 17, 22, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  8,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DevilsShaftB1FPokeBall, EVENT_DEVILS_SHAFT_B1F_POKE_BALL

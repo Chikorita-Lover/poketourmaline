@@ -102,7 +102,6 @@ KRIS EQU __trainer_class__
 
 	trainerclass YOUNGSTER ; 16
 	const JOEY1
-	const MIKEY
 	const ALBERT
 	const GORDON
 	const SAMUEL
@@ -318,12 +317,12 @@ KRIS EQU __trainer_class__
 	trainerclass SABRINA ; 23
 	const SABRINA1
 
-	trainerclass BUG_CATCHER ; 24
+	trainerclass MYCOMANIAC ; 24
 	const DON
 	const ROB
 	const ED
 	const WADE1
-	const BUG_CATCHER_BENNY
+	const MYCOMANIAC_BENNY
 	const AL
 	const JOSH
 	const ARNIE1
@@ -454,6 +453,7 @@ KRIS EQU __trainer_class__
 	const VINCENT
 
 	trainerclass HIKER ; 2c
+	const STIKONY
 	const ANTHONY1
 	const RUSSELL
 	const PHILLIP

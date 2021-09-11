@@ -1,8 +1,8 @@
 	object_const_def
 	const AZALEAGYM_BUGSY
-	const AZALEAGYM_BUG_CATCHER1
-	const AZALEAGYM_BUG_CATCHER2
-	const AZALEAGYM_BUG_CATCHER3
+	const AZALEAGYM_MYCOMANIAC1
+	const AZALEAGYM_MYCOMANIAC2
+	const AZALEAGYM_MYCOMANIAC3
 	const AZALEAGYM_TWIN1
 	const AZALEAGYM_TWIN2
 	const AZALEAGYM_GYM_GUIDE
@@ -36,9 +36,9 @@ AzaleaGymBugsyScript:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
 	setevent EVENT_BEAT_TWINS_AMY_AND_MAY
-	setevent EVENT_BEAT_BUG_CATCHER_BENNY
-	setevent EVENT_BEAT_BUG_CATCHER_AL
-	setevent EVENT_BEAT_BUG_CATCHER_JOSH
+	setevent EVENT_BEAT_MYCOMANIAC_BENNY
+	setevent EVENT_BEAT_MYCOMANIAC_AL
+	setevent EVENT_BEAT_MYCOMANIAC_JOSH
 	writetext BugsyText_HiveBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_FURY_CUTTER
@@ -89,35 +89,35 @@ TrainerTwinsAmyandmay2:
 	closetext
 	end
 
-TrainerBugCatcherBenny:
-	trainer BUG_CATCHER, BUG_CATCHER_BENNY, EVENT_BEAT_BUG_CATCHER_BENNY, BugCatcherBennySeenText, BugCatcherBennyBeatenText, 0, .AfterScript
+TrainerMycomaniacBenny:
+	trainer MYCOMANIAC, MYCOMANIAC_BENNY, EVENT_BEAT_MYCOMANIAC_BENNY, MycomaniacBennySeenText, MycomaniacBennyBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherBennyAfterBattleText
+	writetext MycomaniacBennyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherAl:
-	trainer BUG_CATCHER, AL, EVENT_BEAT_BUG_CATCHER_AL, BugCatcherAlSeenText, BugCatcherAlBeatenText, 0, .AfterScript
+TrainerMycomaniacAl:
+	trainer MYCOMANIAC, AL, EVENT_BEAT_MYCOMANIAC_AL, MycomaniacAlSeenText, MycomaniacAlBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherAlAfterBattleText
+	writetext MycomaniacAlAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherJosh:
-	trainer BUG_CATCHER, JOSH, EVENT_BEAT_BUG_CATCHER_JOSH, BugCatcherJoshSeenText, BugCatcherJoshBeatenText, 0, .AfterScript
+TrainerMycomaniacJosh:
+	trainer MYCOMANIAC, JOSH, EVENT_BEAT_MYCOMANIAC_JOSH, MycomaniacJoshSeenText, MycomaniacJoshBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherJoshAfterBattleText
+	writetext MycomaniacJoshAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -230,7 +230,7 @@ BugsyText_BugMonsAreDeep:
 	line "ites thoroughly."
 	done
 
-BugCatcherBennySeenText:
+MycomaniacBennySeenText:
 	text "Bug #MON evolve"
 	line "young. So they get"
 
@@ -238,18 +238,18 @@ BugCatcherBennySeenText:
 	line "faster."
 	done
 
-BugCatcherBennyBeatenText:
+MycomaniacBennyBeatenText:
 	text "Just evolving"
 	line "isn't enough!"
 	done
 
-BugCatcherBennyAfterBattleText:
+MycomaniacBennyAfterBattleText:
 	text "#MON become"
 	line "stronger if they"
 	cont "evolve. Really!"
 	done
 
-BugCatcherAlSeenText:
+MycomaniacAlSeenText:
 	text "Bug #MON are"
 	line "cool and tough!"
 
@@ -257,12 +257,12 @@ BugCatcherAlSeenText:
 	line "you!"
 	done
 
-BugCatcherAlBeatenText:
+MycomaniacAlBeatenText:
 	text "You proved how"
 	line "tough you are…"
 	done
 
-BugCatcherAlAfterBattleText:
+MycomaniacAlAfterBattleText:
 	text "They're so cool,"
 	line "but most girls"
 
@@ -272,7 +272,7 @@ BugCatcherAlAfterBattleText:
 	para "I don't know why…"
 	done
 
-BugCatcherJoshSeenText:
+MycomaniacJoshSeenText:
 	text "You saved all the"
 	line "SLOWPOKE? Whew,"
 	cont "you're mighty!"
@@ -282,11 +282,11 @@ BugCatcherJoshSeenText:
 	cont "tough too!"
 	done
 
-BugCatcherJoshBeatenText:
+MycomaniacJoshBeatenText:
 	text "Urrgggh!"
 	done
 
-BugCatcherJoshAfterBattleText:
+MycomaniacJoshAfterBattleText:
 	text "I guess I should"
 	line "teach them better"
 	cont "moves…"
@@ -374,9 +374,9 @@ AzaleaGym_MapEvents:
 
 	def_object_events
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
-	object_event  5,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherBenny, -1
-	object_event  8,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherAl, -1
-	object_event  0,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherJosh, -1
+	object_event  5,  3, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMycomaniacBenny, -1
+	object_event  8,  8, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMycomaniacAl, -1
+	object_event  0,  2, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMycomaniacJosh, -1
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsAmyandmay1, -1
 	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsAmyandmay2, -1
 	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaGymGuideScript, -1

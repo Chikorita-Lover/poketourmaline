@@ -1,5 +1,5 @@
 	object_const_def
-	const ORMALICITY_EARL
+	const ORMALICITY_FISHER
 	const ORMALICITY_LASS
 	const ORMALICITY_SUPER_NERD
 	const ORMALICITY_GRAMPS
@@ -17,40 +17,8 @@ OrmaliCity_MapScripts:
 	setflag ENGINE_FLYPOINT_ORMALI
 	endcallback
 
-OrmaliCityEarlScript:
-	applymovement ORMALICITY_EARL, OrmaliCitySpinningEarl_MovementData
-	faceplayer
-	opentext
-	writetext Text_EarlAsksIfYouBeatStikulra
-	yesorno
-	iffalse .FollowEarl
-	writetext Text_VeryNiceIndeed
-	waitbutton
-	closetext
-	end
-
-.FollowEarl:
-	writetext Text_FollowEarl
-	waitbutton
-	closetext
-	playmusic MUSIC_SHOW_ME_AROUND
-	follow ORMALICITY_EARL, PLAYER
-	applymovement ORMALICITY_EARL, OrmaliCityFollowEarl_MovementData
-	turnobject PLAYER, UP
-	applymovement ORMALICITY_EARL, OrmaliCitySpinningEarl_MovementData
-	stopfollow
-	special RestartMapMusic
-	opentext
-	writetext Text_HereTeacherIAm
-	waitbutton
-	closetext
-	applymovement ORMALICITY_EARL, OrmaliCitySpinningEarl_MovementData
-	applymovement ORMALICITY_EARL, OrmaliCityFinishFollowEarl_MovementData
-	playsound SFX_ENTER_DOOR
-	disappear ORMALICITY_EARL
-	clearevent EVENT_EARLS_ACADEMY_EARL
-	waitsfx
-	end
+OrmaliCityFisherScript:
+	jumptextfaceplayer OrmaliCityFisherText
 
 OrmaliCityLassScript:
 	jumptextfaceplayer OrmaliCityLassText
@@ -108,6 +76,12 @@ OrmaliCityPokecenterSign:
 OrmaliCityMartSign:
 	jumpstd MartSignScript
 
+OrmaliCityBallMartSign:
+	jumptext OrmaliCityBallMartSignText
+
+OrmaliCityBerryMartSign:
+	jumptext OrmaliCityBerryMartSignText
+
 OrmaliCityRareCandy:
 	itemball RARE_CANDY
 
@@ -117,123 +91,32 @@ OrmaliCityFruitTree:
 OrmaliCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ORMALI_CITY_HIDDEN_HYPER_POTION
 
-OrmaliCityFollowEarl_MovementData:
-	big_step DOWN
-	big_step DOWN
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	big_step DOWN
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	big_step UP
-	turn_head DOWN
-	step_end
+OrmaliCityFisherText:
+	text "You can take the"
+	line "SUBWAY in any town"
 
-OrmaliCityFinishFollowEarl_MovementData:
-	step UP
-	step_end
+	para "to quickly get to"
+	line "another."
 
-OrmaliCitySpinningEarl_MovementData:
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	step_end
-
-Text_EarlAsksIfYouBeatStikulra:
-	text "Hello!"
-	line "You are trainer?"
-
-	para "Battle GYM LEADER,"
-	line "win you did?"
-	done
-
-Text_VeryNiceIndeed:
-	text "Ooh, la la!"
-	line "Very indeed nice!"
-	done
-
-Text_FollowEarl:
-	text "Is that so? Then"
-	line "study shall you!"
-	cont "Follow me!"
-	done
-
-Text_HereTeacherIAm:
-	text "Here, teacher I"
-	line "am. Good it is"
-	cont "you study here!"
+	para "Of course, tickets"
+	line "aren't free! Hoho!"
 	done
 
 OrmaliCityLassText:
-	text "Have you been to"
-	line "the DEPARTMENT"
-	cont "STORE yet?"
+	text "The city square"
+	line "is my favorite"
+	cont "place to be."
 
-	para "I absolutely love"
-	line "their apparel"
-	cont "section!"
+	para "The MARTS are so"
+	line "nice, and the"
+
+	para "fountain is so"
+	line "relaxing!"
 	done
 
 OrmaliCitySuperNerdText:
-	text "Have you heard"
-	line "of the new GYM?"
+	text "Have you been"
+	line "to the new GYM?"
 
 	para "Just recently, a"
 	line "#MON GYM was"
@@ -250,12 +133,12 @@ OrmaliCityGrampsText:
 	text "People say that"
 	line "ORMALI CITY's best"
 
-	para "features are its"
-	line "STADIUM or DEPA-"
-	cont "RTMENT STORE."
+	para "feature is its"
+	line "STADIUM."
 
-	para "My, those are"
-	line "overrated!"
+	para "The one run by"
+	line "those obnoxious"
+	cont "teens? My, oh my!"
 	done
 
 OrmaliCityScientistText:
@@ -322,6 +205,19 @@ OrmaliSubwaySignText:
 	text "ORMALI SUBWAY"
 	done
 
+OrmaliCityBallMartSignText:
+	text "ORMALI CITY"
+	line "BALL MART"
+
+	para "Good BALLS for"
+	line "good prices"
+	done
+
+OrmaliCityBerryMartSignText:
+	text "ORMALI CITY"
+	line "BERRY MART"
+	done
+
 OrmaliCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -333,8 +229,8 @@ OrmaliCity_MapEvents:
 	warp_event 41, 25, ORMALI_NICKNAME_SPEECH_HOUSE, 1
 	warp_event 27, 11, ORMALI_POKECENTER_1F, 1
 	warp_event 22,  5, ORMALI_KYLES_HOUSE, 1
-	warp_event  8,  5, ROUTE_31_ORMALI_GATE, 1
-	warp_event 10,  5, ROUTE_31_ORMALI_GATE, 2
+	warp_event  8,  5, ORMALI_SUBWAY, 1
+	warp_event 10,  5, ORMALI_SUBWAY, 2
 	warp_event 35, 20, ORMALI_BALL_MART, 1
 	warp_event 35, 21, ORMALI_BALL_MART, 2
 	warp_event 51, 23, ORMALI_BERRY_MART, 1
@@ -343,18 +239,20 @@ OrmaliCity_MapEvents:
 
 	def_bg_events
 	bg_event  2, 27, BGEVENT_READ, OrmaliCitySign
-	bg_event 12, 19, BGEVENT_READ, OrmaliStadiumSign
-	bg_event 40,  7, BGEVENT_READ, CedarPokemonAcademySign
-	bg_event 15,  5, BGEVENT_READ, OrmaliSubwaySign
+	bg_event 10, 21, BGEVENT_READ, OrmaliStadiumSign
+	bg_event 35,  5, BGEVENT_READ, CedarPokemonAcademySign
+	bg_event  8,  7, BGEVENT_READ, OrmaliSubwaySign
 	bg_event 28, 11, BGEVENT_READ, OrmaliCityPokecenterSign
 	bg_event 32, 11, BGEVENT_READ, OrmaliCityMartSign
+	bg_event 35, 19, BGEVENT_READ, OrmaliCityBallMartSign
+	bg_event 52, 24, BGEVENT_READ, OrmaliCityBerryMartSign
 	bg_event  6, 32, BGEVENT_ITEM, OrmaliCityHiddenHyperPotion
 
 	def_object_events
-	object_event 11,  8, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliCityEarlScript, EVENT_ORMALI_CITY_EARL
-	object_event 31, 19, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliCityLassScript, -1
-	object_event  9, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OrmaliCitySuperNerdScript, -1
-	object_event 26,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCityGrampsScript, -1
-	object_event  9, 27, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCityScientistScript, -1
+	object_event 12,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliCityFisherScript, -1
+	object_event 31, 19, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCityLassScript, -1
+	object_event  8, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 3, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCitySuperNerdScript, -1
+	object_event 26,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 4, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCityGrampsScript, -1
+	object_event  9, 26, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCityScientistScript, -1
 	object_event 55, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliCityFruitTree, -1
 	object_event 59,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OrmaliCityRareCandy, EVENT_ORMALI_CITY_RARE_CANDY

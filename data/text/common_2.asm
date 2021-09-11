@@ -1362,6 +1362,19 @@ _OakPCText4::
 	line "OAK's PC closed."
 	done
 
+_PokecenterMomsPCText::
+	text "MOM's PC"
+	line "accessed."
+
+	para "Starting video"
+	line "call with MOM."
+	done
+
+_PokecenterPCMomsClosedText::
+	text "Video link"
+	line "closed."
+	done
+
 _TrainerRankingExplanationText:: ; unreferenced
 	text "Triple-theme"
 	line "trainer ranking!"

@@ -158,12 +158,11 @@ PsyduckEggMoves:
 	db CROSS_CHOP
 	db -1 ; end
 
-MankeyEggMoves:
-	db ROCK_SLIDE
-	db FORESIGHT
-	db POISON_JAB
-	db COUNTER
-	db REVERSAL
+ShroomishEggMoves:
+	; db FAKE_TEARS (TODO)
+	db CHARM
+	; db WAKE_UP_SLAP (TODO)
+	; db SEED_BOMB (TODO)
 	db -1 ; end
 
 GrowlitheEggMoves:
@@ -325,16 +324,6 @@ KoffingEggMoves:
 	db PSYBEAM
 	db DESTINY_BOND
 	db PAIN_SPLIT
-	db -1 ; end
-
-BaltoyEggMoves:
-	db CRUNCH
-	db REVERSAL
-	db ROCK_SLIDE
-	db THRASH
-	db PURSUIT
-	db COUNTER
-	db MAGNITUDE
 	db -1 ; end
 
 ChanseyEggMoves:

@@ -80,7 +80,7 @@ OrmaliOutskirts_MapEvents:
 	bg_event  6,  9, BGEVENT_READ, OrmaliOutskirtsSign1
 	bg_event  8,  4, BGEVENT_READ, DevilsShaftSign
 	bg_event 27,  8, BGEVENT_READ, AlertGeodudeSign
-	bg_event 74, 10, BGEVENT_READ, OrmaliOutskirtsSign2
+	bg_event 76, 10, BGEVENT_READ, OrmaliOutskirtsSign2
 
 	def_object_events
 	object_event 11,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OrmaliOutskirtsHikerScript, -1

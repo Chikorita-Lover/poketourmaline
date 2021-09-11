@@ -104,7 +104,7 @@ ENDM
 	connection east, Route29, ROUTE_29, 0
 
 	map_attributes OrmaliOutskirts, ORMALI_OUTSKIRTS, $71, EAST
-	connection east, OrmaliCity, ORMALI_CITY, 8
+	connection east, OrmaliCity, ORMALI_CITY, -8
 
 	map_attributes OrmaliCity, ORMALI_CITY, $71, WEST
 	connection west, OrmaliOutskirts, ORMALI_OUTSKIRTS, 8
@@ -524,6 +524,7 @@ ENDM
 	map_attributes OrmaliNicknameSpeechHouse, ORMALI_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes OrmaliPokecenter1F, ORMALI_POKECENTER_1F, $00, 0
 	map_attributes OrmaliKylesHouse, ORMALI_KYLES_HOUSE, $00, 0
+	map_attributes OrmaliSubway, ORMALI_SUBWAY, $00, 0
 	map_attributes Route32RuinsOfAlphGate, ROUTE_32_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes Route32Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
 	map_attributes Route35GoldenrodGate, ROUTE_35_GOLDENROD_GATE, $00, 0

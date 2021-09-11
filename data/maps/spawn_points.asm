@@ -24,9 +24,9 @@ SpawnPoints:
 	spawn CINNABAR_ISLAND,            11, 12
 	spawn ROUTE_23,                    9,  6
 
-	spawn TOROMA_TOWN,              13,  6
+	spawn TOROMA_TOWN,                13,  6
 	spawn CHERRYGROVE_CITY,           29,  4
-	spawn ORMALI_CITY,                31, 26
+	spawn ORMALI_CITY,                27, 12
 	spawn ROUTE_32,                   11, 74
 	spawn AZALEA_TOWN,                15, 10
 	spawn CIANWOOD_CITY,              23, 44

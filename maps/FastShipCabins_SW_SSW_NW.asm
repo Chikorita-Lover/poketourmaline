@@ -1,6 +1,6 @@
 	object_const_def
 	const FASTSHIPCABINS_SW_SSW_NW_FISHER
-	const FASTSHIPCABINS_SW_SSW_NW_BUG_CATCHER
+	const FASTSHIPCABINS_SW_SSW_NW_MYCOMANIAC
 	const FASTSHIPCABINS_SW_SSW_NW_BEAUTY
 	const FASTSHIPCABINS_SW_SSW_NW_ROCKER
 
@@ -20,13 +20,13 @@ TrainerFirebreatherLyle:
 	closetext
 	end
 
-TrainerBugCatcherKen:
-	trainer BUG_CATCHER, KEN, EVENT_BEAT_BUG_CATCHER_KEN, BugCatcherKenSeenText, BugCatcherKenBeatenText, 0, .Script
+TrainerMycomaniacKen:
+	trainer MYCOMANIAC, KEN, EVENT_BEAT_MYCOMANIAC_KEN, MycomaniacKenSeenText, MycomaniacKenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcherKenAfterBattleText
+	writetext MycomaniacKenAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -130,18 +130,18 @@ FirebreatherLyleAfterBattleText:
 	line "Really?"
 	done
 
-BugCatcherKenSeenText:
+MycomaniacKenSeenText:
 	text "I'm visiting my"
 	line "grandma to catch"
 	cont "me some bugs!"
 	done
 
-BugCatcherKenBeatenText:
+MycomaniacKenBeatenText:
 	text "Ooh, wow."
 	line "You're tough!"
 	done
 
-BugCatcherKenAfterBattleText:
+MycomaniacKenAfterBattleText:
 	text "You can find lots"
 	line "of #MON in the"
 	cont "trees of JOHTO!"
@@ -239,6 +239,6 @@ FastShipCabins_SW_SSW_NW_MapEvents:
 
 	def_object_events
 	object_event  1, 15, SPRITE_FISHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFirebreatherLyle, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
-	object_event  6, 15, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherKen, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
+	object_event  6, 15, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMycomaniacKen, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
 	object_event  1, 26, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyCassie, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	object_event  3, 28, SPRITE_ROCKER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGuitaristClyde, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND

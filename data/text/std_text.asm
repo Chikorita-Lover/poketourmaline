@@ -403,3 +403,46 @@ RegisteredNumber2Text:
 	text_ram wStringBuffer3
 	text "'s number."
 	done
+
+SubwayWelcomeText:
+	text "Hello, welcome"
+	line "to the SUBWAY!"
+	done
+
+SubwayPurchaseTicketText:
+	text "Would you like"
+	line "to purchase a"
+	cont "one-way TICKET?"
+
+	para "One TICKET will"
+	line "be ¥4000."
+	done
+
+SubwayBoughtTicketText:
+	text "Thank you! Enjoy"
+	line "your ride!"
+	done
+
+SubwayRefusedText:
+	text "Enjoy the rest"
+	line "of your day!"
+	done
+
+SubwayNotEnoughMoneyText:
+	text "Sorry, you don't"
+	line "have enough."
+	done
+
+SubwayHasTicketText:
+	text "Please show the"
+	line "boarding attendent"
+	cont "your TICKET!"
+	done
+
+SubwayTrainNotAvailableText:
+	text "Sorry--the train"
+	line "isn't available"
+
+	para "for service at"
+	line "the moment."
+	done

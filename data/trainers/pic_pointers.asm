@@ -38,7 +38,7 @@ TrainerPicPointers::
 	dba_pic SkierPic
 	dba_pic TeacherPic
 	dba_pic SabrinaPic
-	dba_pic BugCatcherPic
+	dba_pic MycomaniacPic
 	dba_pic FisherPic
 	dba_pic SwimmermPic
 	dba_pic SwimmerfPic

@@ -1,7 +1,7 @@
 Gen1TrainerClassNames:
 ; Untranslated trainer class names from Red.
 	dw .Youngster
-	dw .BugCatcher
+	dw .Mycomaniac
 	dw .Lass
 	dw wOTClassName ; sailor
 	dw .JrTrainerM
@@ -49,7 +49,7 @@ Gen1TrainerClassNames:
 	dw wOTClassName ; lance
 
 .Youngster:    db "たんパン@"
-.BugCatcher:   db "むしとり@"
+.Mycomaniac:   db "むしとり@"
 .Lass:         db "ミニスカ@"
 .JrTrainerM:   db "ボーイ@"
 .JrTrainerF:   db "ガール@"

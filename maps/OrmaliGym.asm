@@ -19,8 +19,8 @@ OrmaliGym_MapEvents:
 	; hallway warps
 	warp_event 22, 35, ORMALI_GYM, 5
 	warp_event 23, 35, ORMALI_GYM, 6
-	warp_event 32, 18, ORMALI_GYM, 11
-	warp_event 33, 18, ORMALI_GYM, 12
+	warp_event 27, 30, ORMALI_GYM, 11
+	warp_event 27, 31, ORMALI_GYM, 12
 	; ring warps
 	warp_event 29, 11, ORMALI_GYM, 9
 	warp_event 29, 10, ORMALI_GYM, 10

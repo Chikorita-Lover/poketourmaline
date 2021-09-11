@@ -19,6 +19,7 @@ AlphabeticalPokedexOrder:
 	db BELLSPROUT
 	db BLASTOISE
 	db BLISSEY
+	db BRELOOM
 	db BULBASAUR
 	db BUTTERFREE
 	db CATERPIE
@@ -125,7 +126,6 @@ AlphabeticalPokedexOrder:
 	db MAGMAR
 	db MAGNEMITE
 	db MAGNETON
-	db MANKEY
 	db MANTINE
 	db MANTYKE
 	db MAREEP
@@ -174,7 +174,6 @@ AlphabeticalPokedexOrder:
 	db POLIWRATH
 	db PONYTA
 	db PORYGON2
-	db PRIMEAPE
 	db PSYDUCK
 	db PUPITAR
 	db QUAGSIRE
@@ -196,6 +195,7 @@ AlphabeticalPokedexOrder:
 	db SEEL
 	db SENTRET
 	db SHELLDER
+	db SHROOMISH
 	db SHUCKLE
 	db SKARMORY
 	db SKIPLOOM

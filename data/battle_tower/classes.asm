@@ -68,8 +68,8 @@ BattleTowerTrainers:
 	db "MEYER@@@@@", SWIMMERF
 	db "JOHNSON@@@", YOUNGSTER
 	db "ADAMS@@@@@", GUITARIST
-	db "SMITH@@@@@", BUG_CATCHER
-	db "TAJIRI@@@@", BUG_CATCHER
+	db "SMITH@@@@@", MYCOMANIAC
+	db "TAJIRI@@@@", MYCOMANIAC
 	db "BAKER@@@@@", POKEMANIAC
 	db "COLLINS@@@", SCIENTIST
 	db "SMART@@@@@", SUPER_NERD

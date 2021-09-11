@@ -2,7 +2,7 @@
 	const VERMILIONPOKECENTER1F_NURSE
 	const VERMILIONPOKECENTER1F_FISHING_GURU
 	const VERMILIONPOKECENTER1F_SAILOR
-	const VERMILIONPOKECENTER1F_BUG_CATCHER
+	const VERMILIONPOKECENTER1F_MYCOMANIAC
 
 VermilionPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -31,8 +31,8 @@ VermilionPokecenter1FFishingGuruScript:
 VermilionPokecenter1FSailorScript:
 	jumptextfaceplayer VermilionPokecenter1FSailorText
 
-VermilionPokecenter1FBugCatcherScript:
-	jumptextfaceplayer VermilionPokecenter1FBugCatcherText
+VermilionPokecenter1FMycomaniacScript:
+	jumptextfaceplayer VermilionPokecenter1FMycomaniacText
 
 VermilionPokecenter1FFishingGuruText:
 	text "A sleeping #MON"
@@ -65,7 +65,7 @@ VermilionPokecenter1FSailorText:
 	line "trainers."
 	done
 
-VermilionPokecenter1FBugCatcherText:
+VermilionPokecenter1FMycomaniacText:
 	text "Oh? You have some"
 	line "BADGES I've never"
 	cont "seen before."
@@ -90,4 +90,4 @@ VermilionPokecenter1F_MapEvents:
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FNurseScript, -1
 	object_event  7,  2, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FFishingGuruScript, -1
 	object_event  6,  5, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FSailorScript, -1
-	object_event  1,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FBugCatcherScript, -1
+	object_event  1,  5, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FMycomaniacScript, -1

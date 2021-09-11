@@ -244,6 +244,7 @@ ENDM
 	map_const ORMALI_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const ORMALI_POKECENTER_1F,                         5,  4 ; 10
 	map_const ORMALI_KYLES_HOUSE,                           4,  4 ; 11
+	map_const ORMALI_SUBWAY,                               10,  7
 	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
 	map_const ROUTE_32_POKECENTER_1F,                       5,  4 ; 13
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14

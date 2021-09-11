@@ -1,7 +1,7 @@
 	object_const_def
 	const GOLDENRODDEPTSTORE1F_RECEPTIONIST
 	const GOLDENRODDEPTSTORE1F_POKEFAN_F
-	const GOLDENRODDEPTSTORE1F_BUG_CATCHER
+	const GOLDENRODDEPTSTORE1F_MYCOMANIAC
 	const GOLDENRODDEPTSTORE1F_GENTLEMAN
 
 GoldenrodDeptStore1F_MapScripts:
@@ -18,8 +18,8 @@ GoldenrodDeptStore1FGentlemanScript:
 GoldenrodDeptStore1FPokefanFScript:
 	jumptextfaceplayer GoldenrodDeptStore1FPokefanFText
 
-GoldenrodDeptStore1FBugCatcherScript:
-	jumptextfaceplayer GoldenrodDeptStore1FBugCatcherText
+GoldenrodDeptStore1FMycomaniacScript:
+	jumptextfaceplayer GoldenrodDeptStore1FMycomaniacText
 
 GoldenrodDeptStore1FDirectory:
 	jumptext GoldenrodDeptStore1FDirectoryText
@@ -49,7 +49,7 @@ GoldenrodDeptStore1FPokefanFText:
 	line "again today!"
 	done
 
-GoldenrodDeptStore1FBugCatcherText:
+GoldenrodDeptStore1FMycomaniacText:
 	text "Mom's good at"
 	line "bargain hunting."
 
@@ -94,5 +94,5 @@ GoldenrodDeptStore1F_MapEvents:
 	def_object_events
 	object_event 10,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore1FReceptionistScript, -1
 	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore1FPokefanFScript, -1
-	object_event  5,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore1FBugCatcherScript, -1
+	object_event  5,  5, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore1FMycomaniacScript, -1
 	object_event 11,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore1FGentlemanScript, -1

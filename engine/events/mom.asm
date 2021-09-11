@@ -634,7 +634,7 @@ MomTakenMoneyText:
 	text_end
 
 MomJustDoWhatYouCanText:
-	text_far _MomJustDoWhatYouCanText
+	text_far _MomDontWorkYourselfTooHardText
 	text_end
 
 Mom_SavedString:

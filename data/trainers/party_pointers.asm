@@ -38,7 +38,7 @@ TrainerGroups:
 	dba SkierGroup
 	dba TeacherGroup
 	dba SabrinaGroup
-	dba BugCatcherGroup
+	dba MycomaniacGroup
 	dba FisherGroup
 	dba SwimmerMGroup
 	dba SwimmerFGroup

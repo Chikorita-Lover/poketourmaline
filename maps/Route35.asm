@@ -5,7 +5,7 @@
 	const ROUTE35_LASS2
 	const ROUTE35_YOUNGSTER3
 	const ROUTE35_FISHER
-	const ROUTE35_BUG_CATCHER
+	const ROUTE35_MYCOMANIAC
 	const ROUTE35_SUPER_NERD
 	const ROUTE35_OFFICER
 	const ROUTE35_FRUIT_TREE
@@ -126,22 +126,22 @@ TrainerPicnickerKim:
 	closetext
 	end
 
-TrainerBugCatcherArnie:
-	trainer BUG_CATCHER, ARNIE1, EVENT_BEAT_BUG_CATCHER_ARNIE, BugCatcherArnieSeenText, BugCatcherArnieBeatenText, 0, .Script
+TrainerMycomaniacArnie:
+	trainer MYCOMANIAC, ARNIE1, EVENT_BEAT_MYCOMANIAC_ARNIE, MycomaniacArnieSeenText, MycomaniacArnieBeatenText, 0, .Script
 
 .Script:
-	loadvar VAR_CALLERID, PHONE_BUG_CATCHER_ARNIE
+	loadvar VAR_CALLERID, PHONE_MYCOMANIAC_ARNIE
 	endifjustbattled
 	opentext
 	checkflag ENGINE_ARNIE_READY_FOR_REMATCH
 	iftrue .WantsBattle
 	checkflag ENGINE_YANMA_SWARM
 	iftrue .YanmaSwarming
-	checkcellnum PHONE_BUG_CATCHER_ARNIE
+	checkcellnum PHONE_MYCOMANIAC_ARNIE
 	iftrue Route35NumberAcceptedM
 	checkevent EVENT_ARNIE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext BugCatcherArnieAfterBattleText
+	writetext MycomaniacArnieAfterBattleText
 	promptbutton
 	setevent EVENT_ARNIE_ASKED_FOR_PHONE_NUMBER
 	scall Route35AskNumber1M
@@ -150,16 +150,16 @@ TrainerBugCatcherArnie:
 .AskedAlready:
 	scall Route35AskNumber2M
 .AskForNumber:
-	askforphonenumber PHONE_BUG_CATCHER_ARNIE
+	askforphonenumber PHONE_MYCOMANIAC_ARNIE
 	ifequal PHONE_CONTACTS_FULL, Route35PhoneFullM
 	ifequal PHONE_CONTACT_REFUSED, Route35NumberDeclinedM
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
+	gettrainername STRING_BUFFER_3, MYCOMANIAC, ARNIE1
 	scall Route35RegisteredNumberM
 	sjump Route35NumberAcceptedM
 
 .WantsBattle:
 	scall Route35RematchM
-	winlosstext BugCatcherArnieBeatenText, 0
+	winlosstext MycomaniacArnieBeatenText, 0
 	readmem wArnieFightCount
 	ifequal 4, .Fight4
 	ifequal 3, .Fight3
@@ -179,7 +179,7 @@ TrainerBugCatcherArnie:
 	checkflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer BUG_CATCHER, ARNIE1
+	loadtrainer MYCOMANIAC, ARNIE1
 	startbattle
 	reloadmapafterbattle
 	loadmem wArnieFightCount, 1
@@ -187,7 +187,7 @@ TrainerBugCatcherArnie:
 	end
 
 .LoadFight1:
-	loadtrainer BUG_CATCHER, ARNIE2
+	loadtrainer MYCOMANIAC, ARNIE2
 	startbattle
 	reloadmapafterbattle
 	loadmem wArnieFightCount, 2
@@ -195,7 +195,7 @@ TrainerBugCatcherArnie:
 	end
 
 .LoadFight2:
-	loadtrainer BUG_CATCHER, ARNIE3
+	loadtrainer MYCOMANIAC, ARNIE3
 	startbattle
 	reloadmapafterbattle
 	loadmem wArnieFightCount, 3
@@ -203,7 +203,7 @@ TrainerBugCatcherArnie:
 	end
 
 .LoadFight3:
-	loadtrainer BUG_CATCHER, ARNIE4
+	loadtrainer MYCOMANIAC, ARNIE4
 	startbattle
 	reloadmapafterbattle
 	loadmem wArnieFightCount, 4
@@ -211,14 +211,14 @@ TrainerBugCatcherArnie:
 	end
 
 .LoadFight4:
-	loadtrainer BUG_CATCHER, ARNIE5
+	loadtrainer MYCOMANIAC, ARNIE5
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_ARNIE_READY_FOR_REMATCH
 	end
 
 .YanmaSwarming:
-	writetext BugCatcherArnieYanmaText
+	writetext MycomaniacArnieYanmaText
 	waitbutton
 	closetext
 	end
@@ -387,18 +387,18 @@ JugglerIrwinAfterBattleText:
 	line "electrified me!"
 	done
 
-BugCatcherArnieSeenText:
+MycomaniacArnieSeenText:
 	text "I'll go anywhere"
 	line "if bug #MON"
 	cont "appear there."
 	done
 
-BugCatcherArnieBeatenText:
+MycomaniacArnieBeatenText:
 	text "Huh? I shouldn't"
 	line "have lost that…"
 	done
 
-BugCatcherArnieAfterBattleText:
+MycomaniacArnieAfterBattleText:
 	text "My VENONAT won me"
 	line "the Bug-Catching"
 
@@ -406,7 +406,7 @@ BugCatcherArnieAfterBattleText:
 	line "NATIONAL PARK."
 	done
 
-BugCatcherArnieYanmaText:
+MycomaniacArnieYanmaText:
 	text "Wow… Look at all"
 	line "those YANMA!"
 
@@ -481,7 +481,7 @@ Route35_MapEvents:
 	object_event 10, 26, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerKim, -1
 	object_event 14, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBirdKeeperBryan, -1
 	object_event  2, 10, SPRITE_FISHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFirebreatherWalt, -1
-	object_event 16,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherArnie, -1
+	object_event 16,  7, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMycomaniacArnie, -1
 	object_event  5, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerIrwin, -1
 	object_event  5,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerOfficerDirk, -1
 	object_event  2, 25, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35FruitTree, -1

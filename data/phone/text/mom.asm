@@ -50,14 +50,42 @@ MomPhoneCherrygroveText:
 	line "home for a bit?"
 	done
 
-MomOtherAreaText:
-	text "Wow, you're in"
+MomPhoneOrmaliText:
+	text "You're down at"
 	line "@"
 	text_ram wStringBuffer3
 	text "?"
 
-	para "Good luck on your"
-	line "#MON quest!"
+	para "Have you been to"
+	line "the STADIUM re-"
+	cont "cently?"
+
+	para "I thought you'd"
+	line "like it!"
+	done
+
+MomPhoneEsmaraText:
+	text "You're over in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "It's a real jun-"
+	line "gle out there."
+
+	para "I'm sure there"
+	line "are plenty of"
+	cont "rare #MON, too!"
+	done
+
+MomOtherAreaText:
+	text "Wow, you're at"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "What kinds of"
+	line "#MON are there?"
 	done
 
 MomDeterminedText:

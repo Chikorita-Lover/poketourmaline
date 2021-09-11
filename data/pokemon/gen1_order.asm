@@ -56,7 +56,7 @@ Pokered_MonIndices:
 	db MAGNETON
 	db KOFFING
 	db SNEASEL ; MISSINGNO.
-	db MANKEY
+	db SHROOMISH
 	db SEEL
 	db DIGLETT
 	db TAUROS
@@ -116,7 +116,7 @@ Pokered_MonIndices:
 	db BEEDRILL
 	db HOUNDOOM ; MISSINGNO.
 	db DODRIO
-	db PRIMEAPE
+	db BRELOOM
 	db DUGTRIO
 	db VENOMOTH
 	db DEWGONG
