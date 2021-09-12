@@ -560,7 +560,7 @@ CheckContestBattleOver:
 	ld a, [wBattleType]
 	cp BATTLETYPE_CONTEST
 	jr nz, .contest_not_over
-	ld a, [wParkBallsRemaining]
+	ld a, [wSportBallsRemaining]
 	and a
 	jr nz, .contest_not_over
 	ld a, [wBattleResult]
@@ -4973,7 +4973,7 @@ BattleMenu_Pack:
 	jr .got_item
 
 .contest
-	ld a, PARK_BALL
+	ld a, SPORT_BALL
 	ld [wCurItem], a
 	call DoItemEffect
 

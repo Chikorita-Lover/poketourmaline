@@ -1,8 +1,8 @@
-GiveParkBalls:
+GiveSportBalls:
 	xor a
 	ld [wContestMon], a
 	ld a, BUG_CONTEST_BALLS
-	ld [wParkBallsRemaining], a
+	ld [wSportBallsRemaining], a
 	farcall StartBugContestTimer
 	ret
 
@@ -11,7 +11,7 @@ BugCatchingContestBattleScript::
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
-	readmem wParkBallsRemaining
+	readmem wSportBallsRemaining
 	iffalse BugCatchingContestOutOfBallsScript
 	end
 

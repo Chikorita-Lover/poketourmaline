@@ -3105,7 +3105,7 @@ wPoisonStepCount:: db
 wHappinessStepCount:: db
 	ds 1
 
-wParkBallsRemaining::
+wSportBallsRemaining::
 wSafariBallsRemaining:: db
 wSafariTimeRemaining:: dw
 

@@ -84,7 +84,7 @@ ContestBattleMenuHeader:
 	dn 2, 2 ; rows, columns
 	db 12 ; spacing
 	dba .Text
-	dba .PrintParkBallsRemaining
+	dba .PrintSportBallsRemaining
 
 .Text:
 	db "FIGHT@"
@@ -92,9 +92,9 @@ ContestBattleMenuHeader:
 	db "PARKBALL×  @"
 	db "RUN@"
 
-.PrintParkBallsRemaining:
+.PrintSportBallsRemaining:
 	hlcoord 13, 16
-	ld de, wParkBallsRemaining
+	ld de, wSportBallsRemaining
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum
 	ret

@@ -159,7 +159,7 @@ StartMenu_PrintBugContestStatus:
 	ld de, .BallsString
 	call PlaceString
 	hlcoord 8, 5
-	ld de, wParkBallsRemaining
+	ld de, wSportBallsRemaining
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	hlcoord 1, 1

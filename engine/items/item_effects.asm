@@ -190,7 +190,7 @@ ItemEffects:
 	dw RestoreHPEffect     ; GOLD_BERRY
 	dw SquirtbottleEffect  ; SQUIRTBOTTLE
 	dw NoEffect            ; ITEM_B0
-	dw PokeBallEffect      ; PARK_BALL
+	dw PokeBallEffect      ; SPORT_BALL
 	dw NoEffect            ; RAINBOW_WING
 	dw NoEffect            ; ITEM_B3
 	assert_table_length ITEM_B3
@@ -229,7 +229,7 @@ PokeBallEffect:
 	xor a
 	ld [wWildMon], a
 	ld a, [wCurItem]
-	cp PARK_BALL
+	cp SPORT_BALL
 	call nz, ReturnToBattle_UseBall
 
 	ld hl, wOptions
@@ -722,7 +722,7 @@ PokeBallEffect:
 	jp TossItem
 
 .used_park_ball
-	ld hl, wParkBallsRemaining
+	ld hl, wSportBallsRemaining
 	dec [hl]
 	ret
 
@@ -738,7 +738,7 @@ BallMultiplierFunctionTable:
 	dbw FAST_BALL,   FastBallMultiplier
 	dbw DUSK_BALL,   DuskBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
-	dbw PARK_BALL,   ParkBallMultiplier
+	dbw SPORT_BALL,  SportBallMultiplier
 	db -1 ; end
 
 UltraBallMultiplier:
@@ -750,7 +750,7 @@ UltraBallMultiplier:
 
 SafariBallMultiplier:
 GreatBallMultiplier:
-ParkBallMultiplier:
+SportBallMultiplier:
 ; multiply catch rate by 1.5
 	ld a, b
 	srl a
@@ -914,17 +914,16 @@ DuskBallMultiplier:
 	ret
 
 .night_or_cave
-; b is the catch rate
-; a := b + b + b == b × 3
 	ld a, b
-rept 3
-	add b
+	add a
 	jr c, .max
-endr
-	ret
 
+	add b
+	jr nc, .done
 .max
-	ld b, $ff
+	ld a, $ff
+.done
+	ld b, a
 	ret
 
 LoveBallMultiplier:

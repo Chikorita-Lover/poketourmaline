@@ -1491,7 +1491,7 @@ This is a mistake with the left-hand warp carpet corner tiles in [gfx/tilesets/p
  	xor a
  	ld [wWildMon], a
 -	ld a, [wCurItem]
--	cp PARK_BALL
+-	cp SPORT_BALL
 +	ld a, [wBattleType]
 +	cp BATTLETYPE_CONTEST
  	call nz, ReturnToBattle_UseBall

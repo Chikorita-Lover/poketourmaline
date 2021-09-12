@@ -35,7 +35,7 @@ SpecialsPointers::
 	add_special CheckPartyFullAfterContest
 	add_special ContestDropOffMons
 	add_special ContestReturnMons
-	add_special GiveParkBalls
+	add_special GiveSportBalls
 	add_special CheckMagikarpLength
 	add_special MagikarpHouseSign
 	add_special HealParty ; this is both a special and a predef
