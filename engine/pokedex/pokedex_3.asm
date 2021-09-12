@@ -43,9 +43,6 @@ DrawPokedexListWindow:
 	ld [hl], $3f
 	hlcoord 5, 16
 	ld [hl], $40
-	ld a, [wCurDexMode]
-	cp DEXMODE_OLD
-	jr z, .OldMode
 ; scroll bar
 	hlcoord 11, 0
 	ld [hl], $50
@@ -56,15 +53,6 @@ DrawPokedexListWindow:
 	ld [hl], $52
 	jr .Done
 
-.OldMode:
-; no scroll bar
-	hlcoord 11, 0
-	ld [hl], $66
-	ld a, $67
-	hlcoord 11, 1
-	ld b, SCREEN_HEIGHT - 3
-	call Pokedex_FillColumn2
-	ld [hl], $68
 .Done:
 	ret
 

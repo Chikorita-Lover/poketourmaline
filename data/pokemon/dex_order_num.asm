@@ -1,7 +1,7 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
-NewPokedexOrder:
-	table_width 1, NewPokedexOrder
+NumericalPokedexOrder:
+	table_width 1, NumericalPokedexOrder
 	db CHIKORITA
 	db BAYLEEF
 	db MEGANIUM
@@ -11,6 +11,48 @@ NewPokedexOrder:
 	db TOTODILE
 	db CROCONAW
 	db FERALIGATR
+
+; Route 1 / Route 4
+	db WEEDLE
+	db KAKUNA
+	db BEEDRILL
+	db PARAS
+	db PARASECT
+	db SHROOMISH
+	db BRELOOM
+	db HERACROSS
+
+; Ormali Outskirts
+	db SANDSHREW
+	db SANDSLASH
+	db NIDORAN_F
+	db NIDORINA
+	db NIDOQUEEN
+	db NIDORAN_M
+	db NIDORINO
+	db NIDOKING
+	db ODDISH
+	db GLOOM
+	db VILEPLUME
+	db BELLOSSOM
+	db DROWZEE
+	db HYPNO
+	db GASTLY
+	db HAUNTER
+	db GENGAR
+
+; Devil's Shaft
+	db SPINARAK
+	db ARIADOS
+	db CLEFFA
+	db CLEFAIRY
+	db CLEFABLE
+	db BALTOY
+	db RHYDON
+	db STARYU
+	db STARMIE
+
+; Route 3
 	db SENTRET
 	db FURRET
 	db SPEAROW
@@ -24,15 +66,8 @@ NewPokedexOrder:
 	db IGGLYBUFF
 	db JIGGLYPUFF
 	db WIGGLYTUFF
-	db SPINARAK
-	db ARIADOS
-	db BALTOY
-	db RHYDON
-	db STARYU
-	db STARMIE
-	db CLEFFA
-	db CLEFAIRY
-	db CLEFABLE
+
+; Miscellaneous
 	db PIDGEY
 	db PIDGEOTTO
 	db PIDGEOT
@@ -44,9 +79,6 @@ NewPokedexOrder:
 	db CATERPIE
 	db METAPOD
 	db BUTTERFREE
-	db WEEDLE
-	db KAKUNA
-	db BEEDRILL
 	db GEODUDE
 	db GRAVELER
 	db GOLEM
@@ -55,17 +87,12 @@ NewPokedexOrder:
 	db CROBAT
 	db TOGEPI
 	db TOGETIC
-	db SANDSHREW
-	db SANDSLASH
 	db DUNSPARCE
 	db MAREEP
 	db FLAAFFY
 	db AMPHAROS
 	db WOOPER
 	db QUAGSIRE
-	db GASTLY
-	db HAUNTER
-	db GENGAR
 	db UNOWN
 	db ONIX
 	db STEELIX
@@ -75,8 +102,6 @@ NewPokedexOrder:
 	db HOPPIP
 	db SKIPLOOM
 	db JUMPLUFF
-	db PARAS
-	db PARASECT
 	db POLIWAG
 	db POLIWHIRL
 	db POLIWRATH
@@ -88,24 +113,12 @@ NewPokedexOrder:
 	db SLOWPOKE
 	db SLOWBRO
 	db SLOWKING
-	db ODDISH
-	db GLOOM
-	db VILEPLUME
-	db BELLOSSOM
-	db DROWZEE
-	db HYPNO
 	db ABRA
 	db KADABRA
 	db ALAKAZAM
 	db DITTO
 	db PINECO
 	db FORRETRESS
-	db NIDORAN_F
-	db NIDORINA
-	db NIDOQUEEN
-	db NIDORAN_M
-	db NIDORINO
-	db NIDOKING
 	db YANMA
 	db SUNKERN
 	db SUNFLORA
@@ -118,7 +131,6 @@ NewPokedexOrder:
 	db SCYTHER
 	db SCIZOR
 	db PINSIR
-	db HERACROSS
 	db KOFFING
 	db WEEZING
 	db GRIMER
@@ -139,8 +151,6 @@ NewPokedexOrder:
 	db AZUMARILL
 	db DIGLETT
 	db DUGTRIO
-	db SHROOMISH
-	db BRELOOM
 	db MEOWTH
 	db PERSIAN
 	db PSYDUCK

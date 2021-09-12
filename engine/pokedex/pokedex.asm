@@ -236,7 +236,7 @@ Pokedex_InitMainScreen:
 	ldh [hSCX], a
 
 	ld a, [wCurDexMode]
-	cp DEXMODE_OLD
+	cp DEXMODE_NUM
 	ld a, $4a
 	jr z, .okay
 	ld a, $47
@@ -399,16 +399,7 @@ Pokedex_UpdateDexEntryScreen:
 .update_palettes
 ; refresh palettes
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout	
-; play sound based on setting
-	ld de, SFX_BUMP
-	ld a, [wPokedexShinyToggle]
-	bit 0, a
-	jr z, .got_sound
-	ld de, SFX_SHINE
-.got_sound
-	call PlaySFX
-	jp WaitSFX
+	jp Pokedex_GetSGBLayout
 
 Pokedex_Page:
 	ld a, [wPokedexStatus]
@@ -583,30 +574,23 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 .NoUnownModeArrowCursorData:
-	db D_UP | D_DOWN, 3
-	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
+	db D_UP | D_DOWN, 2
+	dwcoord 2,  4 ; NUM
+	dwcoord 2,  6 ; ABC
 
 .ArrowCursorData:
-	db D_UP | D_DOWN, 4
-	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
-	dwcoord 2, 10 ; UNOWN
+	db D_UP | D_DOWN, 3
+	dwcoord 2,  4 ; NUM
+	dwcoord 2,  6 ; ABC
+	dwcoord 2,  8 ; UNOWN
 
 .MenuActionJumptable:
-	dw .MenuAction_NewMode
-	dw .MenuAction_OldMode
+	dw .MenuAction_NumMode
 	dw .MenuAction_ABCMode
 	dw .MenuAction_UnownMode
 
-.MenuAction_NewMode:
-	ld b, DEXMODE_NEW
-	jr .ChangeMode
-
-.MenuAction_OldMode:
-	ld b, DEXMODE_OLD
+.MenuAction_NumMode:
+	ld b, DEXMODE_NUM
 	jr .ChangeMode
 
 .MenuAction_ABCMode:
@@ -1220,7 +1204,7 @@ Pokedex_DrawOptionScreenBG:
 	ld a, [wUnlockedUnownMode]
 	and a
 	ret z
-	hlcoord 3, 10
+	hlcoord 3, 8
 	ld de, .UnownMode
 	call PlaceString
 	ret
@@ -1229,8 +1213,7 @@ Pokedex_DrawOptionScreenBG:
 	db $3b, " OPTION ", $3c, -1
 
 .Modes:
-	db   "NEW #DEX MODE"
-	next "OLD #DEX MODE"
+	db   "NUMERICAL MODE"
 	next "A to Z MODE"
 	db   "@"
 
@@ -1271,7 +1254,7 @@ Pokedex_DrawSearchScreenBG:
 	db   "@"
 
 .Menu:
-	db   "BEGIN SEARCH!!"
+	db   "BEGIN SEARCH"
 	next "CANCEL"
 	db   "@"
 
@@ -1488,14 +1471,7 @@ Pokedex_PrintListing:
 ; Prints the list of Pokémon on the main Pokédex screen.
 
 ; This check is completely useless.
-	ld a, [wCurDexMode]
-	cp DEXMODE_OLD
-	jr z, .okay
 	ld c, 11
-	jr .resume
-.okay
-	ld c, 11
-; End useless check
 
 .resume
 ; Clear (2 * [wDexListingHeight] + 1) by 11 box starting at 0,1
@@ -1540,7 +1516,7 @@ Pokedex_PrintListing:
 ; Prints one entry in the list of Pokémon on the main Pokédex screen.
 	and a
 	ret z
-	call Pokedex_PrintNumberIfOldMode
+	call Pokedex_PrintNumberIfNumMode
 	call Pokedex_PlaceDefaultStringIfNotSeen
 	ret c
 	call Pokedex_PlaceCaughtSymbolIfCaught
@@ -1550,9 +1526,9 @@ Pokedex_PrintListing:
 	call PlaceString
 	ret
 
-Pokedex_PrintNumberIfOldMode:
+Pokedex_PrintNumberIfNumMode:
 	ld a, [wCurDexMode]
-	cp DEXMODE_OLD
+	cp DEXMODE_NUM
 	jr z, .printnum
 	ret
 
@@ -1560,7 +1536,9 @@ Pokedex_PrintNumberIfOldMode:
 	push hl
 	ld de, -SCREEN_WIDTH
 	add hl, de
-	ld de, wTempSpecies
+	call Pokedex_GetDexNumber
+	ld de, wUnusedBCDNumber
+
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
 	pop hl
@@ -1649,11 +1627,12 @@ Pokedex_OrderMonsByMode:
 
 .Jumptable:
 	dw .NewMode
-	dw .OldMode
+;	dw .OldMode
 	dw Pokedex_ABCMode
 
 .NewMode:
-	ld de, NewPokedexOrder
+	ld de, NumericalPokedexOrder
+.do_dex
 	ld hl, wPokedexOrder
 	ld c, NUM_POKEMON
 .loopnew
@@ -1662,18 +1641,6 @@ Pokedex_OrderMonsByMode:
 	ld [hli], a
 	dec c
 	jr nz, .loopnew
-	call .FindLastSeen
-	ret
-
-.OldMode:
-	ld hl, wPokedexOrder
-	ld a, $1
-	ld c, NUM_POKEMON
-.loopold
-	ld [hli], a
-	inc a
-	dec c
-	jr nz, .loopold
 	call .FindLastSeen
 	ret
 
@@ -1732,7 +1699,7 @@ Pokedex_ABCMode:
 
 INCLUDE "data/pokemon/dex_order_alpha.asm"
 
-INCLUDE "data/pokemon/dex_order_new.asm"
+INCLUDE "data/pokemon/dex_order_num.asm"
 
 Pokedex_DisplayModeDescription:
 	xor a
@@ -1752,18 +1719,13 @@ Pokedex_DisplayModeDescription:
 	ret
 
 .Modes:
-	dw .NewMode
-	dw .OldMode
+	dw .NumMode
 	dw .ABCMode
 	dw .UnownMode
 
-.NewMode:
+.NumMode:
 	db   "<PK><MN> are listed by"
-	next "evolution type.@"
-
-.OldMode:
-	db   "<PK><MN> are listed by"
-	next "official type.@"
+	next "#DEX number.@"
 
 .ABCMode:
 	db   "<PK><MN> are listed"
@@ -1998,13 +1960,13 @@ Pokedex_DisplayTypeNotFoundMessage:
 
 Pokedex_UpdateCursorOAM:
 	ld a, [wCurDexMode]
-	cp DEXMODE_OLD
-	jp z, Pokedex_PutOldModeCursorOAM
+	cp DEXMODE_NUM
+	jp z, Pokedex_PutNumModeCursorOAM
 	call Pokedex_PutNewModeABCModeCursorOAM
 	call Pokedex_PutScrollbarOAM
 	ret
 
-Pokedex_PutOldModeCursorOAM:
+Pokedex_PutNumModeCursorOAM:
 	ld hl, .CursorOAM
 	ld a, [wDexListingCursor]
 	or a
@@ -2100,8 +2062,8 @@ Pokedex_PutNewModeABCModeCursorOAM:
 
 Pokedex_UpdateSearchResultsCursorOAM:
 	ld a, [wCurDexMode]
-	cp DEXMODE_OLD
-	jp z, Pokedex_PutOldModeCursorOAM
+	cp DEXMODE_NUM
+	jp z, Pokedex_PutNumModeCursorOAM
 	ld hl, .CursorOAM
 	call Pokedex_LoadCursorOAM
 	ret
@@ -2158,7 +2120,7 @@ Pokedex_LoadCursorOAM:
 	jr .loop
 
 Pokedex_PutScrollbarOAM:
-; Writes the OAM data for the scrollbar in the new mode and ABC mode.
+; Writes the OAM data for the scrollbar in the ABC mode.
 	push de
 	ld a, [wDexListingEnd]
 	dec a
@@ -2601,4 +2563,25 @@ Pokedex_SetBGMapMode_3ifDMG_4ifCGB:
 Pokedex_ResetBGMapMode:
 	xor a
 	ldh [hBGMapMode], a
+	ret
+
+Pokedex_GetDexNumber:
+; Get the intended number of the selected Pokémon.
+	push bc
+	push hl
+	
+	ld a, [wTempSpecies] ; a = current mon (internal number)
+	ld b, a ; b = Needed mon (a and b must be matched)
+	ld c, 0 ; c = index
+	ld hl, NumericalPokedexOrder
+	
+.loop
+	inc c
+	ld a, [hli]
+	cp b
+	jr nz, .loop
+	ld a, c
+	ld [wUnusedBCDNumber], a
+	pop hl
+	pop bc
 	ret
