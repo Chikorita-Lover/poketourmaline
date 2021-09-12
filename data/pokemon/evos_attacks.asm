@@ -21,16 +21,18 @@ BulbasaurEvosAttacks:
 	db EVOLVE_LEVEL, 16, IVYSAUR
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 4, GROWL
-	db 7, LEECH_SEED
-	db 10, VINE_WHIP
-	db 15, POISONPOWDER
-	db 15, SLEEP_POWDER
-	db 20, RAZOR_LEAF
-	db 25, SWEET_SCENT
-	db 32, GROWTH
-	db 39, SYNTHESIS
-	db 46, SOLARBEAM
+	db 3, GROWL
+	db 7, VINE_WHIP
+	db 9, VINE_WHIP
+	db 13, POISONPOWDER
+	db 13, SLEEP_POWDER
+	db 15, TAKE_DOWN
+	db 19, RAZOR_LEAF
+	db 21, SWEET_SCENT
+	db 25, GROWTH
+	db 27, DOUBLE_EDGE
+	db 33, SYNTHESIS
+	db 37, SEED_BOMB
 	db 0 ; no more level-up moves
 
 IvysaurEvosAttacks:
@@ -803,7 +805,7 @@ ShroomishEvosAttacks:
 	db 26, GIGA_DRAIN
 	db 29, GROWTH
 	db 33, TOXIC
-	db 36, PETAL_DANCE ; TODO: SEED_BOMB
+	db 36, SEED_BOMB
 	db 40, SPORE
 	db 0 ; no more level-up moves
 
@@ -823,7 +825,7 @@ BreloomEvosAttacks:
 	db 28, KARATE_CHOP
 	db 33, MIND_READER
 	db 39, SUBMISSION
-	db 44, PETAL_DANCE ; TODO: SEED_BOMB
+	db 44, SEED_BOMB
 	db 50, DYNAMICPUNCH
 	db 0 ; no more level-up moves
 
@@ -1459,21 +1461,26 @@ ExeggcuteEvosAttacks:
 	db 1, BARRAGE
 	db 1, HYPNOSIS
 	db 7, REFLECT
-	db 13, LEECH_SEED
-	db 19, CONFUSION
-	db 25, STUN_SPORE
-	db 31, POISONPOWDER
-	db 37, SLEEP_POWDER
+	db 11, LEECH_SEED
+	db 17, PIN_MISSILE ; TODO: BULLET_SEED
+	db 19, STUN_SPORE
+	db 21, POISONPOWDER
+	db 23, SLEEP_POWDER
+	db 27, CONFUSION
+	db 33, MIND_READER
 	db 43, SOLARBEAM
+	db 47, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 ExeggutorEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SEED_BOMB
 	db 1, BARRAGE
 	db 1, HYPNOSIS
 	db 1, CONFUSION
-	db 19, STOMP
-	db 31, EGG_BOMB
+	db 17, PSYCHIC_M
+	db 27, EGG_BOMB
+	db 37, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CuboneEvosAttacks:
@@ -1777,17 +1784,15 @@ JynxEvosAttacks:
 	db 1, DRAININGKISS
 	db 1, POUND
 	db 1, LICK
-	db 1, LOVELY_KISS
 	db 5, LICK
-	db 8, LOVELY_KISS
 	db 11, POWDER_SNOW
 	db 15, DOUBLESLAP
 	db 18, ICE_PUNCH
-	db 21, PSYBEAM ; TODO: HEART_STAMP
+	db 21, PSYBEAM
 	db 25, MEAN_LOOK
 	db 30, DRAININGKISS
-	db 33, LOW_KICK ; TODO: WAKE_UP_SLAP
-	db 39, ICE_BEAM ; TODO: AVALANCHE
+	db 33, LOW_KICK
+	db 39, ICE_BEAM
 	db 44, BODY_SLAM
 	db 55, PERISH_SONG
 	db 60, BLIZZARD
@@ -3312,11 +3317,11 @@ SmoochumEvosAttacks:
 	db 11, POWDER_SNOW
 	db 15, CONFUSION
 	db 18, SING
-	db 21, PSYBEAM ; TODO: HEART_STAMP
+	db 21, PSYBEAM
 	db 25, MEAN_LOOK
-	db 35, ICE_BEAM ; TODO: AVALANCHE
+	db 35, ICE_BEAM
 	db 38, PSYCHIC_M
-	db 41, MIRROR_MOVE ; TODO: COPYCAT
+	db 41, MIRROR_MOVE
 	db 45, PERISH_SONG
 	db 48, BLIZZARD
 	db 0 ; no more level-up moves

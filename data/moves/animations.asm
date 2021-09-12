@@ -143,7 +143,7 @@ BattleAnimations::
 	dw BattleAnim_PoisonGas
 	dw BattleAnim_Barrage
 	dw BattleAnim_LeechLife
-	dw BattleAnim_LovelyKiss
+	dw BattleAnim_SeedBomb
 	dw BattleAnim_SkyAttack
 	dw BattleAnim_Transform
 	dw BattleAnim_Bubble
@@ -2405,14 +2405,26 @@ BattleAnim_Mimic:
 	anim_wait 48
 	anim_ret
 
-BattleAnim_LovelyKiss:
-	anim_2gfx ANIM_GFX_OBJECTS, ANIM_GFX_ANGELS
-	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-	anim_obj ANIM_OBJ_LOVELY_KISS, 152, 40, $0
+BattleAnim_SeedBomb:
+	anim_2gfx ANIM_GFX_PLANT, ANIM_GFX_EXPLOSION
+	anim_sound 0, 1, SFX_THROW_BALL
+	anim_obj ANIM_OBJ_SEED_BOMB, 64, 92, $10
+	anim_wait 9
+	anim_sound 0, 1, SFX_THROW_BALL
+	anim_obj ANIM_OBJ_SEED_BOMB, 64, 92, $10
+	anim_wait 9
+	anim_sound 0, 1, SFX_THROW_BALL
+	anim_obj ANIM_OBJ_SEED_BOMB, 64, 92, $10
+	anim_wait 18
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_obj ANIM_OBJ_EXPLOSION2, 128, 64, $0
+	anim_wait 9
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_obj ANIM_OBJ_EXPLOSION2, 160, 56, $0
+	anim_wait 9
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_obj ANIM_OBJ_EXPLOSION2, 144, 48, $0
 	anim_wait 32
-	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_HEART, 128, 40, $0
-	anim_wait 40
 	anim_ret
 
 BattleAnim_Bonemerang:

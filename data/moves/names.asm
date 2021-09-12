@@ -141,7 +141,7 @@ MoveNames::
 	li "POISON GAS"
 	li "BARRAGE"
 	li "LEECH LIFE"
-	li "LOVELY KISS"
+	li "SEED BOMB"
 	li "SKY ATTACK"
 	li "TRANSFORM"
 	li "BUBBLE"
