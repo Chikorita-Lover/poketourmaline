@@ -129,16 +129,19 @@ ToromaTownPokecenterSign:
 ToromaTownMartSign:
 	jumpstd MartSignScript
 
+ToromaSubwaySign:
+	jumptext ToromaSubwaySignText
+
 ToromaTown_TeacherRunsToYouMovement1:
 	step DOWN
 	step DOWN
+	step DOWN
+	turn_head LEFT
 	step_end
 
 ToromaTown_TeacherRunsToYouMovement2:
 	step DOWN
 	step DOWN
-	step DOWN
-	turn_head LEFT
 	step_end
 
 ToromaTown_TeacherBringsYouBackMovement1:
@@ -176,11 +179,15 @@ Text_ItsDangerousToGoAlone:
 	line "go out without a"
 	cont "#MON!"
 
-	para "Wild #MON"
-	line "jump out of the"
+	para "Wild #MON live"
+	line "in the grass and"
+	cont "in DEVIL'S SHAFT."
 
-	para "grass on the way"
-	line "to the next town."
+	para "If you want to"
+	line "go that way,"
+
+	para "you should get"
+	line "your own #MON."
 	done
 
 Text_YourMonIsAdorable:
@@ -261,6 +268,10 @@ ToromaTownElmsHouseSignText:
 	line "House"
 	done
 
+ToromaSubwaySignText:
+	text "TOROMA SUBWAY"
+	done
+
 ToromaTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -271,6 +282,8 @@ ToromaTown_MapEvents:
 	warp_event 11, 11, TOROMA_POKECENTER_1F, 1
 	warp_event  3, 13, TOROMA_MART, 1
 	warp_event 33,  3, ELMS_HOUSE, 1
+	warp_event 34, 13, TOROMA_SUBWAY, 1
+	warp_event 36, 13, TOROMA_SUBWAY, 3
 
 	def_coord_events
 	coord_event 14, 16, SCENE_DEFAULT, ToromaTown_TeacherStopsYouScene1
@@ -283,9 +296,10 @@ ToromaTown_MapEvents:
 	bg_event 31,  3, BGEVENT_READ, ToromaTownElmsHouseSign
 	bg_event 12, 11, BGEVENT_READ, ToromaTownPokecenterSign
 	bg_event  4, 13, BGEVENT_READ, ToromaTownMartSign
+	bg_event 32, 14, BGEVENT_READ, ToromaSubwaySign
 
 	def_object_events
-	object_event 15, 13, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ToromaTownTeacherScript, -1
-	object_event 29, 13, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownMycomaniacScript, -1
-	object_event 23,  6, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ToromaTownLassScript, -1
-	object_event  6,  6, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownFisherScript, -1
+	object_event 15, 13, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ToromaTownTeacherScript, -1
+	object_event 27, 15, SPRITE_MYCOMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownMycomaniacScript, -1
+	object_event 23,  6, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ToromaTownLassScript, -1
+	object_event  6,  6, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 3, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ToromaTownFisherScript, -1

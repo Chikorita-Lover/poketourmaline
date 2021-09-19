@@ -732,7 +732,7 @@ wPokedexShinyToggle::
 ; bit 0: set if displaying shiny palettes
 	db
 wPokedexDataEnd::
-	ds 1
+wSubwayDestination:: db
 
 NEXTU
 ; pokegear

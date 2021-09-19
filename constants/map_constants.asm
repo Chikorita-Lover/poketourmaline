@@ -469,6 +469,7 @@ ENDM
 	map_const TOROMA_MART,                                  6,  4
 	map_const TOROMA_POKECENTER_1F,                         5,  4
 	map_const ELMS_HOUSE,                                   4,  4 ;  9
+	map_const TOROMA_SUBWAY,                               10,  7
 	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ; 10
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12

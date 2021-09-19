@@ -1923,12 +1923,6 @@ HappinessCheckScript:
 	closetext
 	end
 
-Movement_ContestResults_WalkAfterWarp:
-	step RIGHT
-	step DOWN
-	turn_head UP
-	step_end
-
 SubwayCounterAttendentScript:
 	opentext
 	faceplayer
@@ -1973,7 +1967,49 @@ SubwayCounterAttendentScript:
 
 SubwayBoardingAttendentScript:
 	opentext
-	farwritetext SubwayTrainNotAvailableText
+	faceplayer
+	applymovement PLAYER, Movement_Subway_CheckTicket
+	farwritetext SubwayCheckTicketText
+	waitbutton
+	checkitem TICKET
+	iftrue .HasTicket
+	farwritetext SubwayNoTicketText
 	waitbutton
 	closetext
 	end
+.HasTicket
+	farwritetext SubwayDestinationText
+	waitbutton
+	special LoadSubwayDestinations
+	waitbutton
+	farwritetext SubwayWelcomeAboardText
+	waitbutton
+	closetext
+	applymovement PLAYER, Movement_Subway_BoardTrain
+	special SubwayTrain
+	warpcheck
+	newloadmap MAPSETUP_TRAIN
+	applymovement PLAYER, Movement_Subway_AboardTrain
+	wait 20
+	end
+
+Movement_ContestResults_WalkAfterWarp:
+	step RIGHT
+	step DOWN
+	turn_head UP
+	step_end
+
+Movement_Subway_CheckTicket:
+	turn_head RIGHT
+	step_end
+
+Movement_Subway_BoardTrain:
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step_end
+
+Movement_Subway_AboardTrain:
+	turn_head DOWN
+	step_end

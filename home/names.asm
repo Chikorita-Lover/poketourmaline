@@ -1,13 +1,14 @@
 NamesPointers::
 ; entries correspond to GetName constants (see constants/text_constants.asm)
-	dba PokemonNames        ; MON_NAME (not used; jumps to GetPokemonName)
-	dba MoveNames           ; MOVE_NAME
-	dba NULL                ; DUMMY_NAME
-	dba ItemNames           ; ITEM_NAME
-	dbw 0, wPartyMonOTs     ; PARTY_OT_NAME
-	dbw 0, wOTPartyMonOTs   ; ENEMY_OT_NAME
-	dba TrainerClassNames   ; TRAINER_NAME
-	dbw 4, MoveDescriptions ; MOVE_DESC_NAME_BROKEN (wrong bank)
+	dba PokemonNames           ; MON_NAME (not used; jumps to GetPokemonName)
+	dba MoveNames              ; MOVE_NAME
+	dba NULL                   ; DUMMY_NAME
+	dba ItemNames              ; ITEM_NAME
+	dba SubwayDestinationNames ; SUBWAY_NAME
+	dbw 0, wPartyMonOTs        ; PARTY_OT_NAME
+	dbw 0, wOTPartyMonOTs      ; ENEMY_OT_NAME
+	dba TrainerClassNames      ; TRAINER_NAME
+	dbw 4, MoveDescriptions    ; MOVE_DESC_NAME_BROKEN (wrong bank)
 
 GetName::
 ; Return name wCurSpecies from name list wNamedObjectType in wStringBuffer1.
@@ -265,5 +266,23 @@ GetMoveName::
 	call GetName
 	ld de, wStringBuffer1
 
+	pop hl
+	ret
+
+GetSubwayDestinationName::
+; Get subway destination name for wNamedObjectIndex.
+
+	push hl
+	push bc
+	ld a, [wNamedObjectIndex]
+
+	ld [wCurSpecies], a
+	ld a, SUBWAY_NAME
+	ld [wNamedObjectType], a
+	call GetName
+	jr .Copied
+.Copied:
+	ld de, wStringBuffer1
+	pop bc
 	pop hl
 	ret

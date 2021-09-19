@@ -1,7 +1,6 @@
 	object_const_def
 	const ORMALISUBWAY_ATTENDENT1
 	const ORMALISUBWAY_ATTENDENT2
-	const ORMALISUBWAY_ATTENDENT3
 	const ORMALISUBWAY_FISHER
 	const ORMALISUBWAY_POKEFAN_F
 	const ORMALISUBWAY_SCIENTIST
@@ -27,7 +26,13 @@ OrmaliSubwayCounterAttendentScript:
 	jumpstd SubwayCounterAttendentScript
 
 OrmaliSubwayBoardingAttendentScript:
-	jumpstd SubwayBoardingAttendentScript
+;	jumpstd SubwayBoardingAttendentScript
+	opentext
+	writetext OrmaliSubwayBoardingAttendentText
+	waitbutton
+	closetext
+	applymovement PLAYER, OrmaliSubway_TurnBack
+	end
 
 OrmaliSubwayFisherScript:
 	jumptextfaceplayer OrmaliSubwayFisherText
@@ -40,6 +45,18 @@ OrmaliSubwayScientistScript:
 
 OrmaliSubwayGrannyScript:
 	jumptextfaceplayer OrmaliSubwayGrannyText
+
+OrmaliSubway_TurnBack:
+	step DOWN
+	step_end
+
+OrmaliSubwayBoardingAttendentText:
+	text "Sorry--the train"
+	line "isn't available"
+
+	para "for service at"
+	line "the moment."
+	done
 
 OrmaliSubwayFisherText:
 	text "People say that"
@@ -103,19 +120,18 @@ OrmaliSubway_MapEvents:
 
 	def_warp_events
 	warp_event  6, 13, ORMALI_CITY, 8
-  warp_event  7, 13, ORMALI_CITY, 8
+	warp_event  7, 13, ORMALI_CITY, 8
 	warp_event 12, 13, ORMALI_CITY, 9
-  warp_event 13, 13, ORMALI_CITY, 9
+	warp_event 13, 13, ORMALI_CITY, 9
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayCounterAttendentScript, -1
-	object_event  4,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayCounterAttendentScript, -1
-	object_event 13,  7, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayBoardingAttendentScript, -1
+	object_event  3,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayCounterAttendentScript, -1
+	object_event 14,  5, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayBoardingAttendentScript, -1
 	object_event  0, 12, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayFisherScript, -1
-	object_event  9, 11, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayPokefanFScript, -1
-	object_event 18, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayScientistScript, -1
-	object_event 19,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayGrannyScript, -1
+	object_event 10, 11, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayPokefanFScript, -1
+	object_event 17, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayScientistScript, -1
+	object_event 18,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OrmaliSubwayGrannyScript, -1

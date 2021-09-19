@@ -122,6 +122,7 @@ INCLUDE "engine/battle/returntobattle_useball.asm"
 INCLUDE "engine/battle/consume_held_item.asm"
 INCLUDE "data/moves/effects.asm"
 INCLUDE "engine/events/kurt_selectquantity_interpretjoypad.asm"
+INCLUDE "engine/events/subway_train.asm"
 
 
 SECTION "bankA", ROMX
@@ -639,6 +640,7 @@ INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
+INCLUDE "data/maps/subway_names.asm"
 
 
 SECTION "Print Party", ROMX

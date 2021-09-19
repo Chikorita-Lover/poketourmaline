@@ -672,6 +672,7 @@ ENDM
 	map_attributes ToromaMart, TOROMA_MART, $00, 0
 	map_attributes ToromaPokecenter1F, TOROMA_POKECENTER_1F, $00, 0
 	map_attributes ElmsHouse, ELMS_HOUSE, $00, 0
+	map_attributes ToromaSubway, TOROMA_SUBWAY, $00, 0
 	map_attributes Route26HealHouse, ROUTE_26_HEAL_HOUSE, $00, 0
 	map_attributes DayOfWeekSiblingsHouse, DAY_OF_WEEK_SIBLINGS_HOUSE, $00, 0
 	map_attributes Route27SandstormHouse, ROUTE_27_SANDSTORM_HOUSE, $00, 0

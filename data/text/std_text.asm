@@ -439,10 +439,29 @@ SubwayHasTicketText:
 	cont "your TICKET!"
 	done
 
-SubwayTrainNotAvailableText:
-	text "Sorry--the train"
-	line "isn't available"
+SubwayCheckTicketText:
+	text "Hello! May I see"
+	line "your TICKET?"
+	done
 
-	para "for service at"
-	line "the moment."
+SubwayNoTicketText:
+	text "Oh, you have no"
+	line "TICKET."
+
+	para "You may buy one"
+	line "at the counter."
+	done
+
+SubwayDestinationText:
+	text "<PLAYER> flashed"
+	line "the TICKET."
+
+	para "Perfect--what is"
+	line "your destination?"
+	done
+
+SubwayWelcomeAboardText:
+	text "Hop aboard--the"
+	line "train should"
+	cont "leave shortly."
 	done

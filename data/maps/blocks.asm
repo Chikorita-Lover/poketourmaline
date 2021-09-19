@@ -1063,5 +1063,6 @@ OrmaliBerryMart_Blocks:
 OrmaliOutskirts_Blocks:
 	INCBIN "maps/OrmaliOutskirts.blk"
 
+ToromaSubway_Blocks:
 OrmaliSubway_Blocks:
 	INCBIN "maps/Subway.blk"
