@@ -10,8 +10,8 @@
 	const_def
 	const MART_TOROMA
 	const MART_TOROMA_DEX
-	const MART_CHERRYGROVE
-	const MART_CHERRYGROVE_DEX
+	const MART_CHERRYGROVE ; unused
+	const MART_CHERRYGROVE_DEX ; unused
 	const MART_ORMALI
 	const MART_ORMALI_BALLS
 	const BERRY_MART_ORMALI

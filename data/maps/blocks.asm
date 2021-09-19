@@ -124,9 +124,6 @@ BetaSproutTower6_Blocks: ; unreferenced
 BetaPokecenter_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaPokecenter.blk"
 
-Route30_Blocks:
-	INCBIN "maps/Route30.blk"
-
 Route26_Blocks:
 	INCBIN "maps/Route26.blk"
 
@@ -194,10 +191,6 @@ DayOfWeekSiblingsHouse_Blocks:
 Route27SandstormHouse_Blocks:
 MrPsychicsHouse_Blocks:
 Route5CleanseTagHouse_Blocks:
-CherrygroveGymSpeechHouse_Blocks:
-GuideGentsHouse_Blocks:
-CherrygroveEvolutionSpeechHouse_Blocks:
-Route30BerryHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 SafariZoneFuchsiaGateBeta_Blocks:
@@ -213,12 +206,6 @@ Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
-
-BetaEcruteakCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaEcruteakCity.blk"
-
-BetaCherrygroveCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaCherrygroveCity.blk"
 
 CinnabarIsland_Blocks:
 	INCBIN "maps/CinnabarIsland.blk"
@@ -250,9 +237,6 @@ Route17_Blocks:
 BetaMahoganyTown_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaMahoganyTown.blk"
 
-Route31_Blocks:
-	INCBIN "maps/Route31.blk"
-
 Route27_Blocks:
 	INCBIN "maps/Route27.blk"
 
@@ -277,7 +261,6 @@ Route8SaffronGate_Blocks:
 Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
-Route31OrmaliGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 BetaAzaleaTown_Blocks: ; unreferenced
@@ -331,7 +314,6 @@ FuchsiaMart_Blocks:
 LavenderMart_Blocks:
 ViridianMart_Blocks:
 SaffronMart_Blocks:
-CherrygroveMart_Blocks:
 ToromaMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
@@ -361,7 +343,6 @@ CeladonPokecenter1F_Blocks:
 CianwoodPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 SaffronPokecenter1F_Blocks:
-CherrygrovePokecenter1F_Blocks:
 ToromaPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
@@ -527,9 +508,6 @@ RadioTower5F_Blocks:
 
 ToromaTown_Blocks:
 	INCBIN "maps/ToromaTown.blk"
-
-CherrygroveCity_Blocks:
-	INCBIN "maps/CherrygroveCity.blk"
 
 AzaleaTown_Blocks:
 	INCBIN "maps/AzaleaTown.blk"
@@ -932,9 +910,6 @@ MountMoon_Blocks:
 
 SeafoamGym_Blocks:
 	INCBIN "maps/SeafoamGym.blk"
-
-MrPokemonsHouse_Blocks:
-	INCBIN "maps/MrPokemonsHouse.blk"
 
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"

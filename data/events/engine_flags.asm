@@ -88,7 +88,6 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_CINNABAR
 	engine_flag wVisitedSpawns, SPAWN_INDIGO
 	engine_flag wVisitedSpawns, SPAWN_TOROMA
-	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE
 	engine_flag wVisitedSpawns, SPAWN_ORMALI
 	engine_flag wVisitedSpawns, SPAWN_AZALEA
 	engine_flag wVisitedSpawns, SPAWN_CIANWOOD

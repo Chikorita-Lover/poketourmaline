@@ -2917,8 +2917,6 @@ wToromaTownSceneID::                              db
 wElmsLabSceneID::                                 db
 wPlayersHouse1FSceneID::                          db
 wRoute29SceneID::                                 db
-wCherrygroveCitySceneID::                         db
-wMrPokemonsHouseSceneID::                         db
 wRoute32SceneID::                                 db
 wRoute35NationalParkGateSceneID::                 db
 wRoute36SceneID::                                 db
@@ -2973,7 +2971,7 @@ wMountMoonSquareSceneID::                         db
 wMobileTradeRoomSceneID::                         db
 wMobileBattleRoomSceneID::                        db
 
-	ds 49
+	ds 51
 
 ; fight counts
 wJackFightCount::    db

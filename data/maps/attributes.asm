@@ -99,10 +99,6 @@ ENDM
 	map_attributes ToromaTown, TOROMA_TOWN, $05, SOUTH
 	connection south, Route29, ROUTE_29, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
-	connection north, Route30, ROUTE_30, 5
-	connection east, Route29, ROUTE_29, 0
-
 	map_attributes OrmaliOutskirts, ORMALI_OUTSKIRTS, $71, EAST
 	connection east, OrmaliCity, ORMALI_CITY, -8
 
@@ -156,14 +152,6 @@ ENDM
 
 	map_attributes Route29, ROUTE_29, $71, NORTH
 	connection north, ToromaTown, TOROMA_TOWN, 0
-
-	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
-	connection north, Route31, ROUTE_31, -10
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
-
-	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
-	connection south, Route30, ROUTE_30, 10
-	connection west, OrmaliCity, ORMALI_CITY, -9
 
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
 	connection north, OrmaliCity, ORMALI_CITY, 0
@@ -690,13 +678,5 @@ ENDM
 	map_attributes Route5UndergroundPathEntrance, ROUTE_5_UNDERGROUND_PATH_ENTRANCE, $00, 0
 	map_attributes Route5SaffronGate, ROUTE_5_SAFFRON_GATE, $00, 0
 	map_attributes Route5CleanseTagHouse, ROUTE_5_CLEANSE_TAG_HOUSE, $00, 0
-	map_attributes CherrygroveMart, CHERRYGROVE_MART, $00, 0
-	map_attributes CherrygrovePokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
-	map_attributes CherrygroveGymSpeechHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
-	map_attributes GuideGentsHouse, GUIDE_GENTS_HOUSE, $00, 0
-	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
-	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
-	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
-	map_attributes Route31OrmaliGate, ROUTE_31_ORMALI_GATE, $00, 0
 	map_attributes DevilsShaft1F, DEVILS_SHAFT_1F, $09, 0
 	map_attributes DevilsShaftB1F, DEVILS_SHAFT_B1F, $09, 0

@@ -3,8 +3,8 @@ Marts:
 	table_width 2, Marts
 	dw MartToroma
 	dw MartToromaDex
-	dw MartCherrygrove
-	dw MartCherrygroveDex
+	dw MartCherrygrove ; unused
+	dw MartCherrygroveDex ; unused
 	dw MartOrmali
 	dw MartOrmaliBalls
 	dw BerryMartOrmali

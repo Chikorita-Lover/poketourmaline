@@ -6,8 +6,6 @@ ENDM
 TreeMonMaps:
 	treemon_map ROUTE_28,                  TREEMON_SET_CITY
 	treemon_map ROUTE_29,                  TREEMON_SET_ROUTE
-	treemon_map ROUTE_30,                  TREEMON_SET_ROUTE
-	treemon_map ROUTE_31,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_32,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_33,                  TREEMON_SET_TOWN
 	treemon_map ROUTE_34,                  TREEMON_SET_ROUTE
@@ -24,7 +22,6 @@ TreeMonMaps:
 	treemon_map ROUTE_45,                  TREEMON_SET_CANYON
 	treemon_map ROUTE_46,                  TREEMON_SET_CANYON
 	treemon_map TOROMA_TOWN,             TREEMON_SET_CITY
-	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_CITY
 	treemon_map ORMALI_CITY,               TREEMON_SET_CITY
 	treemon_map AZALEA_TOWN,               TREEMON_SET_TOWN
 	treemon_map CIANWOOD_CITY,             TREEMON_SET_CITY

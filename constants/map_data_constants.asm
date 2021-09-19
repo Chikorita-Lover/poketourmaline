@@ -92,7 +92,6 @@ NUM_FISHGROUPS EQU const_value - 1
 	const SPAWN_INDIGO
 ; johto
 	const SPAWN_TOROMA
-	const SPAWN_CHERRYGROVE
 	const SPAWN_ORMALI
 	const SPAWN_UNION_CAVE
 	const SPAWN_AZALEA
@@ -114,7 +113,6 @@ SPAWN_N_A EQU -1
 ; johto
 JOHTO_FLYPOINT EQU const_value
 	const FLY_TOROMA
-	const FLY_CHERRYGROVE
 	const FLY_ORMALI
 	const FLY_AZALEA
 	const FLY_GOLDENROD

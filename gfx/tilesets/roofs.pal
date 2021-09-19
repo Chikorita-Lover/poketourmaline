@@ -127,8 +127,3 @@
  	RGB 31,26,00, 31,15,00 ; morn/day
  	RGB 13,13,01, 08,08,01 ; nite
 	RGB 25,20,00, 25,11,00 ; eve
-
- ; group 26 (Cherrygrove)
- 	RGB 31,14,28, 31,05,21 ; morn/day
- 	RGB 14,07,17, 13,00,08 ; nite
-	RGB 25,10,20, 25,03,16 ; eve

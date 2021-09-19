@@ -28,8 +28,6 @@ PhoneScript_AnswerPhone_Male:
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -151,8 +149,6 @@ PhoneScript_AnswerPhone_Male_Day:
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -274,8 +270,6 @@ PhoneScript_AnswerPhone_Male_Nite:
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -558,8 +552,6 @@ PhoneScript_GreetPhone_Male:
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -681,8 +673,6 @@ PhoneScript_GreetPhone_Male_Day:
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -804,8 +794,6 @@ PhoneScript_GreetPhone_Male_Nite:
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -1083,8 +1071,6 @@ PhoneScript_Generic_Male:
 	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
-	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_MYCOMANIAC_WADE, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd

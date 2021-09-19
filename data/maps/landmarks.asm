@@ -75,7 +75,6 @@ Landmarks:
 	assert_table_length NUM_LANDMARKS
 
 ToromaTownName:      db "TOROMA TOWN@"
-CherrygroveCityName: db "CHERRYGROVE¯CITY@"
 OrmaliCityName:      db "ORMALI CITY@"
 EsmaraTownName:      db "ESMARA TOWN@"
 GoldenrodCityName:   db "GOLDENROD¯CITY@"
@@ -150,8 +149,6 @@ Route26Name:         db "ROUTE 26@"
 Route27Name:         db "ROUTE 27@"
 Route28Name:         db "ROUTE 28@"
 Route29Name:         db "ROUTE 29@"
-Route30Name:         db "ROUTE 30@"
-Route31Name:         db "ROUTE 31@"
 Route32Name:         db "ROUTE 32@"
 Route33Name:         db "ROUTE 33@"
 Route34Name:         db "ROUTE 34@"
